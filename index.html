@@ -18,6 +18,7 @@
     <style>
         /*navigation styles for header*/
         /*=======================================================*/
+
         header > nav {
             display: flex;
             z-index: 10;
@@ -27,6 +28,7 @@
             background-color: black;
             width: 100vw;
             height: 50px;
+            box-shadow: 2px 4px 3px 2px darkgray;
         }
 
         header > nav {
@@ -67,16 +69,19 @@
 
         /*=======================================================*/
 
+        /*Page 01-Home*/
+        /*=======================================================*/
         /*logo in first section*/
-        main > #Home {
-            position: absolute;
+        #Home {
+            position: relative;
             background-color: black;
             width: 100%;
             height: 100vh;
-            border: 2px solid #44C6E2;
+            /*border: 2px solid #44C6E2;*/
+            background-image: url("assets/images/background.jpeg");
         }
 
-        main > #Home > section:nth-child(2) > img {
+        #Home > section:nth-child(2) > img {
             position: absolute;
             margin: auto;
             right: 50px;
@@ -87,17 +92,34 @@
         }
 
         /*Name*/
-        body > main > section:nth-child(1) > section:nth-child(1) > h1 {
+        #Home > section:nth-child(1) > h1 {
+            position: absolute;
+            margin: auto;
+            top: 350px;
+            left: 50px;
             font-family: "Arial Rounded MT Bold";
             font-size: 50px;
             color: white;
         }
 
-        body > main > section:nth-child(1) > section:nth-child(1) > h4 {
+        #Home > section:nth-child(1) > h4 {
+            position: absolute;
+            margin: auto;
+            top: 420px;
+            left: 50px;
             font-family: "Tw Cen MT Condensed Extra Bold";
             font-size: 30px;
             color: white;
         }
+        #media_links{
+            position: absolute;
+            margin: auto;
+            top: 475px;
+            left: 42px;
+        }
+
+        /*=======================================================*/
+
 
     </style>
 
@@ -125,20 +147,20 @@
         <section>
             <h1>Kaveesha Sanduni Kodikara</h1>
             <h4>Software Engineer</h4>
-            <nav>
-                <a href="https://twitter.com/kaveeshasandun1">
+            <nav id="media_links">
+                <a style="padding: 10px" href="https://twitter.com/kaveeshasandun1">
                     <img alt="twitter" height="30" src="assets/icons/twitter.png">
                 </a>
-                <a href="https://www.linkedin.com/in/kaveesha-sanduni-358561201">
+                <a style="padding: 10px" href="https://www.linkedin.com/in/kaveesha-sanduni-358561201">
                     <img alt="linkedIn" height="30" src="assets/icons/linkedIn.png">
                 </a>
-                <a href="https://github.com/Kaveesha2000">
+                <a style="padding: 10px" href="https://github.com/Kaveesha2000">
                     <img alt="git hub" height="30" src="assets/icons/github.png">
                 </a>
             </nav>
         </section>
         <!--logo-->
-        <section>
+        <section id="logo">
             <img alt="Logo" src="assets/icons/logo.jpeg" width="300">
         </section>
     </section>
