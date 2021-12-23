@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en" style="background-color: black">
 <html xml:base="http://www.w3.org/1999/xhtml">
 
 <head>
@@ -12,18 +13,114 @@
 
     <link href="assets/icons/removebgLogo.png" rel="icon">
     <link href="assets/css/styles.css" rel="stylesheet">
+    <link href="assets/css/normalize.css" rel="stylesheet">
+
+    <style>
+        /*navigation styles for header*/
+        /*=======================================================*/
+        header > nav {
+            display: flex;
+            z-index: 10;
+            align-items: center;
+            justify-content: space-around;
+            position: fixed;
+            background-color: black;
+            width: 100vw;
+            height: 50px;
+        }
+
+        header > nav {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: auto;
+            top: 0;
+        }
+
+        header > nav > ul {
+            position: absolute;
+            bottom: 0;
+            top: 20px;
+            right: 20px;
+            margin: auto;
+            height: 40px;
+            font-size: 15px;
+            font-family: 'Lobster', cursive;
+            list-style: none;
+        }
+
+        header > nav > ul > li {
+            padding: 0 10px 0 10px;
+            display: inline;
+        }
+
+        header > nav > ul > li > a {
+            text-decoration: none;
+            color: white;
+        }
+
+        header > nav > ul > li > a:hover {
+            cursor: pointer;
+            color: #44C6E2;
+        }
+
+        /*=======================================================*/
+
+        /*logo in first section*/
+        main > #Home {
+            position: absolute;
+            background-color: black;
+            width: 100%;
+            height: 100vh;
+            border: 2px solid #44C6E2;
+        }
+
+        main > #Home > section:nth-child(2) > img {
+            position: absolute;
+            margin: auto;
+            right: 50px;
+            top: 0;
+            bottom: 0;
+            border-radius: 100%;
+            border: 2px solid #44C6E2;
+        }
+
+        /*Name*/
+        body > main > section:nth-child(1) > section:nth-child(1) > h1 {
+            font-family: "Arial Rounded MT Bold";
+            font-size: 50px;
+            color: white;
+        }
+
+        body > main > section:nth-child(1) > section:nth-child(1) > h4 {
+            font-family: "Tw Cen MT Condensed Extra Bold";
+            font-size: 30px;
+            color: white;
+        }
+
+    </style>
 
 </head>
 
 <body>
 <header>
     <nav>
-        Home About me Education Skills Projects Services Contact Info Gallery
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About me</a></li>
+            <li><a href="">Education</a></li>
+            <li><a href="">Skills</a></li>
+            <li><a href="">Projects</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Contact Info</a></li>
+            <li><a href="">Gallery</a></li>
+        </ul>
     </nav>
 </header>
 <main>
     <!--page 1-->
-    <section>
+    <section id="Home">
         <!--personal details-->
         <section>
             <h1>Kaveesha Sanduni Kodikara</h1>
@@ -46,18 +143,18 @@
         </section>
     </section>
     <!--page 2-->
-    <section>
+    <section id="About_me">
         <!--header-->
         <section>
             <h1><u>About Me</u></h1>
         </section>
         <!--photo-->
         <section>
-            <img src="assets/images/myPhoto.jpeg" width="300">
+            <img src="assets/images/Gallery/5.jpeg" width="200">
         </section>
         <!--details-->
         <section>
-                    <pre>
+                    <pre style="font-family: 'Times New Roman'">
                         I am software engineering student at Institute Of
                         Software Engineering (IJSE) who constantly seeks out
                         innovative solutions to everyday problems. I have honed my
@@ -77,7 +174,7 @@
         </section>
     </section>
     <!--page 3-->
-    <section>
+    <section id="Education">
         <section>
             <h1><u>Education</u></h1>
         </section>
@@ -102,7 +199,7 @@
         </section>
     </section>
     <!--page 4-->
-    <section>
+    <section id="Skills">
         <!--heading-->
         <section>
             <h1><u>Skills</u></h1>
@@ -114,7 +211,7 @@
             <img src="assets/images/star.ico" width="30">
             <img src="assets/images/star.ico" width="30">
 
-            <pre>
+            <pre style="font-family: 'Times New Roman'">
                     Python is an interpreted, object-
                     oriented,high-level programming
                     language with dynamic semantics. ...
@@ -132,7 +229,7 @@
             <img src="assets/images/star.ico" width="30">
             <img src="assets/images/star.ico" width="30">
 
-            <pre>
+            <pre style="font-family: 'Times New Roman'">
                     Java is a general-purpose, class-
                     based, object-oriented programming
                     language designed for having lesser
@@ -147,7 +244,7 @@
             <!--<img src="assets/icons/LanguageSkillsIcon/python.ico" width="60">-->
             <img src="assets/images/star.ico" width="30">
 
-            <pre>
+            <pre style="font-family: 'Times New Roman'">
                     More than an ORM, discover the
                     Hibernate galaxy. Hibernate ORM.
                     Domain model persistence for
@@ -161,7 +258,7 @@
             <img src="assets/images/star.ico" width="30">
             <img src="assets/images/star.ico" width="30">
 
-            <pre>
+            <pre style="font-family: 'Times New Roman'">
                     CSS is the language for describing
                     the presentation of Web pages,
                     including colors, layout, and fonts. It
@@ -179,7 +276,7 @@
             <img src="assets/images/star.ico" width="30">
             <img src="assets/images/star.ico" width="30">
 
-            <pre>
+            <pre style="font-family: 'Times New Roman'">
                     HyperText Markup Language (HTML)
                     is the set of markup symbols or
                     codes inserted into a file intended for
@@ -195,7 +292,7 @@
             <img src="assets/images/star.ico" width="30">
             <img src="assets/images/star.ico" width="30">
 
-            <pre>
+            <pre style="font-family: 'Times New Roman'">
                     MySQL is an Oracle-backed open
                     source relational database
                     management system (RDBMS)
@@ -207,12 +304,12 @@
         </section>
         <!--arrow-->
         <section>
-            <img src="assets/icons/backarrow.jpeg" alt="foward arrow">
-            <img src="assets/icons/fowardarrow.ico" alt="foward arrow">
+            <img alt="foward arrow" src="assets/icons/backarrow.jpeg">
+            <img alt="foward arrow" src="assets/icons/fowardarrow.ico">
         </section>
     </section>
     <!--page 5-->
-    <section>
+    <section id="Project">
         <!--heading-->
         <section>
             <h1><u>Project</u></h1>
@@ -234,16 +331,16 @@
         </section>
     </section>
     <!--page 6-->
-    <section>
+    <section id="Services">
         <!--services-->
         <section>
             <!--header-->
-                <h1><u>Services</u></h1>
-                <ul type="disc">
-                    <li>Stand - Alone Applications Development</li>
-                    <li>Web Based Applications Development</li>
-                    <li>Mobile Applications Development</li>
-                </ul>
+            <h1><u>Services</u></h1>
+            <ul type="disc">
+                <li>Stand - Alone Applications Development</li>
+                <li>Web Based Applications Development</li>
+                <li>Mobile Applications Development</li>
+            </ul>
             <!--arrow-->
             <section>
                 <img src="assets/icons/upwardarrow.jpeg">
@@ -265,7 +362,7 @@
         </section>
     </section>
     <!--page 7-->
-    <section>
+    <section id="Contact_Info">
         <!--heading-->
         <section>
             <h1><u>Contact Info</u></h1>
@@ -281,8 +378,8 @@
             <img src="assets/icons/location.ico">
             <h2>Residence</h2>
             <address>102 Samagimawatha,
-                    Watagedaramulla,
-                    Denipitiya.
+                Watagedaramulla,
+                Denipitiya.
             </address>
 
             <img src="assets/icons/email.ico">
@@ -302,22 +399,23 @@
         </section>
     </section>
     <!--page 8-->
-    <section>
+    <section id="Gallery">
         <!--heading-->
         <section>
             <h1><u>Gallery</u></h1>
         </section>
         <!--photos-->
         <section>
-            <img src="assets/images/Gallery/1.jpeg" alt="Photo" width="289">
-            <img src="assets/images/Gallery/2.jpeg" alt="Photo" width="300">
-            <img src="assets/images/Gallery/3.jpeg" alt="Photo" width="289">
-            <img src="assets/images/Gallery/4.jpeg" alt="Photo" width="358">
+            <img alt="Photo" src="assets/images/Gallery/1.jpeg" width="289">
+            <img alt="Photo" src="assets/images/Gallery/2.jpeg" width="300">
+            <img alt="Photo" src="assets/images/Gallery/3.jpeg" width="289">
+            <img alt="Photo" src="assets/images/Gallery/4.jpeg" width="358">
+            <img alt="Photo" src="assets/images/Gallery/5.jpeg" width="358">
         </section>
         <!--arrow-->
         <section>
-            <img src="assets/icons/backarrow.jpeg" alt="foward arrow">
-            <img src="assets/icons/fowardarrow.ico" alt="foward arrow">
+            <img alt="foward arrow" src="assets/icons/backarrow.jpeg">
+            <img alt="foward arrow" src="assets/icons/fowardarrow.ico">
         </section>
     </section>
 </main>
@@ -342,7 +440,7 @@
     </section>
     <!--copyright-->
     <section>
-        <h5>Copyright ©️ 2021 All Right Reserved  Website Powerd By Kaveesha Sanduni Kodikara</h5>
+        <h5>Copyright ©️ 2021 All Right Reserved Website Powerd By Kaveesha Sanduni Kodikara</h5>
     </section>
     <!--nav bar-->
     <section>
