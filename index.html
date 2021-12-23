@@ -84,7 +84,7 @@
         #Home > section:nth-child(2) > img {
             position: absolute;
             margin: auto;
-            right: 50px;
+            right: 150px;
             top: 0;
             bottom: 0;
             border-radius: 100%;
@@ -129,10 +129,9 @@
             background-color: black;
             width: 100%;
             height: 100vh;
-            border: 2px solid #44C6E2;
         }
 
-        #header1 {
+        #header2 {
             position: absolute;
             font-size: 30px;
             color: white;
@@ -141,7 +140,7 @@
             top: 10px;
         }
 
-        #Myphoto{
+        #Myphoto {
             position: absolute;
             margin: auto;
             left: 70px;
@@ -149,7 +148,8 @@
             width: 22vw;
             height: 80vh;
         }
-        #details{
+
+        #details {
             position: absolute;
             right: 200px;
             top: 100px;
@@ -157,7 +157,8 @@
             margin: auto;
             color: white;
         }
-        #DownloadBtn{
+
+        #DownloadBtn {
             width: 200px;
             height: 30px;
             position: absolute;
@@ -170,10 +171,64 @@
             font-weight: bold;
             border: 2px solid white;
         }
-        #DownloadBtn:hover{
+
+        #DownloadBtn:hover {
             cursor: pointer;
             box-shadow: 2px 3px 6px 2px darkgrey;
         }
+
+        /*=======================================================*/
+
+        /*Page 03-Education*/
+        /*=======================================================*/
+        #Education {
+            position: relative;
+            background-color: black;
+            width: 100%;
+            height: 100vh;
+        }
+
+        /*=======================================================*/
+        /*Page 04-Skills*/
+        /*=======================================================*/
+        #Skills {
+            position: relative;
+            background-color: black;
+            width: 100%;
+            height: 100vh;
+            border: 2px solid white;
+        }
+
+        #header4 {
+            position: absolute;
+            font-size: 30px;
+            color: white;
+            margin: auto;
+            left: 20px;
+            top: 10px;
+        }
+
+        #grid {
+            position: absolute;
+            width: 95%;
+            height: 100vh;
+            display: grid;
+            top: 70px;
+            left: 40px;
+            margin: auto;
+            grid-template-rows: repeat(2,240px);
+            grid-template-columns: repeat(3,380px);
+
+
+            grid-gap: 40px;
+        }
+
+        #grid>section{
+            border: 1px solid white;
+            background-color: #131111;
+            box-shadow: 20px 18px 7px 1px #888888;
+        }
+        /*=======================================================*/
     </style>
 
 </head>
@@ -182,14 +237,14 @@
 <header>
     <nav>
         <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">About me</a></li>
-            <li><a href="">Education</a></li>
-            <li><a href="">Skills</a></li>
-            <li><a href="">Projects</a></li>
-            <li><a href="">Services</a></li>
-            <li><a href="">Contact Info</a></li>
-            <li><a href="">Gallery</a></li>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#About_me">About me</a></li>
+            <li><a href="#Education">Education</a></li>
+            <li><a href="#Skills">Skills</a></li>
+            <li><a href="#Project">Projects</a></li>
+            <li><a href="#Services">Services</a></li>
+            <li><a href="#Contact_Info">Contact Info</a></li>
+            <li><a href="#Gallery">Gallery</a></li>
         </ul>
     </nav>
 </header>
@@ -222,15 +277,15 @@
     <section id="About_me">
         <!--header-->
         <section>
-            <h1 id="header1"><u>About Me</u></h1>
+            <h1 id="header2"><u>About Me</u></h1>
         </section>
         <!--photo-->
         <section>
-            <img src="assets/images/Gallery/5.jpeg" id="Myphoto">
+            <img id="Myphoto" src="assets/images/Gallery/5.jpeg">
         </section>
         <!--details-->
         <section>
-                    <pre style="font-family: 'Times New Roman'" id="details">
+                    <pre id="details" style="font-family: 'Times New Roman'">
                         I am software engineering student at Institute Of
                         Software Engineering (IJSE) who constantly seeks out
                         innovative solutions to everyday problems. I have honed my
@@ -249,6 +304,7 @@
             <button id="DownloadBtn">Dowload CV</button>
         </section>
     </section>
+
     <!--page 3-->
     <section id="Education">
         <section>
@@ -274,20 +330,22 @@
             <img src="assets/images/Education/2021.png" width="300">
         </section>
     </section>
+
     <!--page 4-->
     <section id="Skills">
         <!--heading-->
         <section>
-            <h1><u>Skills</u></h1>
+            <h1 id="header4"><u>Skills</u></h1>
         </section>
-        <!--python-->
-        <section>
-            <h2>PYTHON</h2>
-            <img src="assets/icons/LanguageSkillsIcon/python.ico" width="60">
-            <img src="assets/images/star.ico" width="30">
-            <img src="assets/images/star.ico" width="30">
+        <section id="grid">
+            <!--python-->
+            <section>
+                <h2>PYTHON</h2>
+                <img src="assets/icons/LanguageSkillsIcon/python.ico" width="60">
+                <img src="assets/images/star.ico" width="30">
+                <img src="assets/images/star.ico" width="30">
 
-            <pre style="font-family: 'Times New Roman'">
+                <pre style="font-family: 'Times New Roman'">
                     Python is an interpreted, object-
                     oriented,high-level programming
                     language with dynamic semantics. ...
@@ -296,16 +354,16 @@
                     reduces the cost of program
                     maintenance
                 </pre>
-        </section>
-        <!--java-->
-        <section>
-            <h2>JAVA</h2>
-            <img src="assets/icons/LanguageSkillsIcon/java.ico" width="60">
-            <img src="assets/images/star.ico" width="30">
-            <img src="assets/images/star.ico" width="30">
-            <img src="assets/images/star.ico" width="30">
+            </section>
+            <!--java-->
+            <section>
+                <h2>JAVA</h2>
+                <img src="assets/icons/LanguageSkillsIcon/java.ico" width="60">
+                <img src="assets/images/star.ico" width="30">
+                <img src="assets/images/star.ico" width="30">
+                <img src="assets/images/star.ico" width="30">
 
-            <pre style="font-family: 'Times New Roman'">
+                <pre style="font-family: 'Times New Roman'">
                     Java is a general-purpose, class-
                     based, object-oriented programming
                     language designed for having lesser
@@ -313,28 +371,28 @@
                     computing platform for application
                     development
                 </pre>
-        </section>
-        <!--hibernate-->
-        <section>
-            <h2>HIBERNATE</h2>
-            <!--<img src="assets/icons/LanguageSkillsIcon/python.ico" width="60">-->
-            <img src="assets/images/star.ico" width="30">
+            </section>
+            <!--hibernate-->
+            <section>
+                <h2>HIBERNATE</h2>
+                <!--<img src="assets/icons/LanguageSkillsIcon/python.ico" width="60">-->
+                <img src="assets/images/star.ico" width="30">
 
-            <pre style="font-family: 'Times New Roman'">
+                <pre style="font-family: 'Times New Roman'">
                     More than an ORM, discover the
                     Hibernate galaxy. Hibernate ORM.
                     Domain model persistence for
                     relational databases.
             </pre>
-        </section>
-        <!--css-->
-        <section>
-            <h2>CSS</h2>
-            <img src="assets/icons/LanguageSkillsIcon/css.ico" width="60">
-            <img src="assets/images/star.ico" width="30">
-            <img src="assets/images/star.ico" width="30">
+            </section>
+            <!--css-->
+            <section>
+                <h2>CSS</h2>
+                <img src="assets/icons/LanguageSkillsIcon/css.ico" width="60">
+                <img src="assets/images/star.ico" width="30">
+                <img src="assets/images/star.ico" width="30">
 
-            <pre style="font-family: 'Times New Roman'">
+                <pre style="font-family: 'Times New Roman'">
                     CSS is the language for describing
                     the presentation of Web pages,
                     including colors, layout, and fonts. It
@@ -343,16 +401,16 @@
                     large screens, small screens, or
                     printers
                 </pre>
-        </section>
-        <!--html-->
-        <section>
-            <h2>HTML</h2>
-            <img src="assets/icons/LanguageSkillsIcon/html.ico" width="60">
-            <img src="assets/images/star.ico" width="30">
-            <img src="assets/images/star.ico" width="30">
-            <img src="assets/images/star.ico" width="30">
+            </section>
+            <!--html-->
+            <section>
+                <h2>HTML</h2>
+                <img src="assets/icons/LanguageSkillsIcon/html.ico" width="60">
+                <img src="assets/images/star.ico" width="30">
+                <img src="assets/images/star.ico" width="30">
+                <img src="assets/images/star.ico" width="30">
 
-            <pre style="font-family: 'Times New Roman'">
+                <pre style="font-family: 'Times New Roman'">
                     HyperText Markup Language (HTML)
                     is the set of markup symbols or
                     codes inserted into a file intended for
@@ -360,15 +418,15 @@
                     tells web browsers how to display a
                     web page's words and images
                 </pre>
-        </section>
-        <!--sql-->
-        <section>
-            <h2>SQL</h2>
-            <img src="assets/icons/LanguageSkillsIcon/sql.ico" width="60">
-            <img src="assets/images/star.ico" width="30">
-            <img src="assets/images/star.ico" width="30">
+            </section>
+            <!--sql-->
+            <section>
+                <h2>SQL</h2>
+                <img src="assets/icons/LanguageSkillsIcon/sql.ico" width="60">
+                <img src="assets/images/star.ico" width="30">
+                <img src="assets/images/star.ico" width="30">
 
-            <pre style="font-family: 'Times New Roman'">
+                <pre style="font-family: 'Times New Roman'">
                     MySQL is an Oracle-backed open
                     source relational database
                     management system (RDBMS)
@@ -377,6 +435,7 @@
                     platforms, including Linux, UNIX and
                     Windows. ...
                 </pre>
+            </section>
         </section>
         <!--arrow-->
         <section>
@@ -384,6 +443,7 @@
             <img alt="foward arrow" src="assets/icons/fowardarrow.ico">
         </section>
     </section>
+
     <!--page 5-->
     <section id="Project">
         <!--heading-->
@@ -406,6 +466,7 @@
             <h3>Web - Based</h3>
         </section>
     </section>
+
     <!--page 6-->
     <section id="Services">
         <!--services-->
@@ -437,6 +498,7 @@
             </section>
         </section>
     </section>
+
     <!--page 7-->
     <section id="Contact_Info">
         <!--heading-->
@@ -474,6 +536,7 @@
             <button>Send</button>
         </section>
     </section>
+
     <!--page 8-->
     <section id="Gallery">
         <!--heading-->
