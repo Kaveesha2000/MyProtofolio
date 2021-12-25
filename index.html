@@ -187,6 +187,7 @@
             margin: auto;
             left: 20px;
             top: 10px;
+            text-shadow: 4px 4px 5px darkgrey;
         }
 
         #Myphoto {
@@ -256,6 +257,7 @@
             margin: auto;
             left: 20px;
             top: 10px;
+            text-shadow: 4px 4px 5px darkgrey;
         }
 
         #grid {
@@ -297,7 +299,7 @@
             top: -20px;
         }
 
-        #img1{
+        #img1 {
             left: 10px;
             position: relative;
             top: -8px;
@@ -320,7 +322,7 @@
             top: -20px;
         }
 
-        #img2{
+        #img2 {
             left: 10px;
             position: relative;
             top: -8px;
@@ -343,7 +345,7 @@
             top: -23px;
         }
 
-        #img3{
+        #img3 {
             left: 10px;
             position: relative;
             top: -8px;
@@ -366,7 +368,7 @@
             top: -23px;
         }
 
-        #img4{
+        #img4 {
             left: 10px;
             position: relative;
             top: -8px;
@@ -389,7 +391,7 @@
             top: -25px;
         }
 
-        #img5{
+        #img5 {
             left: 10px;
             position: relative;
             top: -8px;
@@ -412,7 +414,7 @@
             top: -24px;
         }
 
-        #img6{
+        #img6 {
             left: 10px;
             position: relative;
             top: -8px;
@@ -428,6 +430,64 @@
         }
 
         /*=================================*/
+
+        /*Page 05-Projects*/
+        /*=======================================================*/
+        #Project {
+            position: relative;
+            background-color: black;
+            width: 100%;
+            height: 100vh;
+        }
+
+        #header5 {
+            position: absolute;
+            font-size: 30px;
+            color: white;
+            margin: auto;
+            left: 20px;
+            top: 10px;
+            text-shadow: 4px 4px 5px darkgrey;
+        }
+
+        #projectflex {
+            position: absolute;
+            top: 100px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            display: flex;
+            border-radius: 100%;
+            justify-content: space-evenly;
+        }
+
+        #projectflex > section:nth-child(1) > img {
+            border: 2px solid #44C6E2;
+            border-radius: 100%;
+            height: 300px;
+            width: 300px;
+            box-shadow: 0px 0px 15px 10px #44c6e2;
+        }
+
+        #projectflex > section:nth-child(2) > img {
+            border: 2px solid #44C6E2;
+            border-radius: 100%;
+            height: 300px;
+            width: 300px;
+            box-shadow: 0px 0px 15px 10px #44c6e2;
+        }
+
+        #projectflex > section:nth-child(3) > img {
+            border: 2px solid #44C6E2;
+            border-radius: 100%;
+            height: 300px;
+            width: 300px;
+            box-shadow: 0px 0px 15px 10px #44c6e2;
+        }
+
+        #projectflex > section:nth-child(1) > h3 {
+
+        }
 
         /*=======================================================*/
     </style>
@@ -478,7 +538,7 @@
     <section id="About_me">
         <!--header-->
         <section>
-            <h1 id="header2"><u>About Me</u></h1>
+            <h1 id="header2">About Me</h1>
         </section>
         <!--photo-->
         <section>
@@ -508,8 +568,8 @@
 
     <!--page 3-->
     <section id="Education">
-        <section>
-            <h1><u>Education</u></h1>
+        <!--<section>
+            <h1>Education</h1>
         </section>
         <section>
             <img src="assets/images/Education/sumangala.png" width="110">
@@ -529,14 +589,14 @@
             <h3>HRM Diploma</h3>
             <h5>(Since 2021-2022)</h5>
             <img src="assets/images/Education/2021.png" width="300">
-        </section>
+        </section>-->
     </section>
 
     <!--page 4-->
     <section id="Skills">
         <!--heading-->
         <section>
-            <h1 id="header4"><u>Skills</u></h1>
+            <h1 id="header4">Skills</h1>
         </section>
         <section id="grid">
             <!--python-->
@@ -640,7 +700,7 @@
         </section>
         <!--arrow-->
         <section>
-            <img alt="foward arrow" src="assets/icons/backarrow.jpeg">
+            <img alt="foward arrow" src="assets/icons/backwardarrow.ico">
             <img alt="foward arrow" src="assets/icons/fowardarrow.ico">
         </section>
     </section>
@@ -649,22 +709,24 @@
     <section id="Project">
         <!--heading-->
         <section>
-            <h1><u>Project</u></h1>
+            <h1 id="header5">Projects</h1>
         </section>
         <!--assignments-->
-        <section>
-            <img src="assets/images/Projects/Assignment.jpg" width="400">
-            <h3>Assignment</h3>
-        </section>
-        <!--stand-alone-->
-        <section>
-            <img src="assets/images/Projects/standalone.png" width="400">
-            <h3>Stand - Alone</h3>
-        </section>
-        <!--web-based-->
-        <section>
-            <img src="assets/images/Projects/webBased.jpg" width="400">
-            <h3>Web - Based</h3>
+        <section id="projectflex">
+            <section>
+                <img src="assets/images/Projects/Assignment.jpg">
+                <h3>Assignment</h3>
+            </section>
+            <!--stand-alone-->
+            <section>
+                <img src="assets/images/Projects/standalone.png">
+                <h3>Stand - Alone</h3>
+            </section>
+            <!--web-based-->
+            <section>
+                <img src="assets/images/Projects/webBased.jpg">
+                <h3>Web - Based</h3>
+            </section>
         </section>
     </section>
 
@@ -673,7 +735,7 @@
         <!--services-->
         <section>
             <!--header-->
-            <h1><u>Services</u></h1>
+            <h1>Services</h1>
             <ul type="disc">
                 <li>Stand - Alone Applications Development</li>
                 <li>Web Based Applications Development</li>
@@ -704,7 +766,7 @@
     <section id="Contact_Info">
         <!--heading-->
         <section>
-            <h1><u>Contact Info</u></h1>
+            <h1>Contact Info</h1>
             <h2>Do you want to do your project with me ?</h2>
             <h2>Contact me on your interested social media platform or in my residence as you wish</h2>
         </section>
@@ -742,7 +804,7 @@
     <section id="Gallery">
         <!--heading-->
         <section>
-            <h1><u>Gallery</u></h1>
+            <h1>Gallery</h1>
         </section>
         <!--photos-->
         <section>
@@ -754,7 +816,7 @@
         </section>
         <!--arrow-->
         <section>
-            <img alt="foward arrow" src="assets/icons/backarrow.jpeg">
+            <img alt="foward arrow" src="assets/icons/backwardarrow.ico">
             <img alt="foward arrow" src="assets/icons/fowardarrow.ico">
         </section>
     </section>
