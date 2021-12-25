@@ -141,6 +141,7 @@
                 width: 100%;
             }
         }
+
         #Home > section:nth-child(1) > h1 {
             position: absolute;
             margin: auto;
@@ -193,8 +194,10 @@
             margin: auto;
             left: 70px;
             top: 80px;
-            width: 22vw;
+            width: 21vw;
             height: 80vh;
+            border-radius: 100%;
+            box-shadow: 16px 4px 12px 1px darkgrey;
         }
 
         #details {
@@ -244,7 +247,6 @@
             background-color: black;
             width: 100%;
             height: 100vh;
-            /*border: 2px solid white;*/
         }
 
         #header4 {
@@ -274,6 +276,110 @@
             background-color: #131111;
             box-shadow: 20px 18px 7px 1px #888888;
         }
+
+        /*Inner Content*/
+
+        /*headers*/
+
+        /*=================================*/
+        .skillheader {
+            margin: 0;
+            padding: 10px;
+            color: #44C6E2;
+        }
+
+        /*=================================*/
+        /*python*/
+        .one > #star1, #star2 {
+            position: relative;
+            top: -13px;
+        }
+
+        .one > p {
+            font-family: 'Times New Roman';
+            margin: 0;
+            color: #44C6E2;
+            width: 299px;
+            text-align: center;
+            padding-left: 20px;
+        }
+
+        /*java*/
+        .two > #star3, #star4, #star5 {
+            position: relative;
+            top: -13px;
+        }
+
+        .two > p {
+            font-family: 'Times New Roman';
+            margin: 0;
+            color: #44C6E2;
+            width: 299px;
+            text-align: center;
+            padding-left: 20px;
+        }
+
+        /*hibernate*/
+        .three > #star6 {
+            position: relative;
+            top: -13px;
+        }
+
+        .three > p {
+            font-family: 'Times New Roman';
+            margin: 0;
+            color: #44C6E2;
+            width: 299px;
+            text-align: center;
+            padding-left: 20px;
+        }
+
+        /*css*/
+        .four > #star7, #star8 {
+            position: relative;
+            top: -19px;
+        }
+
+        .four > p {
+            font-family: 'Times New Roman';
+            margin: 0;
+            color: #44C6E2;
+            width: 299px;
+            text-align: center;
+            padding-left: 20px;
+        }
+
+        /*html*/
+        .five > #star9, #star10, #star11 {
+            position: relative;
+            top: -20px;
+        }
+
+        .five > p {
+            font-family: 'Times New Roman';
+            margin: 0;
+            color: #44C6E2;
+            width: 299px;
+            text-align: center;
+            padding-left: 20px;
+        }
+
+        /*sql*/
+        .six > #star12, #star13 {
+            position: relative;
+            top: -18px;
+        }
+
+        .six > p {
+            font-family: 'Times New Roman';
+            margin: 0;
+            color: #44C6E2;
+            width: 299px;
+            text-align: center;
+            padding-left: 20px;
+        }
+
+        /*=================================*/
 
         /*=======================================================*/
     </style>
@@ -386,13 +492,13 @@
         </section>
         <section id="grid">
             <!--python-->
-            <section>
-                <h2>PYTHON</h2>
+            <section class="one">
+                <h2 class="skillheader">PYTHON</h2>
                 <img src="assets/icons/LanguageSkillsIcon/python.ico" width="60">
-                <img src="assets/images/star.ico" width="30">
-                <img src="assets/images/star.ico" width="30">
+                <img id="star1" src="assets/images/star.ico" width="30">
+                <img id="star2" src="assets/images/star.ico" width="30">
 
-                <pre style="font-family: 'Times New Roman'">
+                <p>
                     Python is an interpreted, object-
                     oriented,high-level programming
                     language with dynamic semantics. ...
@@ -400,46 +506,46 @@
                     emphasizes readability and therefore
                     reduces the cost of program
                     maintenance
-                </pre>
+                </p>
             </section>
             <!--java-->
-            <section>
-                <h2>JAVA</h2>
+            <section class="two">
+                <h2 class="skillheader">JAVA</h2>
                 <img src="assets/icons/LanguageSkillsIcon/java.ico" width="60">
-                <img src="assets/images/star.ico" width="30">
-                <img src="assets/images/star.ico" width="30">
-                <img src="assets/images/star.ico" width="30">
+                <img id="star3" src="assets/images/star.ico" width="30">
+                <img id="star4" src="assets/images/star.ico" width="30">
+                <img id="star5" src="assets/images/star.ico" width="30">
 
-                <pre style="font-family: 'Times New Roman'">
+                <p>
                     Java is a general-purpose, class-
                     based, object-oriented programming
                     language designed for having lesser
                     implementation dependencies. It is a
                     computing platform for application
                     development
-                </pre>
+                </p>
             </section>
             <!--hibernate-->
-            <section>
-                <h2>HIBERNATE</h2>
+            <section class="three">
+                <h2 class="skillheader">HIBERNATE</h2>
                 <!--<img src="assets/icons/LanguageSkillsIcon/python.ico" width="60">-->
-                <img src="assets/images/star.ico" width="30">
+                <img id="star6" src="assets/images/star.ico" width="30">
 
-                <pre style="font-family: 'Times New Roman'">
+                <p>
                     More than an ORM, discover the
                     Hibernate galaxy. Hibernate ORM.
                     Domain model persistence for
                     relational databases.
-            </pre>
+                </p>
             </section>
             <!--css-->
-            <section>
-                <h2>CSS</h2>
+            <section class="four">
+                <h2 class="skillheader">CSS</h2>
                 <img src="assets/icons/LanguageSkillsIcon/css.ico" width="60">
-                <img src="assets/images/star.ico" width="30">
-                <img src="assets/images/star.ico" width="30">
+                <img id="star7" src="assets/images/star.ico" width="30">
+                <img id="star8" src="assets/images/star.ico" width="30">
 
-                <pre style="font-family: 'Times New Roman'">
+                <p>
                     CSS is the language for describing
                     the presentation of Web pages,
                     including colors, layout, and fonts. It
@@ -447,33 +553,33 @@
                     to different types of devices, such as
                     large screens, small screens, or
                     printers
-                </pre>
+                </p>
             </section>
             <!--html-->
-            <section>
-                <h2>HTML</h2>
+            <section class="five">
+                <h2 class="skillheader">HTML</h2>
                 <img src="assets/icons/LanguageSkillsIcon/html.ico" width="60">
-                <img src="assets/images/star.ico" width="30">
-                <img src="assets/images/star.ico" width="30">
-                <img src="assets/images/star.ico" width="30">
+                <img id="star9" src="assets/images/star.ico" width="30">
+                <img id="star10" src="assets/images/star.ico" width="30">
+                <img id="star11" src="assets/images/star.ico" width="30">
 
-                <pre style="font-family: 'Times New Roman'">
+                <p>
                     HyperText Markup Language (HTML)
                     is the set of markup symbols or
                     codes inserted into a file intended for
                     display on the Internet. The markup
                     tells web browsers how to display a
                     web page's words and images
-                </pre>
+                </p>
             </section>
             <!--sql-->
-            <section>
-                <h2>SQL</h2>
+            <section class="six">
+                <h2 class="skillheader">SQL</h2>
                 <img src="assets/icons/LanguageSkillsIcon/sql.ico" width="60">
-                <img src="assets/images/star.ico" width="30">
-                <img src="assets/images/star.ico" width="30">
+                <img id="star12" src="assets/images/star.ico" width="30">
+                <img id="star13" src="assets/images/star.ico" width="30">
 
-                <pre style="font-family: 'Times New Roman'">
+                <p>
                     MySQL is an Oracle-backed open
                     source relational database
                     management system (RDBMS)
@@ -481,7 +587,7 @@
                     (SQL). MySQL runs on virtually all
                     platforms, including Linux, UNIX and
                     Windows. ...
-                </pre>
+                </p>
             </section>
         </section>
         <!--arrow-->
