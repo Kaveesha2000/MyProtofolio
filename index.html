@@ -92,6 +92,55 @@
         }
 
         /*Name*/
+        #nameAnimation {
+            position: relative;
+            color: black;
+            -webkit-text-stroke: 0.3vw black;
+        }
+
+        #nameAnimation::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            color: #44C6E2;
+            -webkit-text-stroke: 0vw black;
+            border-right: 2px solid #44C6E2;
+            overflow: hidden;
+            animation: animate 6s linear infinite;
+        }
+
+        /*Job*/
+        #jobAnimation {
+            position: relative;
+            color: black;
+            -webkit-text-stroke: 0.3vw black;
+        }
+
+        #jobAnimation::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            color: #44C6E2;
+            -webkit-text-stroke: 0vw black;
+            border-right: 2px solid #44C6E2;
+            overflow: hidden;
+            animation: animate 6s linear infinite;
+        }
+
+        @keyframes animate {
+            0%, 10%, 100% {
+                width: 0;
+            }
+            70%, 90% {
+                width: 100%;
+            }
+        }
         #Home > section:nth-child(1) > h1 {
             position: absolute;
             margin: auto;
@@ -123,7 +172,6 @@
 
         /*Page 02-About me*/
         /*=======================================================*/
-
         #About_me {
             position: relative;
             background-color: black;
@@ -196,7 +244,7 @@
             background-color: black;
             width: 100%;
             height: 100vh;
-            border: 2px solid white;
+            /*border: 2px solid white;*/
         }
 
         #header4 {
@@ -216,18 +264,17 @@
             top: 70px;
             left: 40px;
             margin: auto;
-            grid-template-rows: repeat(2,240px);
-            grid-template-columns: repeat(3,380px);
-
-
+            grid-template-rows: repeat(2, 240px);
+            grid-template-columns: repeat(3, 380px);
             grid-gap: 40px;
         }
 
-        #grid>section{
+        #grid > section {
             border: 1px solid white;
             background-color: #131111;
             box-shadow: 20px 18px 7px 1px #888888;
         }
+
         /*=======================================================*/
     </style>
 
@@ -253,8 +300,8 @@
     <section id="Home">
         <!--personal details-->
         <section>
-            <h1>Kaveesha Sanduni Kodikara</h1>
-            <h4>Software Engineer</h4>
+            <h1 data-text="Kaveesha_Sanduni_Kodikara" id="nameAnimation">Kaveesha_Sanduni_Kodikara</h1>
+            <h4 data-text="Software_Engineer" id="jobAnimation">Software_Engineer</h4>
             <nav id="media_links">
                 <a href="https://twitter.com/kaveeshasandun1" style="padding: 10px">
                     <img alt="twitter" height="30" src="assets/icons/twitter.png">
