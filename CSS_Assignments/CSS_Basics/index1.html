@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case 1 (Using Absolute & Relative)</title>
+    <link href="assets/CSS/normalize.css" rel="stylesheet">
+    <style>
+
+        /*step no-01*/
+        body > section {
+            width: 50vw;
+            height: 50vh;
+            position: absolute;
+        }
+        body>section:nth-child(1){
+            background: red;
+            left: 0;
+            top: 0;
+        }
+        body>section:nth-child(2){
+            background: green;
+            right: 0;
+            top: 0;
+        }
+        body>section:nth-child(3){
+            background: orange;
+            bottom: 0;
+            left: 0;
+        }
+
+        body>section:nth-child(4){
+            background: deeppink;
+            right: 0;
+            bottom: 0;
+        }
+        /*step no-02*/
+        body>section:nth-child(1)>div:nth-child(1){
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            z-index: 300;
+            border-radius: 100px;
+            background-color: white;
+            margin-left: 37.5vh;
+            margin-top: 50px;
+        }
+        body>section:nth-child(2)>div:nth-child(1){
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            z-index: 300;
+            border-radius: 100px;
+            background-color: white;
+            margin-left: 42.5vh;
+            margin-top: 50px;
+        }
+        body>section:nth-child(3)>div:nth-child(1){
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            z-index: 300;
+            border-radius: 100px;
+            background-color: white;
+            margin-left: 37.5vh;
+            margin-top: 75px;
+        }
+        body>section:nth-child(4)>div:nth-child(1){
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            z-index: 300;
+            border-radius: 100px;
+            background-color: white;
+            margin-left: 42.5vh;
+            margin-top: 75px;
+        }
+        /*step no-03*/
+        body>section:nth-child(1)>div:nth-child(1)>section:nth-child(1){
+            width: 75px;
+            height: 75px;
+            position: absolute;
+            background-color: red;
+            margin-left: 60px;
+            margin-top: 60px;
+        }
+        body>section:nth-child(2)>div:nth-child(1)>section:nth-child(1){
+            width: 75px;
+            height: 75px;
+            position: absolute;
+            background-color: red;
+            margin-left: 60px;
+            margin-top: 60px;
+        }
+        body>section:nth-child(3)>div:nth-child(1)>section:nth-child(1){
+            width: 75px;
+            height: 75px;
+            position: absolute;
+            background-color: red;
+            margin-left: 60px;
+            margin-top: 60px;
+        }
+        body>section:nth-child(4)>div:nth-child(1)>section:nth-child(1){
+            width: 75px;
+            height: 75px;
+            position: absolute;
+            background-color: red;
+            margin-left: 60px;
+            margin-top: 60px;
+        }
+        /*step no-04*/
+        body>div{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            background-color: white;
+            top: 200px;
+            left: 580px;
+        }
+        /*step no-05*/
+        body>div>section:nth-child(1){
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            background-color: red;
+            border-radius: 100px;
+            margin-left: 50px;
+            margin-top: 50px;
+        }
+        /*step no-06*/
+
+        /*red->margin*/
+        body>section:nth-child(1)>div:nth-child(2){
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            border-bottom-right-radius: 100px;
+            position: absolute;
+            margin: 0;
+        }
+        /*red->middle*/
+        body>section:nth-child(1)>div:nth-child(3){
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            border-bottom-left-radius: 100px;
+            position: absolute;
+            margin-left: 42.7vw;
+        }
+        /*green->margin*/
+        body>section:nth-child(2)>div:nth-child(2){
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            border-bottom-right-radius: 100px;
+            position: absolute;
+        }
+        /*green->middle*/
+        body>section:nth-child(2)>div:nth-child(3){
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            border-bottom-left-radius: 100px;
+            position: absolute;
+            margin-left: 42.7vw;
+        }
+        /*orange->margin*/
+        body>section:nth-child(3)>div:nth-child(2){
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            border-top-right-radius: 100px;
+            position: absolute;
+            margin-bottom: auto;
+            margin-top: 34vh;
+        }
+        /*orange->middle*/
+        body>section:nth-child(3)>div:nth-child(3){
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            border-top-left-radius: 100px;
+            position: absolute;
+            margin-left: 42.7vw;
+            margin-top: 34vh;
+        }
+        /*deeppink->margin*/
+        body>section:nth-child(4)>div:nth-child(2){
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            border-top-left-radius: 100px;
+            position: absolute;
+            margin-top: 34vh;
+            margin-left: 42.7vw;
+        }
+        /*deeppink->middle*/
+        body>section:nth-child(4)>div:nth-child(3){
+            width: 100px;
+            height: 100px;
+            background-color: white;
+            border-top-right-radius: 100px;
+            position: absolute;
+            margin-top: 34vh;
+        }
+    </style>
+</head>
+<body>
+<!--main sections-->
+
+<!--red-->
+<section>
+    <!--circles-->
+    <div>
+        <!--squares-->
+        <section></section>
+    </div>
+    <!--1/4 circle no-01-->
+    <div></div>
+    <!--1/4 circle no-02-->
+    <div></div>
+</section>
+<!--green-->
+<section>
+    <!--circles-->
+    <div>
+        <!--squares-->
+        <section></section>
+    </div>
+    <!--1/4 circle no-01-->
+    <div></div>
+    <!--1/4 circle no-02-->
+    <div></div>
+</section>
+<!--orange-->
+<section>
+    <!--circles-->
+    <div>
+        <!--squares-->
+        <section></section>
+    </div>
+    <!--1/4 circle no-01-->
+    <div></div>
+    <!--1/4 circle no-02-->
+    <div></div>
+</section>
+<!--deeppink-->
+<section>
+    <!--circles-->
+    <div>
+        <!--squares-->
+        <section></section>
+    </div>
+    <!--1/4 circle no-01-->
+    <div></div>
+    <!--1/4 circle no-02-->
+    <div></div>
+</section>
+<!--centre design-->
+<div>
+    <!--middle circle-->
+    <section></section>
+</div>
+</body>
+</html>
