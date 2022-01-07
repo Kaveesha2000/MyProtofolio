@@ -4,988 +4,1145 @@
 
 <head>
 
-  <title>Kaveesha Sanduni Kodikara</title>
-
-  <meta content="Kaveesha Sanduni Kodikara,IJSE,Software Engineer,Web Profile" name="keywords">
-  <meta content="This is my personal protofolio I'm Software Engineer & Graphic Designer" name="description">
-  <meta content="width=device-width initial-scale=1" name="viewport">
-  <meta content="#F06E4C" name="theme-color">
-
-  <link href="assets/icons/removebgLogo.png" rel="icon">
-  <link href="assets/css/styles.css" rel="stylesheet">
-  <link href="assets/css/normalize.css" rel="stylesheet">
-  <link href="assets/css/fonts/css/all.css" rel="stylesheet">
-
-  <style>
-    /*navigation styles for header*/
-    /*=======================================================*/
-
-    header > nav {
-      display: flex;
-      z-index: 10;
-      align-items: center;
-      justify-content: space-around;
-      position: fixed;
-      background-color: black;
-      width: 100vw;
-      height: 50px;
-      box-shadow: 2px 4px 3px 2px darkgray;
-    }
-
-    header > nav {
-      display: flex;
-      list-style: none;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin: auto;
-      top: 0;
-    }
-
-    header > nav > ul {
-      position: absolute;
-      bottom: 0;
-      top: 20px;
-      right: 20px;
-      margin: auto;
-      height: 40px;
-      font-size: 15px;
-      font-family: 'Lobster', cursive;
-      list-style: none;
-    }
-
-    header > nav > ul > li {
-      padding: 0 10px 0 10px;
-      display: inline;
-    }
-
-    header > nav > ul > li > a {
-      text-decoration: none;
-      color: white;
-    }
-
-    header > nav > ul > li > a:hover {
-      cursor: pointer;
-      color: #44C6E2;
-    }
-
-    /*=======================================================*/
-
-    /*Page 01-Home*/
-    /*=======================================================*/
-    /*logo in first section*/
-    #Home {
-      position: relative;
-      background-color: black;
-      width: 100%;
-      height: 100vh;
-      /*border: 2px solid #44C6E2;*/
-      background-image: url("assets/images/background.jpeg");
-    }
-
-    #Home > section:nth-child(2) > img {
-      position: absolute;
-      margin: auto;
-      right: 150px;
-      top: 0;
-      bottom: 0;
-      border-radius: 100%;
-      border: 2px solid #44C6E2;
-    }
-
-    /*Name*/
-    #nameAnimation {
-      position: relative;
-      color: black;
-      -webkit-text-stroke: 0.3vw black;
-    }
-
-    #nameAnimation::before {
-      content: attr(data-text);
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 0;
-      height: 100%;
-      color: #44C6E2;
-      -webkit-text-stroke: 0vw black;
-      border-right: 2px solid #44C6E2;
-      overflow: hidden;
-      animation: animate 6s linear infinite;
-    }
-
-    /*Job*/
-    #jobAnimation {
-      position: relative;
-      color: black;
-      -webkit-text-stroke: 0.3vw black;
-    }
-
-    #jobAnimation::before {
-      content: attr(data-text);
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 0;
-      height: 100%;
-      color: #44C6E2;
-      -webkit-text-stroke: 0vw black;
-      border-right: 2px solid #44C6E2;
-      overflow: hidden;
-      animation: animate 6s linear infinite;
-    }
-
-    @keyframes animate {
-      0%, 10%, 100% {
-        width: 0;
-      }
-      70%, 90% {
-        width: 100%;
-      }
-    }
-
-    #Home > section:nth-child(1) > h1 {
-      position: absolute;
-      margin: auto;
-      top: 350px;
-      left: 50px;
-      font-family: "Arial Rounded MT Bold";
-      font-size: 50px;
-      color: white;
-    }
-
-    #Home > section:nth-child(1) > h4 {
-      position: absolute;
-      margin: auto;
-      top: 420px;
-      left: 50px;
-      font-family: "Tw Cen MT Condensed Extra Bold";
-      font-size: 30px;
-      color: white;
-    }
-
-    #media_links {
-      position: absolute;
-      margin: auto;
-      top: 475px;
-      left: 42px;
-    }
-
-    /*=======================================================*/
-
-    /*Page 02-About me*/
-    /*=======================================================*/
-    #About_me {
-      position: relative;
-      background-color: black;
-      width: 100%;
-      height: 100vh;
-    }
-
-    #header2 {
-      position: absolute;
-      font-size: 30px;
-      color: white;
-      margin: auto;
-      left: 20px;
-      top: 10px;
-      text-shadow: 4px 4px 5px darkgrey;
-    }
-
-    #Myphoto {
-      position: absolute;
-      margin: auto;
-      left: 70px;
-      top: 80px;
-      width: 21vw;
-      height: 80vh;
-      border-radius: 100%;
-      box-shadow: 16px 4px 12px 1px darkgrey;
-    }
-
-    #details {
-      position: absolute;
-      right: 200px;
-      top: 100px;
-      font-size: 25px;
-      margin: auto;
-      color: white;
-    }
-
-    #DownloadBtn {
-      width: 200px;
-      height: 30px;
-      position: absolute;
-      margin: auto;
-      right: 100px;
-      top: 550px;
-      background-color: forestgreen;
-      color: white;
-      font-size: 20px;
-      font-weight: bold;
-      border: 2px solid white;
-    }
-
-    #DownloadBtn:hover {
-      cursor: pointer;
-      box-shadow: 2px 3px 6px 2px darkgrey;
-    }
-
-    /*=======================================================*/
-
-    /*Page 03-Education*/
-    /*=======================================================*/
-    #Education {
-      position: relative;
-      background-color: black;
-      width: 100%;
-      height: 100vh;
-    }
-
-    #header3 {
-      position: absolute;
-      font-size: 30px;
-      color: white;
-      margin: auto;
-      left: 20px;
-      top: 10px;
-      text-shadow: 4px 4px 5px darkgrey;
-    }
-
-    #sqare_1 {
-      position: absolute;
-      top: 451px;
-      left: 169px;
-      color: #44C6E2;
-      font-size: 120px;
-    }
-
-    #sqare_7 {
-      position: absolute;
-      top: 451px;
-      left: 358px;
-      color: #44C6E2;
-      font-size: 120px;
-    }
-
-    #sqare_8 {
-      position: absolute;
-      top: 422px;
-      left: 358px;
-      color: #44C6E2;
-      font-size: 120px;
-    }
-
-    #sqare_9 {
-      position: absolute;
-      top: 451px;
-      left: 558px;
-      color: #44C6E2;
-      font-size: 120px;
-    }
-
-    #sqare_10 {
-      position: absolute;
-      top: 364px;
-      left: 558px;
-      color: #44C6E2;
-      font-size: 120px;
-    }
-
-    #sqare_4 {
-      position: absolute;
-      top: 451px;
-      right: 276px;
-      color: #44C6E2;
-      font-size: 120px;
-    }
-
-    #sqare_12 {
-      position: absolute;
-      top: 373px;
-      right: 276px;
-      color: #44C6E2;
-      font-size: 120px;
-    }
-
-    #sqare_13 {
-      position: absolute;
-      top: 294px;
-      right: 276px;
-      color: #44C6E2;
-      font-size: 120px;
-    }
-
-    #sqare_15 {
-      position: absolute;
-      top: 212px;
-      right: 276px;
-      color: #44C6E2;
-      font-size: 120px;
-    }
-
-    #sqare_16 {
-      position: absolute;
-      top: 451px;
-      right: 482px;
-      color: #44C6E2;
-      font-size: 120px;
-    }
-
-    #sqare_17 {
-      position: absolute;
-      top: 367px;
-      right: 482px;
-      color: #44C6E2;
-      font-size: 120px;
-    }
-
-    #sqare_18 {
-      position: absolute;
-      top: 280px;
-      right: 482px;
-      color: #44C6E2;
-      font-size: 120px;
-    }
-
-    /*images- logos*/
-    #primary {
-      position: absolute;
-      width: 120px;
-      height: 120px;
-      left: 164px;
-      top: 320px;
-    }
-
-    #ol {
-      position: absolute;
-      width: 120px;
-      height: 120px;
-      left: 358px;
-      top: 295px;
-    }
-
-    #al {
-      position: absolute;
-      width: 170px;
-      height: 170px;
-      left: 527px;
-      top: 206px;
-    }
-
-    #dip1 {
-      position: absolute;
-      top: 186px;
-      width: 130px;
-      height: 120px;
-      left: 752px;
-    }
-
-    #dip2 {
-      position: absolute;
-      top: 88px;
-      width: 90px;
-      left: 976px;
-      height: 110px;
-    }
-
-    /*years*/
-
-    #pLevel {
-      position: absolute;
-      left: 163px;
-      bottom: 15px;
-      font-size: 15px;
-      color: white;
-      text-shadow: 4px 4px 5px darkgrey;
-    }
-
-    #oLevel {
-      position: absolute;
-      left: 380px;
-      bottom: 15px;
-      font-size: 15px;
-      color: white;
-      text-shadow: 4px 4px 5px darkgrey;
-    }
-
-    #aLevel {
-      position: absolute;
-      left: 580px;
-      bottom: 15px;
-      font-size: 15px;
-      color: white;
-      text-shadow: 4px 4px 5px darkgrey;
-    }
-
-    #dip11Level {
-      position: absolute;
-      left: 795px;
-      bottom: 15px;
-      font-size: 15px;
-      color: white;
-      text-shadow: 4px 4px 5px darkgrey;
-    }
-
-    #dip12Level {
-      position: absolute;
-      left: 760px;
-      bottom: -5px;
-      font-size: 15px;
-      color: white;
-      text-shadow: 4px 4px 5px darkgrey;
-    }
-
-    #dip21Level {
-      position: absolute;
-      left: 972px;
-      bottom: 15px;
-      font-size: 15px;
-      color: white;
-      text-shadow: 4px 4px 5px darkgrey;
-    }
-
-    #dip22Level {
-      position: absolute;
-      left: 965px;
-      bottom: -5px;
-      font-size: 15px;
-      color: white;
-      text-shadow: 4px 4px 5px darkgrey;
-    }
-
-    /*Arrows*/
-    #arrow1 {
-      position: absolute;
-      bottom: 73px;
-      left: 275px;
-      transform: rotate(-21deg);
-      width: 80px;
-      height: 60px;
-      color: white;
-    }
-
-    #arrow2 {
-      position: absolute;
-      bottom: 123px;
-      left: 471px;
-      transform: rotate(-22deg);
-      width: 80px;
-      height: 60px;
-      color: white;
-    }
-
-    #arrow3 {
-      position: absolute;
-      bottom: 187px;
-      left: 674px;
-      transform: rotate(-22deg);
-      width: 80px;
-      height: 60px;
-      color: white;
-    }
-
-    #arrow4 {
-      position: absolute;
-      bottom: 256px;
-      left: 878px;
-      transform: rotate(-22deg);
-      width: 80px;
-      height: 60px;
-      color: white;
-    }
-
-    /*Arrow hover*/
-    #primary {
-      transition: .6s;
-    }
-
-    #primary:hover {
-      transition: all .6s ease;
-      transform: translate(0, -30px);
-      cursor: pointer;
-    }
-
-    #ol {
-      transition: .6s;
-    }
-
-    #ol:hover {
-      transition: all .6s ease;
-      transform: translate(0, -30px);
-      cursor: pointer;
-    }
-
-    #al {
-      transition: .6s;
-    }
-
-    #al:hover {
-      transition: all .6s ease;
-      transform: translate(0, -30px);
-      cursor: pointer;
-    }
-
-    #dip1 {
-      transition: .6s;
-    }
-
-    #dip1:hover {
-      transition: all .6s ease;
-      transform: translate(0, -30px);
-      cursor: pointer;
-    }
-
-    #dip2 {
-      transition: .6s;
-    }
-
-    #dip2:hover {
-      transition: all .6s ease;
-      transform: translate(0, -30px);
-      cursor: pointer;
-    }
-
-    /*=======================================================*/
-    /*Page 04-Skills*/
-    /*=======================================================*/
-    #Skills {
-      position: relative;
-      background-color: black;
-      width: 100%;
-      height: 100vh;
-    }
-
-    #header4 {
-      position: absolute;
-      font-size: 30px;
-      color: white;
-      margin: auto;
-      left: 20px;
-      top: 10px;
-      text-shadow: 4px 4px 5px darkgrey;
-    }
-
-    #grid {
-      position: absolute;
-      width: 95%;
-      height: 100vh;
-      display: grid;
-      top: 70px;
-      left: 40px;
-      margin: auto;
-      grid-template-rows: repeat(2, 240px);
-      grid-template-columns: repeat(3, 380px);
-      grid-gap: 40px;
-    }
-
-    #grid > section {
-      border: 1px solid white;
-      background-color: #131111;
-      box-shadow: 20px 18px 7px 1px #888888;
-    }
-
-    /*Inner Content*/
-
-    /*headers*/
-
-    /*=================================*/
-    .skillheader {
-      margin: 0;
-      padding: 10px;
-      color: #44C6E2;
-    }
-
-    /*=================================*/
-    /*python*/
-    .one > #star1, #star2 {
-      position: relative;
-      margin: auto;
-      left: 10px;
-      top: -20px;
-    }
-
-    #img1 {
-      left: 10px;
-      position: relative;
-      top: -8px;
-    }
-
-    .one > p {
-      font-family: 'Times New Roman';
-      margin: 0;
-      color: #44C6E2;
-      width: 299px;
-      text-align: center;
-      padding-left: 20px;
-    }
-
-    /*java*/
-    .two > #star3, #star4, #star5 {
-      position: relative;
-      margin: auto;
-      left: 10px;
-      top: -20px;
-    }
-
-    #img2 {
-      left: 10px;
-      position: relative;
-      top: -8px;
-    }
-
-    .two > p {
-      font-family: 'Times New Roman';
-      margin: 0;
-      color: #44C6E2;
-      width: 299px;
-      text-align: center;
-      padding-left: 20px;
-    }
-
-    /*hibernate*/
-    .three > #star6 {
-      position: relative;
-      margin: auto;
-      left: 10px;
-      top: -23px;
-    }
-
-    #img3 {
-      left: 10px;
-      position: relative;
-      top: -8px;
-    }
-
-    .three > p {
-      font-family: 'Times New Roman';
-      margin: 0;
-      color: #44C6E2;
-      width: 299px;
-      text-align: center;
-      padding-left: 20px;
-    }
-
-    /*css*/
-    .four > #star7, #star8 {
-      position: relative;
-      margin: auto;
-      left: 10px;
-      top: -23px;
-    }
-
-    #img4 {
-      left: 10px;
-      position: relative;
-      top: -8px;
-    }
-
-    .four > p {
-      font-family: 'Times New Roman';
-      margin: 0;
-      color: #44C6E2;
-      width: 299px;
-      text-align: center;
-      padding-left: 20px;
-    }
-
-    /*html*/
-    .five > #star9, #star10, #star11 {
-      position: relative;
-      margin: auto;
-      left: 10px;
-      top: -25px;
-    }
-
-    #img5 {
-      left: 10px;
-      position: relative;
-      top: -8px;
-    }
-
-    .five > p {
-      font-family: 'Times New Roman';
-      margin: 0;
-      color: #44C6E2;
-      width: 299px;
-      text-align: center;
-      padding-left: 20px;
-    }
-
-    /*sql*/
-    .six > #star12, #star13 {
-      position: relative;
-      margin: auto;
-      left: 10px;
-      top: -24px;
-    }
-
-    #img6 {
-      left: 10px;
-      position: relative;
-      top: -8px;
-    }
-
-    .six > p {
-      font-family: 'Times New Roman';
-      margin: 0;
-      color: #44C6E2;
-      width: 299px;
-      text-align: center;
-      padding-left: 20px;
-    }
-
-    /*=================================*/
-
-    /*Page 05-Projects*/
-    /*=======================================================*/
-    #Project {
-      position: relative;
-      background-color: black;
-      width: 100%;
-      height: 100vh;
-    }
-
-    #header5 {
-      position: absolute;
-      font-size: 30px;
-      color: white;
-      margin: auto;
-      left: 20px;
-      top: 10px;
-      text-shadow: 4px 4px 5px darkgrey;
-    }
-
-    #projectflex {
-      position: absolute;
-      top: 150px;
-      left: 0;
-      right: 0;
-      margin: auto;
-      display: flex;
-      border-radius: 100%;
-      justify-content: space-evenly;
-    }
-
-    #projectflex > section:nth-child(1) > img {
-      border: 2px solid #44C6E2;
-      border-radius: 100%;
-      height: 300px;
-      width: 300px;
-      box-shadow: 0px 0px 15px 10px #44c6e2;
-      transition: .6s;
-    }
-
-    #projectflex > section:nth-child(2) > img {
-      border: 2px solid #44C6E2;
-      border-radius: 100%;
-      height: 300px;
-      width: 300px;
-      box-shadow: 0px 0px 15px 10px #44c6e2;
-      transition: .6s;
-    }
-
-    #projectflex > section:nth-child(3) > img {
-      border: 2px solid #44C6E2;
-      border-radius: 100%;
-      height: 300px;
-      width: 300px;
-      box-shadow: 0px 0px 15px 10px #44c6e2;
-      transition: .6s;
-    }
-
-    #projectflex > section > img:hover {
-      transition: all .6s ease;
-      transform: translate(0, -30px);
-      cursor: pointer;
-    }
-
-    #projectflex > section:nth-child(1) > h3 {
-      position: absolute;
-      margin: auto;
-      top: 345px;
-      left: 201px;
-      font-family: cursive;
-      color: #44C6E2;
-    }
-
-    #projectflex > section:nth-child(2) > h3 {
-      position: absolute;
-      margin: auto;
-      top: 345px;
-      left: 610px;
-      color: #44C6E2;
-      font-family: cursive;
-    }
-
-    #projectflex > section:nth-child(3) > h3 {
-      position: absolute;
-      margin: auto;
-      top: 345px;
-      left: 1030px;
-      color: #44C6E2;
-      font-family: cursive;
-    }
-
-    /*=======================================================*/
-
-    /*Page 06-Services*/
-    /*=======================================================*/
-
-    #Services {
-      position: relative;
-      background-color: black;
-      width: 100%;
-      height: 75vh;
-    }
-
-    #header6 {
-      position: absolute;
-      font-size: 30px;
-      color: white;
-      margin: auto;
-      left: 20px;
-      top: 10px;
-      text-shadow: 4px 4px 5px darkgrey;
-    }
-
-    #header7 {
-      position: absolute;
-      font-size: 30px;
-      color: white;
-      margin: auto;
-      left: 20px;
-      top: 270px;
-      text-shadow: 4px 4px 5px darkgrey;
-    }
-
-    #Services>section:nth-child(1)>ul{
-      position: absolute;
-      left: 160px;
-      top: 83px;
-      padding: 20px;
-      margin: auto;
-    }
-
-    #Services>section:nth-child(1)>ul>li{
-      position: relative;
-      font-family: Ubuntu;
-      font-size: 25px;
-      color: #44C6E2;
-    }
-
-    #Services>section:nth-child(2)>ul{
-      position: absolute;
-      left: 160px;
-      top: 83px;
-      padding: 20px;
-      margin: auto;
-    }
-
-    #Services>section:nth-child(2)>ul>li{
-      position: relative;
-      top: 255px;
-      font-family: Ubuntu;
-      font-size: 25px;
-      color: #44C6E2;
-    }
-
-    #Services>section:nth-child(3)>img{
-      position: absolute;
-      top: 56px;
-      right: 85px;
-      margin: auto;
-      width: 360px;
-      height: 360px;
-      border-radius: 100%;
-    }
-    /*=======================================================*/
-
-    /*Page 08-Contact Info*/
-    /*=======================================================*/
-
-    #Contact_Info {
-      position: relative;
-      background-color: black;
-      width: 100%;
-      height: 75vh;
-    }
-
-    #header8 {
-      position: absolute;
-      font-size: 30px;
-      color: white;
-      margin: auto;
-      left: 20px;
-      top: 10px;
-      text-shadow: 4px 4px 5px darkgrey;
-    }
-
-    #desc1{
-      position: absolute;
-      font-size: 25px;
-      color: #44C6E2;
-      margin: auto;
-      left: 130px;
-      top: 70px;
-    }
-
-    /*=======================================================*/
-  </style>
+    <title>Kaveesha Sanduni Kodikara</title>
+
+    <meta content="Kaveesha Sanduni Kodikara,IJSE,Software Engineer,Web Profile" name="keywords">
+    <meta content="This is my personal protofolio I'm Software Engineer & Graphic Designer" name="description">
+    <meta content="width=device-width initial-scale=1" name="viewport">
+    <meta content="#F06E4C" name="theme-color">
+
+    <link href="assets/icons/removebgLogo.png" rel="icon">
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <link href="assets/css/normalize.css" rel="stylesheet">
+    <link href="assets/css/fonts/css/all.css" rel="stylesheet">
+
+    <style>
+        /*navigation styles for header*/
+        /*=======================================================*/
+
+        header > nav {
+            display: flex;
+            z-index: 10;
+            align-items: center;
+            justify-content: space-around;
+            position: fixed;
+            background-color: black;
+            width: 100vw;
+            height: 50px;
+            box-shadow: 2px 4px 3px 2px darkgray;
+        }
+
+        header > nav {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: auto;
+            top: 0;
+        }
+
+        header > nav > ul {
+            position: absolute;
+            bottom: 0;
+            top: 20px;
+            right: 20px;
+            margin: auto;
+            height: 40px;
+            font-size: 15px;
+            font-family: 'Lobster', cursive;
+            list-style: none;
+        }
+
+        header > nav > ul > li {
+            padding: 0 10px 0 10px;
+            display: inline;
+        }
+
+        header > nav > ul > li > a {
+            text-decoration: none;
+            color: white;
+        }
+
+        header > nav > ul > li > a:hover {
+            cursor: pointer;
+            color: #44C6E2;
+        }
+
+        /*=======================================================*/
+
+        /*Page 01-Home*/
+        /*=======================================================*/
+        /*logo in first section*/
+        #Home {
+            position: relative;
+            background-color: black;
+            width: 100%;
+            height: 100vh;
+            /*border: 2px solid #44C6E2;*/
+            background-image: url("assets/images/background.jpeg");
+        }
+
+        #Home > section:nth-child(2) > img {
+            position: absolute;
+            margin: auto;
+            right: 150px;
+            top: 0;
+            bottom: 0;
+            border-radius: 100%;
+            border: 2px solid #44C6E2;
+        }
+
+        /*Name*/
+        #nameAnimation {
+            position: relative;
+            color: black;
+            -webkit-text-stroke: 0.3vw black;
+        }
+
+        #nameAnimation::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            color: #44C6E2;
+            -webkit-text-stroke: 0vw black;
+            border-right: 2px solid #44C6E2;
+            overflow: hidden;
+            animation: animate 6s linear infinite;
+        }
+
+        /*Job*/
+        #jobAnimation {
+            position: relative;
+            color: black;
+            -webkit-text-stroke: 0.3vw black;
+        }
+
+        #jobAnimation::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            color: #44C6E2;
+            -webkit-text-stroke: 0vw black;
+            border-right: 2px solid #44C6E2;
+            overflow: hidden;
+            animation: animate 6s linear infinite;
+        }
+
+        @keyframes animate {
+            0%, 10%, 100% {
+                width: 0;
+            }
+            70%, 90% {
+                width: 100%;
+            }
+        }
+
+        #Home > section:nth-child(1) > h1 {
+            position: absolute;
+            margin: auto;
+            top: 350px;
+            left: 50px;
+            font-family: "Arial Rounded MT Bold";
+            font-size: 50px;
+            color: white;
+        }
+
+        #Home > section:nth-child(1) > h4 {
+            position: absolute;
+            margin: auto;
+            top: 420px;
+            left: 50px;
+            font-family: "Tw Cen MT Condensed Extra Bold";
+            font-size: 30px;
+            color: white;
+        }
+
+        #media_links {
+            position: absolute;
+            margin: auto;
+            top: 475px;
+            left: 42px;
+        }
+
+        /*=======================================================*/
+
+        /*Page 02-About me*/
+        /*=======================================================*/
+        #About_me {
+            position: relative;
+            background-color: black;
+            width: 100%;
+            height: 100vh;
+        }
+
+        #header2 {
+            position: absolute;
+            font-size: 30px;
+            color: white;
+            margin: auto;
+            left: 20px;
+            top: 10px;
+            text-shadow: 4px 4px 5px darkgrey;
+        }
+
+        #Myphoto {
+            position: absolute;
+            margin: auto;
+            left: 70px;
+            top: 80px;
+            width: 21vw;
+            height: 80vh;
+            border-radius: 100%;
+            box-shadow: 16px 4px 12px 1px darkgrey;
+        }
+
+        #details {
+            position: absolute;
+            right: 200px;
+            top: 100px;
+            font-size: 25px;
+            margin: auto;
+            color: white;
+        }
+
+        #DownloadBtn {
+            width: 200px;
+            height: 30px;
+            position: absolute;
+            margin: auto;
+            right: 100px;
+            top: 550px;
+            background-color: forestgreen;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            border: 2px solid white;
+        }
+
+        #DownloadBtn:hover {
+            cursor: pointer;
+            box-shadow: 2px 3px 6px 2px darkgrey;
+        }
+
+        /*=======================================================*/
+
+        /*Page 03-Education*/
+        /*=======================================================*/
+        #Education {
+            position: relative;
+            background-color: black;
+            width: 100%;
+            height: 100vh;
+        }
+
+        #header3 {
+            position: absolute;
+            font-size: 30px;
+            color: white;
+            margin: auto;
+            left: 20px;
+            top: 10px;
+            text-shadow: 4px 4px 5px darkgrey;
+        }
+
+        #sqare_1 {
+            position: absolute;
+            top: 451px;
+            left: 169px;
+            color: #44C6E2;
+            font-size: 120px;
+        }
+
+        #sqare_7 {
+            position: absolute;
+            top: 451px;
+            left: 358px;
+            color: #44C6E2;
+            font-size: 120px;
+        }
+
+        #sqare_8 {
+            position: absolute;
+            top: 422px;
+            left: 358px;
+            color: #44C6E2;
+            font-size: 120px;
+        }
+
+        #sqare_9 {
+            position: absolute;
+            top: 451px;
+            left: 558px;
+            color: #44C6E2;
+            font-size: 120px;
+        }
+
+        #sqare_10 {
+            position: absolute;
+            top: 364px;
+            left: 558px;
+            color: #44C6E2;
+            font-size: 120px;
+        }
+
+        #sqare_4 {
+            position: absolute;
+            top: 451px;
+            right: 276px;
+            color: #44C6E2;
+            font-size: 120px;
+        }
+
+        #sqare_12 {
+            position: absolute;
+            top: 373px;
+            right: 276px;
+            color: #44C6E2;
+            font-size: 120px;
+        }
+
+        #sqare_13 {
+            position: absolute;
+            top: 294px;
+            right: 276px;
+            color: #44C6E2;
+            font-size: 120px;
+        }
+
+        #sqare_15 {
+            position: absolute;
+            top: 212px;
+            right: 276px;
+            color: #44C6E2;
+            font-size: 120px;
+        }
+
+        #sqare_16 {
+            position: absolute;
+            top: 451px;
+            right: 482px;
+            color: #44C6E2;
+            font-size: 120px;
+        }
+
+        #sqare_17 {
+            position: absolute;
+            top: 367px;
+            right: 482px;
+            color: #44C6E2;
+            font-size: 120px;
+        }
+
+        #sqare_18 {
+            position: absolute;
+            top: 280px;
+            right: 482px;
+            color: #44C6E2;
+            font-size: 120px;
+        }
+
+        /*images- logos*/
+        #primary {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            left: 164px;
+            top: 320px;
+        }
+
+        #ol {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            left: 358px;
+            top: 295px;
+        }
+
+        #al {
+            position: absolute;
+            width: 170px;
+            height: 170px;
+            left: 527px;
+            top: 206px;
+        }
+
+        #dip1 {
+            position: absolute;
+            top: 186px;
+            width: 130px;
+            height: 120px;
+            left: 752px;
+        }
+
+        #dip2 {
+            position: absolute;
+            top: 88px;
+            width: 90px;
+            left: 976px;
+            height: 110px;
+        }
+
+        /*years*/
+
+        #pLevel {
+            position: absolute;
+            left: 163px;
+            bottom: 15px;
+            font-size: 15px;
+            color: white;
+            text-shadow: 4px 4px 5px darkgrey;
+        }
+
+        #oLevel {
+            position: absolute;
+            left: 380px;
+            bottom: 15px;
+            font-size: 15px;
+            color: white;
+            text-shadow: 4px 4px 5px darkgrey;
+        }
+
+        #aLevel {
+            position: absolute;
+            left: 580px;
+            bottom: 15px;
+            font-size: 15px;
+            color: white;
+            text-shadow: 4px 4px 5px darkgrey;
+        }
+
+        #dip11Level {
+            position: absolute;
+            left: 795px;
+            bottom: 15px;
+            font-size: 15px;
+            color: white;
+            text-shadow: 4px 4px 5px darkgrey;
+        }
+
+        #dip12Level {
+            position: absolute;
+            left: 760px;
+            bottom: -5px;
+            font-size: 15px;
+            color: white;
+            text-shadow: 4px 4px 5px darkgrey;
+        }
+
+        #dip21Level {
+            position: absolute;
+            left: 972px;
+            bottom: 15px;
+            font-size: 15px;
+            color: white;
+            text-shadow: 4px 4px 5px darkgrey;
+        }
+
+        #dip22Level {
+            position: absolute;
+            left: 965px;
+            bottom: -5px;
+            font-size: 15px;
+            color: white;
+            text-shadow: 4px 4px 5px darkgrey;
+        }
+
+        /*Arrows*/
+        #arrow1 {
+            position: absolute;
+            bottom: 73px;
+            left: 275px;
+            transform: rotate(-21deg);
+            width: 80px;
+            height: 60px;
+            color: white;
+        }
+
+        #arrow2 {
+            position: absolute;
+            bottom: 123px;
+            left: 471px;
+            transform: rotate(-22deg);
+            width: 80px;
+            height: 60px;
+            color: white;
+        }
+
+        #arrow3 {
+            position: absolute;
+            bottom: 187px;
+            left: 674px;
+            transform: rotate(-22deg);
+            width: 80px;
+            height: 60px;
+            color: white;
+        }
+
+        #arrow4 {
+            position: absolute;
+            bottom: 256px;
+            left: 878px;
+            transform: rotate(-22deg);
+            width: 80px;
+            height: 60px;
+            color: white;
+        }
+
+        /*Arrow hover*/
+        #primary {
+            transition: .6s;
+        }
+
+        #primary:hover {
+            transition: all .6s ease;
+            transform: translate(0, -30px);
+            cursor: pointer;
+        }
+
+        #ol {
+            transition: .6s;
+        }
+
+        #ol:hover {
+            transition: all .6s ease;
+            transform: translate(0, -30px);
+            cursor: pointer;
+        }
+
+        #al {
+            transition: .6s;
+        }
+
+        #al:hover {
+            transition: all .6s ease;
+            transform: translate(0, -30px);
+            cursor: pointer;
+        }
+
+        #dip1 {
+            transition: .6s;
+        }
+
+        #dip1:hover {
+            transition: all .6s ease;
+            transform: translate(0, -30px);
+            cursor: pointer;
+        }
+
+        #dip2 {
+            transition: .6s;
+        }
+
+        #dip2:hover {
+            transition: all .6s ease;
+            transform: translate(0, -30px);
+            cursor: pointer;
+        }
+
+        /*=======================================================*/
+        /*Page 04-Skills*/
+        /*=======================================================*/
+        #Skills {
+            position: relative;
+            background-color: black;
+            width: 100%;
+            height: 100vh;
+        }
+
+        #header4 {
+            position: absolute;
+            font-size: 30px;
+            color: white;
+            margin: auto;
+            left: 20px;
+            top: 10px;
+            text-shadow: 4px 4px 5px darkgrey;
+        }
+
+        #grid {
+            position: absolute;
+            width: 95%;
+            height: 100vh;
+            display: grid;
+            top: 70px;
+            left: 40px;
+            margin: auto;
+            grid-template-rows: repeat(2, 240px);
+            grid-template-columns: repeat(3, 380px);
+            grid-gap: 40px;
+        }
+
+        #grid > section {
+            border: 1px solid white;
+            background-color: #131111;
+            box-shadow: 20px 18px 7px 1px #888888;
+        }
+
+        /*Inner Content*/
+
+        /*headers*/
+
+        /*=================================*/
+        .skillheader {
+            margin: 0;
+            padding: 10px;
+            color: #44C6E2;
+        }
+
+        /*=================================*/
+        /*python*/
+        .one > #star1, #star2 {
+            position: relative;
+            margin: auto;
+            left: 10px;
+            top: -20px;
+        }
+
+        #img1 {
+            left: 10px;
+            position: relative;
+            top: -8px;
+        }
+
+        .one > p {
+            font-family: 'Times New Roman';
+            margin: 0;
+            color: #44C6E2;
+            width: 299px;
+            text-align: center;
+            padding-left: 20px;
+        }
+
+        /*java*/
+        .two > #star3, #star4, #star5 {
+            position: relative;
+            margin: auto;
+            left: 10px;
+            top: -20px;
+        }
+
+        #img2 {
+            left: 10px;
+            position: relative;
+            top: -8px;
+        }
+
+        .two > p {
+            font-family: 'Times New Roman';
+            margin: 0;
+            color: #44C6E2;
+            width: 299px;
+            text-align: center;
+            padding-left: 20px;
+        }
+
+        /*hibernate*/
+        .three > #star6 {
+            position: relative;
+            margin: auto;
+            left: 10px;
+            top: -23px;
+        }
+
+        #img3 {
+            left: 10px;
+            position: relative;
+            top: -8px;
+        }
+
+        .three > p {
+            font-family: 'Times New Roman';
+            margin: 0;
+            color: #44C6E2;
+            width: 299px;
+            text-align: center;
+            padding-left: 20px;
+        }
+
+        /*css*/
+        .four > #star7, #star8 {
+            position: relative;
+            margin: auto;
+            left: 10px;
+            top: -23px;
+        }
+
+        #img4 {
+            left: 10px;
+            position: relative;
+            top: -8px;
+        }
+
+        .four > p {
+            font-family: 'Times New Roman';
+            margin: 0;
+            color: #44C6E2;
+            width: 299px;
+            text-align: center;
+            padding-left: 20px;
+        }
+
+        /*html*/
+        .five > #star9, #star10, #star11 {
+            position: relative;
+            margin: auto;
+            left: 10px;
+            top: -25px;
+        }
+
+        #img5 {
+            left: 10px;
+            position: relative;
+            top: -8px;
+        }
+
+        .five > p {
+            font-family: 'Times New Roman';
+            margin: 0;
+            color: #44C6E2;
+            width: 299px;
+            text-align: center;
+            padding-left: 20px;
+        }
+
+        /*sql*/
+        .six > #star12, #star13 {
+            position: relative;
+            margin: auto;
+            left: 10px;
+            top: -24px;
+        }
+
+        #img6 {
+            left: 10px;
+            position: relative;
+            top: -8px;
+        }
+
+        .six > p {
+            font-family: 'Times New Roman';
+            margin: 0;
+            color: #44C6E2;
+            width: 299px;
+            text-align: center;
+            padding-left: 20px;
+        }
+
+        /*=================================*/
+
+        /*Page 05-Projects*/
+        /*=======================================================*/
+        #Project {
+            position: relative;
+            background-color: black;
+            width: 100%;
+            height: 100vh;
+        }
+
+        #header5 {
+            position: absolute;
+            font-size: 30px;
+            color: white;
+            margin: auto;
+            left: 20px;
+            top: 10px;
+            text-shadow: 4px 4px 5px darkgrey;
+        }
+
+        #projectflex {
+            position: absolute;
+            top: 150px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            display: flex;
+            border-radius: 100%;
+            justify-content: space-evenly;
+        }
+
+        #projectflex > section:nth-child(1) > img {
+            border: 2px solid #44C6E2;
+            border-radius: 100%;
+            height: 300px;
+            width: 300px;
+            box-shadow: 0px 0px 15px 10px #44c6e2;
+            transition: .6s;
+        }
+
+        #projectflex > section:nth-child(2) > img {
+            border: 2px solid #44C6E2;
+            border-radius: 100%;
+            height: 300px;
+            width: 300px;
+            box-shadow: 0px 0px 15px 10px #44c6e2;
+            transition: .6s;
+        }
+
+        #projectflex > section:nth-child(3) > img {
+            border: 2px solid #44C6E2;
+            border-radius: 100%;
+            height: 300px;
+            width: 300px;
+            box-shadow: 0px 0px 15px 10px #44c6e2;
+            transition: .6s;
+        }
+
+        #projectflex > section > img:hover {
+            transition: all .6s ease;
+            transform: translate(0, -30px);
+            cursor: pointer;
+        }
+
+        #projectflex > section:nth-child(1) > h3 {
+            position: absolute;
+            margin: auto;
+            top: 345px;
+            left: 201px;
+            font-family: cursive;
+            color: #44C6E2;
+        }
+
+        #projectflex > section:nth-child(2) > h3 {
+            position: absolute;
+            margin: auto;
+            top: 345px;
+            left: 610px;
+            color: #44C6E2;
+            font-family: cursive;
+        }
+
+        #projectflex > section:nth-child(3) > h3 {
+            position: absolute;
+            margin: auto;
+            top: 345px;
+            left: 1030px;
+            color: #44C6E2;
+            font-family: cursive;
+        }
+
+        /*=======================================================*/
+
+        /*Page 06-Services*/
+        /*=======================================================*/
+
+        #Services {
+            position: relative;
+            background-color: black;
+            width: 100%;
+            height: 75vh;
+        }
+
+        #header6 {
+            position: absolute;
+            font-size: 30px;
+            color: white;
+            margin: auto;
+            left: 20px;
+            top: 10px;
+            text-shadow: 4px 4px 5px darkgrey;
+        }
+
+        #header7 {
+            position: absolute;
+            font-size: 30px;
+            color: white;
+            margin: auto;
+            left: 20px;
+            top: 270px;
+            text-shadow: 4px 4px 5px darkgrey;
+        }
+
+        #Services > section:nth-child(1) > ul {
+            position: absolute;
+            left: 160px;
+            top: 83px;
+            padding: 20px;
+            margin: auto;
+        }
+
+        #Services > section:nth-child(1) > ul > li {
+            position: relative;
+            font-family: Ubuntu;
+            font-size: 25px;
+            color: #44C6E2;
+        }
+
+        #Services > section:nth-child(2) > ul {
+            position: absolute;
+            left: 160px;
+            top: 83px;
+            padding: 20px;
+            margin: auto;
+        }
+
+        #Services > section:nth-child(2) > ul > li {
+            position: relative;
+            top: 255px;
+            font-family: Ubuntu;
+            font-size: 25px;
+            color: #44C6E2;
+        }
+
+        #Services > section:nth-child(3) > img {
+            position: absolute;
+            top: 56px;
+            right: 85px;
+            margin: auto;
+            width: 360px;
+            height: 360px;
+            border-radius: 100%;
+        }
+
+        /*=======================================================*/
+
+        /*Page 08-Contact Info*/
+        /*=======================================================*/
+
+        #Contact_Info {
+            position: relative;
+            background-color: black;
+            width: 100%;
+            height: 130vh;
+        }
+
+        #header8 {
+            position: absolute;
+            font-size: 30px;
+            color: white;
+            margin: auto;
+            left: 20px;
+            top: 10px;
+            text-shadow: 4px 4px 5px darkgrey;
+        }
+
+        #desc1 {
+            position: absolute;
+            font-size: 25px;
+            color: #44C6E2;
+            margin: auto;
+            left: 130px;
+            top: 70px;
+        }
+
+        #desc2 {
+            position: absolute;
+            font-size: 25px;
+            color: white;
+            margin: auto;
+            left: 225px;
+            top: 120px;
+        }
+
+        #contact {
+            position: absolute;
+            left: 185px;
+            top: 165px;
+        }
+
+        #contactHead {
+            position: absolute;
+            left: 185px;
+            top: 220px;
+            color: white;
+        }
+
+        #contactdesc {
+            position: absolute;
+            left: 173px;
+            top: 275px;
+            color: white;
+            font-weight: bold;
+        }
+
+        #residence {
+            position: absolute;
+            left: 645px;
+            top: 165px;
+        }
+
+        #residenceHead {
+            position: absolute;
+            left: 625px;
+            top: 220px;
+            color: white;
+        }
+
+        #residencedesc {
+            position: absolute;
+            left: 607px;
+            top: 275px;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        #mail {
+            position: absolute;
+            right: 185px;
+            top: 165px;
+        }
+
+        #mailHead {
+            position: absolute;
+            right: 183px;
+            top: 220px;
+            color: white;
+        }
+
+        #maildesc {
+            position: absolute;
+            right: 97px;
+            top: 275px;
+            color: white;
+            font-weight: bold;
+        }
+
+        #sendSMSDetails > h4:nth-child(1) {
+            position: absolute;
+            left: 230px;
+            top: 350px;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        #sendSMSDetails > h4:nth-child(2) {
+            position: absolute;
+            left: 230px;
+            top: 400px;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        #sendSMSDetails > h4:nth-child(3) {
+            position: absolute;
+            left: 230px;
+            top: 450px;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        #sendSMSDetails > h4:nth-child(4) {
+            position: absolute;
+            left: 230px;
+            top: 500px;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        #SendBtn {
+            width: 115px;
+            height: 30px;
+            position: absolute;
+            margin: auto;
+            right: 407px;
+            top: 760px;
+            background-color: royalblue;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            border: 2px solid white;
+        }
+
+        #SendBtn:hover {
+            cursor: pointer;
+            box-shadow: 2px 3px 6px 2px darkgrey;
+        }
+
+        #name{
+            position: absolute;
+            left: 358px;
+            top: 386px;
+            width: 578px;
+        }
+
+        #mail-address{
+            position: absolute;
+            left: 358px;
+            top: 435px;
+            width: 578px;
+        }
+
+        #subject{
+            position: absolute;
+            left: 358px;
+            top: 485px;
+            width: 578px;
+        }
+
+        #message{
+            position: absolute;
+            left: 358px;
+            top: 535px;
+            width: 578px;
+            height: 200px;
+        }
+        /*=======================================================*/
+    </style>
 
 </head>
 
 <body>
 <header>
-  <nav>
-    <ul>
-      <li><a href="#Home">Home</a></li>
-      <li><a href="#About_me">About me</a></li>
-      <li><a href="#Education">Education</a></li>
-      <li><a href="#Skills">Skills</a></li>
-      <li><a href="#Project">Projects</a></li>
-      <li><a href="#Services">Services</a></li>
-      <li><a href="#Contact_Info">Contact Info</a></li>
-      <li><a href="#Gallery">Gallery</a></li>
-    </ul>
-  </nav>
+    <nav>
+        <ul>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#About_me">About me</a></li>
+            <li><a href="#Education">Education</a></li>
+            <li><a href="#Skills">Skills</a></li>
+            <li><a href="#Project">Projects</a></li>
+            <li><a href="#Services">Services</a></li>
+            <li><a href="#Contact_Info">Contact Info</a></li>
+            <li><a href="#Gallery">Gallery</a></li>
+        </ul>
+    </nav>
 </header>
 <main>
-  <!--page 1-->
-  <section id="Home">
-    <!--personal details-->
-    <section>
-      <h1 data-text="Kaveesha_Sanduni_Kodikara" id="nameAnimation">Kaveesha_Sanduni_Kodikara</h1>
-      <h4 data-text="Software_Engineer" id="jobAnimation">Software_Engineer</h4>
-      <nav id="media_links">
-        <a href="https://twitter.com/kaveeshasandun1" style="padding: 10px">
-          <img alt="twitter" height="30" src="assets/icons/twitter.png">
-        </a>
-        <a href="https://www.linkedin.com/in/kaveesha-sanduni-358561201" style="padding: 10px">
-          <img alt="linkedIn" height="30" src="assets/icons/linkedIn.png">
-        </a>
-        <a href="https://github.com/Kaveesha2000" style="padding: 10px">
-          <img alt="git hub" height="30" src="assets/icons/github.png">
-        </a>
-      </nav>
+    <!--page 1-->
+    <section id="Home">
+        <!--personal details-->
+        <section>
+            <h1 data-text="Kaveesha_Sanduni_Kodikara" id="nameAnimation">Kaveesha_Sanduni_Kodikara</h1>
+            <h4 data-text="Software_Engineer" id="jobAnimation">Software_Engineer</h4>
+            <nav id="media_links">
+                <a href="https://twitter.com/kaveeshasandun1" style="padding: 10px">
+                    <img alt="twitter" height="30" src="assets/icons/twitter.png">
+                </a>
+                <a href="https://www.linkedin.com/in/kaveesha-sanduni-358561201" style="padding: 10px">
+                    <img alt="linkedIn" height="30" src="assets/icons/linkedIn.png">
+                </a>
+                <a href="https://github.com/Kaveesha2000" style="padding: 10px">
+                    <img alt="git hub" height="30" src="assets/icons/github.png">
+                </a>
+            </nav>
+        </section>
+        <!--logo-->
+        <section id="logo">
+            <img alt="Logo" src="assets/icons/logo.jpeg" width="300">
+        </section>
     </section>
-    <!--logo-->
-    <section id="logo">
-      <img alt="Logo" src="assets/icons/logo.jpeg" width="300">
-    </section>
-  </section>
 
-  <!--page 2-->
-  <section id="About_me">
-    <!--header-->
-    <section>
-      <h1 id="header2">About Me</h1>
-    </section>
-    <!--photo-->
-    <section>
-      <img id="Myphoto" src="assets/images/Gallery/5.jpeg">
-    </section>
-    <!--details-->
-    <section>
+    <!--page 2-->
+    <section id="About_me">
+        <!--header-->
+        <section>
+            <h1 id="header2">About Me</h1>
+        </section>
+        <!--photo-->
+        <section>
+            <img id="Myphoto" src="assets/images/Gallery/5.jpeg">
+        </section>
+        <!--details-->
+        <section>
                     <pre id="details" style="font-family: 'Times New Roman'">
                         I am software engineering student at Institute Of
                         Software Engineering (IJSE) who constantly seeks out
@@ -1002,325 +1159,335 @@
 
                         Contact No :- +94775520247
                     </pre>
-      <button id="DownloadBtn">Dowload CV</button>
+            <button id="DownloadBtn">Dowload CV</button>
+        </section>
     </section>
-  </section>
 
-  <!--page 3-->
-  <section id="Education">
-    <section>
-      <h1 id="header3">Education</h1>
+    <!--page 3-->
+    <section id="Education">
+        <section>
+            <h1 id="header3">Education</h1>
+        </section>
+        <section id="chart">
+
+            <img id="primary" src="assets/images/Education/darmapala.png">
+            <i class="fas fa-square" id="sqare_1"></i>
+            <h2 id="pLevel">Scholorship 2010</h2>
+
+
+            <a href="http://www.sumangalabalika.sch.lk">
+                <img id="ol" src="assets/images/Education/sumangala.png">
+            </a>
+            <i class="fas fa-square" id="sqare_7"></i>
+            <i class="fas fa-square" id="sqare_8"></i>
+            <h2 id="oLevel">O/L 2016</h2>
+
+            <a href="https://conventmatara.com">
+                <img id="al" src="assets/images/Education/convent.png">
+            </a>
+            <i class="fas fa-square" id="sqare_9"></i>
+            <i class="fas fa-square" id="sqare_10"></i>
+            <h2 id="aLevel">A/L 2020</h2>
+
+            <a href="https://www.ijse.lk">
+                <img id="dip1" src="assets/images/Education/ijse.png">
+            </a>
+            <i class="fas fa-square" id="sqare_4"></i>
+            <i class="fas fa-square" id="sqare_12"></i>
+            <i class="fas fa-square" id="sqare_13"></i>
+            <i class="fas fa-square" id="sqare_15"></i>
+            <h2 id="dip11Level">GDSE</h2>
+            <h2 id="dip12Level">(Since 2020-2022)</h2>
+
+            <a href="https://lpec.lk">
+                <img id="dip2" src="assets/images/Education/LPEC.png">
+            </a>
+            <i class="fas fa-square" id="sqare_16"></i>
+            <i class="fas fa-square" id="sqare_17"></i>
+            <i class="fas fa-square" id="sqare_18"></i>
+            <h2 id="dip21Level">HRM Diploma</h2>
+            <h2 id="dip22Level">(Since 2021-2022)</h2>
+
+        </section>
+        <section id="arrows">
+            <img id="arrow1" src="assets/images/Education/fawardarrow.ico">
+            <img id="arrow2" src="assets/images/Education/fawardarrow.ico">
+            <img id="arrow3" src="assets/images/Education/fawardarrow.ico">
+            <img id="arrow4" src="assets/images/Education/fawardarrow.ico">
+        </section>
     </section>
-    <section id="chart">
 
-      <img id="primary" src="assets/images/Education/darmapala.png">
-      <i class="fas fa-square" id="sqare_1"></i>
-      <h2 id="pLevel">Scholorship 2010</h2>
+    <!--page 4-->
+    <section id="Skills">
+        <!--heading-->
+        <section>
+            <h1 id="header4">Skills</h1>
+        </section>
+        <section id="grid">
+            <!--python-->
+            <section class="one">
+                <h2 class="skillheader">PYTHON</h2>
+                <img id="img1" src="assets/icons/LanguageSkillsIcon/python.ico" width="60">
+                <img id="star1" src="assets/images/star.ico" width="30">
+                <img id="star2" src="assets/images/star.ico" width="30">
 
+                <p>
+                    Python is an interpreted, object-
+                    oriented,high-level programming
+                    language with dynamic semantics. ...
+                    Python's simple, easy to learn syntax
+                    emphasizes readability and therefore
+                    reduces the cost of program
+                    maintenance
+                </p>
+            </section>
+            <!--java-->
+            <section class="two">
+                <h2 class="skillheader">JAVA</h2>
+                <img id="img2" src="assets/icons/LanguageSkillsIcon/java.ico" width="60">
+                <img id="star3" src="assets/images/star.ico" width="30">
+                <img id="star4" src="assets/images/star.ico" width="30">
+                <img id="star5" src="assets/images/star.ico" width="30">
 
-      <a href="http://www.sumangalabalika.sch.lk">
-        <img id="ol" src="assets/images/Education/sumangala.png">
-      </a>
-      <i class="fas fa-square" id="sqare_7"></i>
-      <i class="fas fa-square" id="sqare_8"></i>
-      <h2 id="oLevel">O/L 2016</h2>
+                <p>
+                    Java is a general-purpose, class-
+                    based, object-oriented programming
+                    language designed for having lesser
+                    implementation dependencies. It is a
+                    computing platform for application
+                    development
+                </p>
+            </section>
+            <!--hibernate-->
+            <section class="three">
+                <h2 class="skillheader">HIBERNATE</h2>
+                <img id="img3" src="assets/icons/LanguageSkillsIcon/python.ico" width="60">
+                <img id="star6" src="assets/images/star.ico" width="30">
 
-      <a href="https://conventmatara.com">
-        <img id="al" src="assets/images/Education/convent.png">
-      </a>
-      <i class="fas fa-square" id="sqare_9"></i>
-      <i class="fas fa-square" id="sqare_10"></i>
-      <h2 id="aLevel">A/L 2020</h2>
+                <p>
+                    More than an ORM, discover the
+                    Hibernate galaxy. Hibernate ORM.
+                    Domain model persistence for
+                    relational databases.
+                </p>
+            </section>
+            <!--css-->
+            <section class="four">
+                <h2 class="skillheader">CSS</h2>
+                <img id="img4" src="assets/icons/LanguageSkillsIcon/css.ico" width="60">
+                <img id="star7" src="assets/images/star.ico" width="30">
+                <img id="star8" src="assets/images/star.ico" width="30">
 
-      <a href="https://www.ijse.lk">
-        <img id="dip1" src="assets/images/Education/ijse.png">
-      </a>
-      <i class="fas fa-square" id="sqare_4"></i>
-      <i class="fas fa-square" id="sqare_12"></i>
-      <i class="fas fa-square" id="sqare_13"></i>
-      <i class="fas fa-square" id="sqare_15"></i>
-      <h2 id="dip11Level">GDSE</h2>
-      <h2 id="dip12Level">(Since 2020-2022)</h2>
+                <p>
+                    CSS is the language for describing
+                    the presentation of Web pages,
+                    including colors, layout, and fonts. It
+                    allows one to adapt the presentation
+                    to different types of devices, such as
+                    large screens, small screens, or
+                    printers
+                </p>
+            </section>
+            <!--html-->
+            <section class="five">
+                <h2 class="skillheader">HTML</h2>
+                <img id="img5" src="assets/icons/LanguageSkillsIcon/html.ico" width="60">
+                <img id="star9" src="assets/images/star.ico" width="30">
+                <img id="star10" src="assets/images/star.ico" width="30">
+                <img id="star11" src="assets/images/star.ico" width="30">
 
-      <a href="https://lpec.lk">
-        <img id="dip2" src="assets/images/Education/LPEC.png">
-      </a>
-      <i class="fas fa-square" id="sqare_16"></i>
-      <i class="fas fa-square" id="sqare_17"></i>
-      <i class="fas fa-square" id="sqare_18"></i>
-      <h2 id="dip21Level">HRM Diploma</h2>
-      <h2 id="dip22Level">(Since 2021-2022)</h2>
+                <p>
+                    HyperText Markup Language (HTML)
+                    is the set of markup symbols or
+                    codes inserted into a file intended for
+                    display on the Internet. The markup
+                    tells web browsers how to display a
+                    web page's words and images
+                </p>
+            </section>
+            <!--sql-->
+            <section class="six">
+                <h2 class="skillheader">SQL</h2>
+                <img id="img6" src="assets/icons/LanguageSkillsIcon/sql.ico" width="60">
+                <img id="star12" src="assets/images/star.ico" width="30">
+                <img id="star13" src="assets/images/star.ico" width="30">
 
+                <p>
+                    MySQL is an Oracle-backed open
+                    source relational database
+                    management system (RDBMS)
+                    based on Structured Query Language
+                    (SQL). MySQL runs on virtually all
+                    platforms, including Linux, UNIX and
+                    Windows. ...
+                </p>
+            </section>
+        </section>
+        <!--arrow-->
+        <section>
+            <img alt="foward arrow" src="assets/icons/backwardarrow.ico">
+            <img alt="foward arrow" src="assets/icons/fowardarrow.ico">
+        </section>
     </section>
-    <section id="arrows">
-      <img id="arrow1" src="assets/images/Education/fawardarrow.ico">
-      <img id="arrow2" src="assets/images/Education/fawardarrow.ico">
-      <img id="arrow3" src="assets/images/Education/fawardarrow.ico">
-      <img id="arrow4" src="assets/images/Education/fawardarrow.ico">
-    </section>
-  </section>
 
-  <!--page 4-->
-  <section id="Skills">
-    <!--heading-->
-    <section>
-      <h1 id="header4">Skills</h1>
+    <!--page 5-->
+    <section id="Project">
+        <!--heading-->
+        <section>
+            <h1 id="header5">Projects</h1>
+        </section>
+        <!--assignments-->
+        <section id="projectflex">
+            <section>
+                <img src="assets/images/Projects/Assignment.jpg">
+                <h3>Assignment</h3>
+            </section>
+            <!--stand-alone-->
+            <section>
+                <img src="assets/images/Projects/standalone.png">
+                <h3>Stand - Alone</h3>
+            </section>
+            <!--web-based-->
+            <section>
+                <img src="assets/images/Projects/webBased.jpg">
+                <h3>Web - Based</h3>
+            </section>
+        </section>
     </section>
-    <section id="grid">
-      <!--python-->
-      <section class="one">
-        <h2 class="skillheader">PYTHON</h2>
-        <img id="img1" src="assets/icons/LanguageSkillsIcon/python.ico" width="60">
-        <img id="star1" src="assets/images/star.ico" width="30">
-        <img id="star2" src="assets/images/star.ico" width="30">
 
-        <p>
-          Python is an interpreted, object-
-          oriented,high-level programming
-          language with dynamic semantics. ...
-          Python's simple, easy to learn syntax
-          emphasizes readability and therefore
-          reduces the cost of program
-          maintenance
-        </p>
-      </section>
-      <!--java-->
-      <section class="two">
-        <h2 class="skillheader">JAVA</h2>
-        <img id="img2" src="assets/icons/LanguageSkillsIcon/java.ico" width="60">
-        <img id="star3" src="assets/images/star.ico" width="30">
-        <img id="star4" src="assets/images/star.ico" width="30">
-        <img id="star5" src="assets/images/star.ico" width="30">
+    <!--page 6-->
+    <section id="Services">
+        <!--services-->
+        <section>
+            <!--header-->
+            <h1 id="header6">Services</h1>
+            <ul type="disc">
+                <li>Stand - Alone Applications Development</li>
+                <li>Web Based Applications Development</li>
+                <li>Mobile Applications Development</li>
+            </ul>
+            <!--arrow-->
+            <!--<section>
+                <img src="assets/icons/upwardarrow.jpeg">
+                <img src="assets/icons/downwardarrow.jpeg">
+            </section>-->
+        </section>
+        <!--experiences-->
+        <section>
+            <!--header-->
+            <h1 id="header7">Experiences</h1>
+            <ul type="disc">
+                <li>Working as a teacher in Wisdom International School (ICT Eng.)</li>
+            </ul>
+            <!--arrow-->
+            <!-- <section>
+                 <img src="assets/icons/upwardarrow.jpeg">
+                 <img src="assets/icons/downwardarrow.jpeg">
+             </section>-->
+        </section>
+        <section>
+            <img src="assets/images/Services/1584023795.jpg">
+        </section>
+    </section>
 
-        <p>
-          Java is a general-purpose, class-
-          based, object-oriented programming
-          language designed for having lesser
-          implementation dependencies. It is a
-          computing platform for application
-          development
-        </p>
-      </section>
-      <!--hibernate-->
-      <section class="three">
-        <h2 class="skillheader">HIBERNATE</h2>
-        <img id="img3" src="assets/icons/LanguageSkillsIcon/python.ico" width="60">
-        <img id="star6" src="assets/images/star.ico" width="30">
+    <!--page 7-->
+    <section id="Contact_Info">
+        <!--heading-->
+        <section>
+            <h1 id="header8">Contact Info</h1>
+            <h2 id="desc1">Do you want to do your project with me ?</h2>
+            <h2 id="desc2">Contact me on your interested social media platform or in my residence as you wish</h2>
+        </section>
+        <!--contact details-->
+        <section>
+            <img id="contact" src="assets/icons/phone.ico">
+            <h2 id="contactHead">Call Me</h2>
+            <address id="contactdesc">+94775520247</address>
 
-        <p>
-          More than an ORM, discover the
-          Hibernate galaxy. Hibernate ORM.
-          Domain model persistence for
-          relational databases.
-        </p>
-      </section>
-      <!--css-->
-      <section class="four">
-        <h2 class="skillheader">CSS</h2>
-        <img id="img4" src="assets/icons/LanguageSkillsIcon/css.ico" width="60">
-        <img id="star7" src="assets/images/star.ico" width="30">
-        <img id="star8" src="assets/images/star.ico" width="30">
+            <img id="residence" src="assets/icons/location.ico">
+            <h2 id="residenceHead">Residence</h2>
+            <address id="residencedesc">102 Samagimawatha,<br>
+                Watagedaramulla,<br>
+                Denipitiya.
+            </address>
 
-        <p>
-          CSS is the language for describing
-          the presentation of Web pages,
-          including colors, layout, and fonts. It
-          allows one to adapt the presentation
-          to different types of devices, such as
-          large screens, small screens, or
-          printers
-        </p>
-      </section>
-      <!--html-->
-      <section class="five">
-        <h2 class="skillheader">HTML</h2>
-        <img id="img5" src="assets/icons/LanguageSkillsIcon/html.ico" width="60">
-        <img id="star9" src="assets/images/star.ico" width="30">
-        <img id="star10" src="assets/images/star.ico" width="30">
-        <img id="star11" src="assets/images/star.ico" width="30">
+            <img id="mail" src="assets/icons/email.ico">
+            <h2 id="mailHead">E-mail</h2>
+            <address id="maildesc">kaveeshasanduni200066@gmail.com</address>
+        </section>
+        <!--leaving message-->
+        <section id="sendSMSDetails">
+            <h4>Name :-</h4>
+            <h4>E-mail :-</h4>
+            <h4>Subject :-</h4>
+            <h4>Message :-</h4>
+            <form class="content">
+                <label for="name"></label>
+                <input type="text" id="name" class="name">
+                <label for="mail-address"></label>
+                <input class="mail-address" id="mail-address" type="text">
+                <label for="subject"></label>
+                <input class="subject" id="subject" type="text">
+                <label for="message"></label>
+                <textarea class="message" id="message"></textarea>
+            </form>
+        </section>
+        <!--button-->
+        <section>
+            <button id="SendBtn">Send</button>
+        </section>
+    </section>
 
-        <p>
-          HyperText Markup Language (HTML)
-          is the set of markup symbols or
-          codes inserted into a file intended for
-          display on the Internet. The markup
-          tells web browsers how to display a
-          web page's words and images
-        </p>
-      </section>
-      <!--sql-->
-      <section class="six">
-        <h2 class="skillheader">SQL</h2>
-        <img id="img6" src="assets/icons/LanguageSkillsIcon/sql.ico" width="60">
-        <img id="star12" src="assets/images/star.ico" width="30">
-        <img id="star13" src="assets/images/star.ico" width="30">
-
-        <p>
-          MySQL is an Oracle-backed open
-          source relational database
-          management system (RDBMS)
-          based on Structured Query Language
-          (SQL). MySQL runs on virtually all
-          platforms, including Linux, UNIX and
-          Windows. ...
-        </p>
-      </section>
+    <!--page 8-->
+    <section id="Gallery">
+        <!--heading-->
+        <section>
+            <h1>Gallery</h1>
+        </section>
+        <!--photos-->
+        <section>
+            <img alt="Photo" src="assets/images/Gallery/1.jpeg" width="289">
+            <img alt="Photo" src="assets/images/Gallery/2.jpeg" width="300">
+            <img alt="Photo" src="assets/images/Gallery/3.jpeg" width="289">
+            <img alt="Photo" src="assets/images/Gallery/4.jpeg" width="358">
+            <img alt="Photo" src="assets/images/Gallery/5.jpeg" width="358">
+        </section>
+        <!--arrow-->
+        <section>
+            <img alt="foward arrow" src="assets/icons/backwardarrow.ico">
+            <img alt="foward arrow" src="assets/icons/fowardarrow.ico">
+        </section>
     </section>
-    <!--arrow-->
-    <section>
-      <img alt="foward arrow" src="assets/icons/backwardarrow.ico">
-      <img alt="foward arrow" src="assets/icons/fowardarrow.ico">
-    </section>
-  </section>
-
-  <!--page 5-->
-  <section id="Project">
-    <!--heading-->
-    <section>
-      <h1 id="header5">Projects</h1>
-    </section>
-    <!--assignments-->
-    <section id="projectflex">
-      <section>
-        <img src="assets/images/Projects/Assignment.jpg">
-        <h3>Assignment</h3>
-      </section>
-      <!--stand-alone-->
-      <section>
-        <img src="assets/images/Projects/standalone.png">
-        <h3>Stand - Alone</h3>
-      </section>
-      <!--web-based-->
-      <section>
-        <img src="assets/images/Projects/webBased.jpg">
-        <h3>Web - Based</h3>
-      </section>
-    </section>
-  </section>
-
-  <!--page 6-->
-  <section id="Services">
-    <!--services-->
-    <section>
-      <!--header-->
-      <h1 id="header6">Services</h1>
-      <ul type="disc">
-        <li>Stand - Alone Applications Development</li>
-        <li>Web Based Applications Development</li>
-        <li>Mobile Applications Development</li>
-      </ul>
-      <!--arrow-->
-      <!--<section>
-          <img src="assets/icons/upwardarrow.jpeg">
-          <img src="assets/icons/downwardarrow.jpeg">
-      </section>-->
-    </section>
-    <!--experiences-->
-    <section>
-      <!--header-->
-      <h1 id="header7">Experiences</h1>
-      <ul type="disc">
-        <li>Working as a teacher in Wisdom International School (ICT Eng.)</li>
-      </ul>
-      <!--arrow-->
-      <!-- <section>
-           <img src="assets/icons/upwardarrow.jpeg">
-           <img src="assets/icons/downwardarrow.jpeg">
-       </section>-->
-    </section>
-    <section>
-      <img src="assets/images/Services/1584023795.jpg">
-    </section>
-  </section>
-
-  <!--page 7-->
-  <section id="Contact_Info">
-    <!--heading-->
-    <section>
-      <h1 id="header8">Contact Info</h1>
-      <h2 id="desc1">Do you want to do your project with me ?</h2>
-      <h2 id="desc2">Contact me on your interested social media platform or in my residence as you wish</h2>
-    </section>
-    <!--contact details-->
-    <section>
-      <img src="assets/icons/phone.ico">
-      <h2>Call Me</h2>
-      <address>+94775520247</address>
-
-      <img src="assets/icons/location.ico">
-      <h2>Residence</h2>
-      <address>102 Samagimawatha,
-        Watagedaramulla,
-        Denipitiya.
-      </address>
-
-      <img src="assets/icons/email.ico">
-      <h2>E-mail</h2>
-      <address>kaveeshasanduni200066@gmail.com</address>
-    </section>
-    <!--leaving message-->
-    <section>
-      <h4>Name</h4>
-      <h4>E-mail</h4>
-      <h4>Subject</h4>
-      <h4>Message</h4>
-    </section>
-    <!--button-->
-    <section>
-      <button>Send</button>
-    </section>
-  </section>
-
-  <!--page 8-->
-  <section id="Gallery">
-    <!--heading-->
-    <section>
-      <h1>Gallery</h1>
-    </section>
-    <!--photos-->
-    <section>
-      <img alt="Photo" src="assets/images/Gallery/1.jpeg" width="289">
-      <img alt="Photo" src="assets/images/Gallery/2.jpeg" width="300">
-      <img alt="Photo" src="assets/images/Gallery/3.jpeg" width="289">
-      <img alt="Photo" src="assets/images/Gallery/4.jpeg" width="358">
-      <img alt="Photo" src="assets/images/Gallery/5.jpeg" width="358">
-    </section>
-    <!--arrow-->
-    <section>
-      <img alt="foward arrow" src="assets/icons/backwardarrow.ico">
-      <img alt="foward arrow" src="assets/icons/fowardarrow.ico">
-    </section>
-  </section>
 </main>
 <footer>
-  <!--name-->
-  <section>
-    <h3>Kaveesha Sanduni Kodikara</h3>
-  </section>
-  <!--social medias-->
-  <section>
-    <nav>
-      <a href="https://twitter.com/kaveeshasandun1">
-        <img alt="twitter" height="30" src="assets/icons/twitter.png">
-      </a>
-      <a href="https://www.linkedin.com/in/kaveesha-sanduni-358561201">
-        <img alt="linkedIn" height="30" src="assets/icons/linkedIn.png">
-      </a>
-      <a href="https://github.com/Kaveesha2000">
-        <img alt="git hub" height="30" src="assets/icons/github.png">
-      </a>
-    </nav>
-  </section>
-  <!--copyright-->
-  <section>
-    <h5>Copyright ©️ 2021 All Right Reserved Website Powerd By Kaveesha Sanduni Kodikara</h5>
-  </section>
-  <!--nav bar-->
-  <section>
-    <nav>
-      Home About me Education Skills Projects Services Contact Info Gallery
-    </nav>
-  </section>
+    <!--name-->
+    <section>
+        <h3>Kaveesha Sanduni Kodikara</h3>
+    </section>
+    <!--social medias-->
+    <section>
+        <nav>
+            <a href="https://twitter.com/kaveeshasandun1">
+                <img alt="twitter" height="30" src="assets/icons/twitter.png">
+            </a>
+            <a href="https://www.linkedin.com/in/kaveesha-sanduni-358561201">
+                <img alt="linkedIn" height="30" src="assets/icons/linkedIn.png">
+            </a>
+            <a href="https://github.com/Kaveesha2000">
+                <img alt="git hub" height="30" src="assets/icons/github.png">
+            </a>
+        </nav>
+    </section>
+    <!--copyright-->
+    <section>
+        <h5>Copyright ©️ 2021 All Right Reserved Website Powerd By Kaveesha Sanduni Kodikara</h5>
+    </section>
+    <!--nav bar-->
+    <section>
+        <nav>
+            Home About me Education Skills Projects Services Contact Info Gallery
+        </nav>
+    </section>
 </footer>
 </body>
 </html>
