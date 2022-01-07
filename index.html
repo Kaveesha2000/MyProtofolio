@@ -1097,6 +1097,86 @@
         }
 
         /*=======================================================*/
+        /*Page 09-Gallery*/
+        /*=======================================================*/
+
+        #Gallery {
+            position: relative;
+            background-color: black;
+            width: 100%;
+            height: 130vh;
+            /*border: 1px solid red;*/
+        }
+
+        #header9 {
+            position: absolute;
+            font-size: 30px;
+            color: white;
+            margin: auto;
+            left: 20px;
+            top: 10px;
+            text-shadow: 4px 4px 5px darkgrey;
+        }
+
+        #photos{
+            position: absolute;
+            width: 82%;
+            height: 101vh;
+            left: 145px;
+            top: 95px;
+        }
+
+        #myImg1 {
+            position: relative;
+            width: 130px;
+            left: 438px;
+            top: 10px;
+            padding: 10px;
+        }
+
+        #myImg2{
+            position: relative;
+            width: 171px;
+            left: 485px;
+            top: 0;
+        }
+
+        #myImg3{
+            position: relative;
+            width: 200px;
+            height: 400px;
+            left: 80px;
+            top: -300px;
+        }
+
+        /*#myImg4{
+            position: absolute;
+            width: 200px;
+            left: 675px;
+            top: 100px;
+        }*/
+
+        #myImg5{
+            position: relative;
+            width: 350px;
+            left: -520px;
+            height: 700px;
+        }
+
+        #myImg6{
+            position: relative;
+            width: 342px;
+            top: 2px;
+            left: -9px;
+        }
+
+        #myImg7{
+            position: relative;
+            width: 169px;
+            top: -705px;
+            left: 658px;
+        }
+        /*=======================================================*/
     </style>
 
 </head>
@@ -1455,21 +1535,23 @@
     <section id="Gallery">
         <!--heading-->
         <section>
-            <h1>Gallery</h1>
+            <h1 id="header9">Gallery</h1>
         </section>
         <!--photos-->
-        <section>
-            <img alt="Photo" src="assets/images/Gallery/1.jpeg" width="289">
-            <img alt="Photo" src="assets/images/Gallery/2.jpeg" width="300">
-            <img alt="Photo" src="assets/images/Gallery/3.jpeg" width="289">
-            <img alt="Photo" src="assets/images/Gallery/4.jpeg" width="358">
-            <img alt="Photo" src="assets/images/Gallery/5.jpeg" width="358">
+        <section id="photos">
+            <img alt="Photo" src="assets/images/Gallery/1.jpeg" id="myImg1">
+            <img alt="Photo" src="assets/images/Gallery/2.jpeg" id="myImg2">
+            <img alt="Photo" src="assets/images/Gallery/3.jpeg" id="myImg3">
+            <!--<img alt="Photo" src="assets/images/Gallery/4.jpeg" id="myImg4">-->
+            <img alt="Photo" src="assets/images/Gallery/5.jpeg" id="myImg5">
+            <img alt="Photo" src="assets/images/Gallery/6.jpg" id="myImg6">
+            <img alt="Photo" src="assets/images/Gallery/7.jpg" id="myImg7">
         </section>
         <!--arrow-->
-        <section>
+        <!--<section>
             <img alt="foward arrow" src="assets/icons/backwardarrow.ico">
             <img alt="foward arrow" src="assets/icons/fowardarrow.ico">
-        </section>
+        </section>-->
     </section>
 </main>
 <footer>
