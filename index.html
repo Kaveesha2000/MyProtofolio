@@ -32,15 +32,15 @@
             box-shadow: 2px 4px 3px 2px darkgray;
         }
 
-        header > nav {
-            display: flex;
-            list-style: none;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: auto;
-            top: 0;
-        }
-
+        /* header > nav {
+             display: flex;
+             list-style: none;
+             justify-content: center;
+             flex-wrap: wrap;
+             margin: auto;
+             top: 0;
+         }
+         */
         header > nav > ul {
             position: absolute;
             bottom: 0;
@@ -252,7 +252,7 @@
             text-shadow: 4px 4px 5px darkgrey;
         }
 
-        #chart{
+        #chart {
             position: absolute;
             width: 73%;
             height: 95vh;
@@ -366,7 +366,7 @@
         }
 
         #ol {
-            position: absolute;
+            position: relative;
             width: 120px;
             height: 120px;
             left: 16.5vw;
@@ -414,6 +414,7 @@
             font-size: 15px;
             top: 48.3vh;
             color: white;
+            text-shadow: 4px 4px 5px darkgrey;
         }
 
         #aLevel {
@@ -1126,7 +1127,7 @@
             text-shadow: 4px 4px 5px darkgrey;
         }
 
-        #photos{
+        #photos {
             position: absolute;
             width: 82%;
             height: 101vh;
@@ -1142,14 +1143,14 @@
             padding: 10px;
         }
 
-        #myImg2{
+        #myImg2 {
             position: relative;
             width: 171px;
             left: 485px;
             top: 0;
         }
 
-        #myImg3{
+        #myImg3 {
             position: relative;
             width: 200px;
             height: 400px;
@@ -1164,26 +1165,107 @@
             top: 100px;
         }*/
 
-        #myImg5{
+        #myImg5 {
             position: relative;
             width: 350px;
             left: -520px;
             height: 700px;
         }
 
-        #myImg6{
+        #myImg6 {
             position: relative;
             width: 342px;
             top: 2px;
             left: -9px;
         }
 
-        #myImg7{
+        #myImg7 {
             position: relative;
             width: 169px;
             top: -705px;
             left: 658px;
         }
+
+        /*=======================================================*/
+
+        /*Page 10-footer*/
+        /*=======================================================*/
+        #footer {
+            position: relative;
+            background-color: black;
+            width: 100%;
+            height: 70vh;
+            border: 1px solid red;
+        }
+
+        #fullName {
+            position: absolute;
+            margin: auto;
+            left: 35%;
+            top: 35vh;
+            font-size: 40px;
+            color: white;
+            display: inline;
+        }
+
+        #linkBar {
+            position: absolute;
+            width: 17%;
+            height: 8vh;
+            top: 41vh;
+            left: 42.4vw;
+            /*border: 1px solid white;*/
+        }
+
+        #twitter {
+            position: relative;
+            padding: 20px;
+        }
+
+        #linkedIn {
+            position: relative;
+            padding: 20px;
+        }
+
+        #gitHub {
+            position: relative;
+            padding: 20px;
+        }
+
+        #copyright {
+            position: absolute;
+            color: white;
+            left: 26vw;
+            top: 52vh;
+        }
+
+        /*navigation Bar*/
+        #footernav > ul {
+            position: absolute;
+            bottom: 4vh;
+            right: 27vw;
+            margin: auto;
+            height: 40px;
+            font-size: 15px;
+            font-family: 'Lobster', cursive;
+            list-style: none;
+        }
+
+        #footernav > ul > li {
+            padding: 0 10px 0 10px;
+            display: inline;
+        }
+
+        #footernav > ul > li > a {
+            text-decoration: none;
+            color: white;
+        }
+
+        #footernav > ul > li > a:hover {
+            cursor: pointer;
+            color: #44C6E2;
+        }
+
         /*=======================================================*/
     </style>
 
@@ -1547,13 +1629,13 @@
         </section>
         <!--photos-->
         <section id="photos">
-            <img alt="Photo" src="assets/images/Gallery/1.jpeg" id="myImg1">
-            <img alt="Photo" src="assets/images/Gallery/2.jpeg" id="myImg2">
-            <img alt="Photo" src="assets/images/Gallery/3.jpeg" id="myImg3">
+            <img alt="Photo" id="myImg1" src="assets/images/Gallery/1.jpeg">
+            <img alt="Photo" id="myImg2" src="assets/images/Gallery/2.jpeg">
+            <img alt="Photo" id="myImg3" src="assets/images/Gallery/3.jpeg">
             <!--<img alt="Photo" src="assets/images/Gallery/4.jpeg" id="myImg4">-->
-            <img alt="Photo" src="assets/images/Gallery/5.jpeg" id="myImg5">
-            <img alt="Photo" src="assets/images/Gallery/6.jpg" id="myImg6">
-            <img alt="Photo" src="assets/images/Gallery/7.jpg" id="myImg7">
+            <img alt="Photo" id="myImg5" src="assets/images/Gallery/5.jpeg">
+            <img alt="Photo" id="myImg6" src="assets/images/Gallery/6.jpg">
+            <img alt="Photo" id="myImg7" src="assets/images/Gallery/7.jpg">
         </section>
         <!--arrow-->
         <!--<section>
@@ -1562,33 +1644,42 @@
         </section>-->
     </section>
 </main>
-<footer>
+<footer id="footer">
     <!--name-->
     <section>
-        <h3>Kaveesha Sanduni Kodikara</h3>
+        <h3 id="fullName">Kaveesha Sanduni Kodikara</h3>
     </section>
     <!--social medias-->
-    <section>
+    <section id="linkBar">
         <nav>
             <a href="https://twitter.com/kaveeshasandun1">
-                <img alt="twitter" height="30" src="assets/icons/twitter.png">
+                <img alt="twitter" height="40" id="twitter" src="assets/icons/twitter.png">
             </a>
             <a href="https://www.linkedin.com/in/kaveesha-sanduni-358561201">
-                <img alt="linkedIn" height="30" src="assets/icons/linkedIn.png">
+                <img alt="linkedIn" height="40" id="linkedIn" src="assets/icons/linkedIn.png">
             </a>
             <a href="https://github.com/Kaveesha2000">
-                <img alt="git hub" height="30" src="assets/icons/github.png">
+                <img alt="git hub" height="40" id="gitHub" src="assets/icons/github.png">
             </a>
         </nav>
     </section>
     <!--copyright-->
     <section>
-        <h5>Copyright ©️ 2021 All Right Reserved Website Powerd By Kaveesha Sanduni Kodikara</h5>
+        <pre id="copyright">Copyright ©️ 2021 All Right Reserved Website Powerd By Kaveesha Sanduni Kodikara</pre>
     </section>
     <!--nav bar-->
     <section>
-        <nav>
-            Home About me Education Skills Projects Services Contact Info Gallery
+        <nav id="footernav">
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About_me">About me</a></li>
+                <li><a href="#Education">Education</a></li>
+                <li><a href="#Skills">Skills</a></li>
+                <li><a href="#Project">Projects</a></li>
+                <li><a href="#Services">Services</a></li>
+                <li><a href="#Contact_Info">Contact Info</a></li>
+                <li><a href="#Gallery">Gallery</a></li>
+            </ul>
         </nav>
     </section>
 </footer>
