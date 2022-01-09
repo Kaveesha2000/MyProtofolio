@@ -31,41 +31,40 @@
         #standAlone {
             position: absolute;
             width: 90%;
-            height: 40vh;
+            height: 90vh;
             left: 5vw;
             display: grid;
             margin-top: 15vh;
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, 1fr);
             grid-gap: 40px;
+            border: 1px solid red;
         }
 
-        #standAlone > div {
+        #standAlone > a {
             position: relative;
+            height: 40vh;
+            background-size: cover;
         }
 
-        #standAlone > div:nth-child(1) {
+        #s1 {
             background-image: url("assets/images/StandAlone/1.png");
-            background-size: cover;
         }
 
-        #standAlone > div:nth-child(2) {
+        #s2 {
             background-image: url("assets/images/StandAlone/2.png");
-            background-size: cover;
         }
 
-        #standAlone > div:nth-child(3) {
+        #s3 {
             background-image: url("assets/images/StandAlone/3.png");
-            background-size: cover;
         }
 
-        #standAlone > div:nth-child(4) {
+        #s4 {
             background-image: url("assets/images/StandAlone/4.png");
-            background-size: cover;
         }
 
-        #standAlone > div:nth-child(5) {
+        #s5 {
             background-image: url("assets/images/StandAlone/5.png");
-            background-size: cover;
         }
 
     </style>
@@ -79,11 +78,11 @@
     <section>
 
         <section id="standAlone">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <a href="CSS_Assignments/CSS_Basics/index1.html" id="s1"></a>
+            <a href="CSS_Assignments/CSS_Basics/index2.html" id="s2"></a>
+            <a href="CSS_Assignments/CSS_Basics/index3.html" id="s3"></a>
+            <a href="CSS_Assignments/CSS_Basics/index4.html" id="s4"></a>
+            <a href="CSS_Assignments/CSS_Basics/index4.html" id="s5"></a>
         </section>
 
     </section>
