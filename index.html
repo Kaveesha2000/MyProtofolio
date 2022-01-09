@@ -1093,7 +1093,7 @@
             text-shadow: 4px 4px 5px darkgrey;
         }
 
-        #photos {
+        /*#photos {
             position: absolute;
             width: 82%;
             height: 101vh;
@@ -1124,12 +1124,12 @@
             top: -300px;
         }
 
-        /*#myImg4{
+        !*#myImg4{
             position: absolute;
             width: 200px;
             left: 675px;
             top: 100px;
-        }*/
+        }*!
 
         #myImg5 {
             position: relative;
@@ -1150,6 +1150,88 @@
             width: 169px;
             top: -1060px;
             left: 303px;
+        }
+*/
+        body{
+            background: black;
+        }
+        .wrapper{
+            width: 500px ;
+            height: 500px;
+            margin: 15% auto;
+        }
+        .box-area{
+            animation: animate 10s ease-in-out infinite;
+            transform-style: preserve-3d;
+            transform-origin: 250px 250px 0;
+        }
+        .box-area div{
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            line-height: 500px;
+        }
+        .box-area .box1{
+            background-image: url("assets/css/Gallery/1.jpeg");
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: center center;
+            transform: translateZ(250px);
+        }
+        .box-area .box2{
+            background-image: url("assets/css/Gallery/2.jpeg");
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: center center;
+            transform: rotateY(90deg) translateZ(250px);
+        }
+        .box-area .box3{
+            background-image: url("assets/css/Gallery/3.jpeg");
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: center center;
+            transform: rotateY(90deg) rotateX(90deg) translateZ(250px);
+        }
+        .box-area .box4{
+            background-image: url("assets/css/Gallery/6.jpg");
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: center center;
+            transform: rotateY(180deg) rotateZ(90deg) translateZ(250px);
+        }
+        .box-area .box5{
+            background-image: url("assets/css/Gallery/5.jpeg");
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: center center;
+            transform: rotateY(-90deg) rotateZ(90deg) translateZ(250px);
+        }
+        .box-area .box6{
+            background-image: url("assets/css/Gallery/7.jpg");
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: center center;
+            transform:rotateX(-90deg) translateZ(250px);
+        }
+        @keyframes animate {
+            from,to{
+                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) ;
+            }
+            16%{
+                transform: rotateY(-90deg);
+            }
+            33%{
+                transform: rotateY(-90deg) rotateZ(90deg);
+            }
+            50%{
+                transform: rotateY(-180deg) rotateZ(90deg);
+            }
+            66%{
+                transform: rotateY(-270deg) rotateX(90deg);
+            }
+            83%{
+                transform: rotateX(90deg);
+            }
         }
 
         /*=======================================================*/
@@ -1285,7 +1367,7 @@
         </section>
         <!--photo-->
         <section>
-            <img id="Myphoto" src="assets/images/Gallery/5.jpeg">
+            <img id="Myphoto" src="assets/css/Gallery/5.jpeg">
         </section>
         <!--details-->
         <section>
@@ -1485,14 +1567,14 @@
             </section>
             <!--stand-alone-->
             <section>
-                <a href="assignment.html">
+                <a href="standalone.html">
                     <img src="assets/images/Projects/standalone.png">
                 </a>
                 <h3>Stand - Alone</h3>
             </section>
             <!--web-based-->
             <section>
-                <a href="assignment.html">
+                <a href="web.html">
                     <img src="assets/images/Projects/webBased.jpg">
                 </a>
                 <h3>Web - Based</h3>
@@ -1593,20 +1675,30 @@
             <h1 id="header9">Gallery</h1>
         </section>
         <!--photos-->
-        <section id="photos">
-            <img alt="Photo" id="myImg1" src="assets/images/Gallery/1.jpeg">
-            <img alt="Photo" id="myImg2" src="assets/images/Gallery/2.jpeg">
-            <img alt="Photo" id="myImg3" src="assets/images/Gallery/3.jpeg">
-            <!--<img alt="Photo" src="assets/images/Gallery/4.jpeg" id="myImg4">-->
-            <img alt="Photo" id="myImg5" src="assets/images/Gallery/5.jpeg">
-            <img alt="Photo" id="myImg6" src="assets/images/Gallery/6.jpg">
-            <img alt="Photo" id="myImg7" src="assets/images/Gallery/7.jpg">
+        <!--<section id="photos">
+            <img alt="Photo" id="myImg1" src="assets/css/Gallery/1.jpeg">
+            <img alt="Photo" id="myImg2" src="assets/css/Gallery/2.jpeg">
+            <img alt="Photo" id="myImg3" src="assets/css/Gallery/3.jpeg">
+            &lt;!&ndash;<img alt="Photo" src="assets/images/Gallery/4.jpeg" id="myImg4">&ndash;&gt;
+            <img alt="Photo" id="myImg5" src="assets/css/Gallery/5.jpeg">
+            <img alt="Photo" id="myImg6" src="assets/css/Gallery/6.jpg">
+            <img alt="Photo" id="myImg7" src="assets/css/Gallery/7.jpg">
         </section>
-        <!--arrow-->
-        <!--<section>
+        &lt;!&ndash;arrow&ndash;&gt;
+        &lt;!&ndash;<section>
             <img alt="foward arrow" src="assets/icons/backwardarrow.ico">
             <img alt="foward arrow" src="assets/icons/fowardarrow.ico">
-        </section>-->
+        </section>&ndash;&gt;-->
+        <div class="wrapper">
+            <div class="box-area">
+                <div class="box1"></div>
+                <div class="box2"></div>
+                <div class="box3"></div>
+                <div class="box4"></div>
+                <div class="box5"></div>
+                <div class="box6"></div>
+            </div>
+        </div>
     </section>
 </main>
 <footer id="footer">
