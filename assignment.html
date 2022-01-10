@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="background-color: black">
+<html lang="en">
 <html xml:base="http://www.w3.org/1999/xhtml">
 
 <head>
@@ -17,6 +17,12 @@
     <link href="assets/css/fonts/css/all.css" rel="stylesheet">
 
     <style>
+
+        body{
+            background: url("assets/images/Assignments/background.jpg");
+            background-size: cover;
+            height: 180vh;
+        }
 
         #header {
             position: absolute;
@@ -42,7 +48,6 @@
         #layout>a{
             position: relative;
             background-size: cover;
-            box-shadow: 15px -15px 5px steelblue;
         }
         #l1 {
             background-image: url("assets/images/Assignments/L1.png");
@@ -74,7 +79,6 @@
         #transition>a{
             position: relative;
             background-size: cover;
-            box-shadow: 15px -15px 5px steelblue;
         }
 
         #t1 {
@@ -103,7 +107,6 @@
         #animation>a{
             position: relative;
             background-size: cover;
-            box-shadow: 15px -15px 5px steelblue;
         }
 
         #a1 {
@@ -122,6 +125,17 @@
             background-image: url("assets/images/Assignments/L4.png");
         }
 
+        .photos {
+            webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+
+        .photos:hover {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
     </style>
 
 </head>
@@ -134,23 +148,23 @@
     <section>
 
         <section id="layout">
-            <a href="CSS_Assignments/CSS_Basics/index1.html" id="l1"></a>
-            <a href="CSS_Assignments/CSS_Basics/index2.html" id="l2"></a>
-            <a href="CSS_Assignments/CSS_Basics/index3.html" id="l3"></a>
-            <a href="CSS_Assignments/CSS_Basics/index4.html" id="l4"></a>
+            <a href="CSS_Assignments/CSS_Basics/index1.html" id="l1" class="photos"></a>
+            <a href="CSS_Assignments/CSS_Basics/index2.html" id="l2" class="photos"></a>
+            <a href="CSS_Assignments/CSS_Basics/index3.html" id="l3" class="photos"></a>
+            <a href="CSS_Assignments/CSS_Basics/index4.html" id="l4" class="photos"></a>
         </section>
 
         <section id="transition">
-            <a href="CSS_Assignments/Transition/index.html" id="t1"></a>
-            <a href="CSS_Assignments/Transition/index2.html" id="t2"></a>
-            <a href="CSS_Assignments/Transition/index2-method2.html" id="t3"></a>
+            <a href="CSS_Assignments/Transition/index.html" id="t1" class="photos"></a>
+            <a href="CSS_Assignments/Transition/index2.html" id="t2" class="photos"></a>
+            <a href="CSS_Assignments/Transition/index2-method2.html" id="t3" class="photos"></a>
         </section>
 
         <section id="animation">
-            <a href="CSS_Assignments/Animation/index.html" id="a1"></a>
-            <a href="CSS_Assignments/Animation/index2.html" id="a2"></a>
-            <a href="CSS_Assignments/Animation/index2.html" id="a3"></a>
-            <a href="CSS_Assignments/Animation/index2.html" id="a4"></a>
+            <a href="CSS_Assignments/Animation/index.html" id="a1" class="photos"></a>
+            <a href="CSS_Assignments/Animation/index2.html" id="a2" class="photos"></a>
+            <a href="CSS_Assignments/Animation/index2.html" id="a3" class="photos"></a>
+            <a href="CSS_Assignments/Animation/index2.html" id="a4" class="photos"></a>
         </section>
 
     </section>

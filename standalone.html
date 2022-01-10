@@ -18,12 +18,18 @@
 
     <style>
 
+        body{
+            background: url("assets/images/Assignments/background.jpg");
+            background-size: cover;
+            height: 180vh;
+        }
+
         #header {
             position: absolute;
             font-size: 30px;
             color: white;
             margin: auto;
-            left: 45%;
+            left: 41%;
             top: 10px;
             text-shadow: 4px 4px 5px darkgrey;
         }
@@ -44,7 +50,6 @@
             position: relative;
             height: 40vh;
             background-size: cover;
-            box-shadow: 15px -15px 5px steelblue;
         }
 
         #s1 {
@@ -67,6 +72,17 @@
             background-image: url("assets/images/StandAlone/5.png");
         }
 
+        .photos {
+            webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+
+        .photos:hover {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
     </style>
 </head>
 <body>
@@ -78,11 +94,11 @@
     <section>
 
         <section id="standAlone">
-            <a href="https://github.com/Kaveesha2000/ReservationRoomSystem" id="s1"></a>
-            <a href="https://github.com/Kaveesha2000/VehicleParkingSystem" id="s2"></a>
-            <a href="https://github.com/Kaveesha2000/SuperMarketProject" id="s3"></a>
-            <a href="https://github.com/Kaveesha2000/Sipsewana_Institute-Registration_System" id="s4"></a>
-            <a href="https://github.com/Kaveesha2000/Airport_Management_System" id="s5"></a>
+            <a href="https://github.com/Kaveesha2000/ReservationRoomSystem" id="s1" class="photos"></a>
+            <a href="https://github.com/Kaveesha2000/VehicleParkingSystem" id="s2" class="photos"></a>
+            <a href="https://github.com/Kaveesha2000/SuperMarketProject" id="s3" class="photos"></a>
+            <a href="https://github.com/Kaveesha2000/Sipsewana_Institute-Registration_System" id="s4" class="photos"></a>
+            <a href="https://github.com/Kaveesha2000/Airport_Management_System" id="s5" class="photos"></a>
         </section>
 
     </section>
