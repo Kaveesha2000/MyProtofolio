@@ -40,22 +40,6 @@ header > nav > ul > li > a:hover {
     color: #44C6E2;
 }
 
-@media all and (max-width: 360px) {
-    header > nav{
-        width: 100vw;
-        height: 50px;
-        box-shadow: 1px 2px 1px 1px darkgrey;
-    }
-    header > nav > ul{
-        left: 0;
-        font-size: 5px;
-        right: 0;
-    }
-    header > nav > ul > li{
-        padding: 2px;
-    }
-}
-
 /*=======================================================*/
 
 /*Page 01-Home*/
@@ -158,6 +142,49 @@ header > nav > ul > li > a:hover {
     left: 42px;
 }
 
+@media all and (max-width: 320px) {
+    header > nav {
+        width: 100vw;
+        box-shadow: 1px 2px 1px 1px darkgrey;
+    }
+
+    header > nav > ul {
+        left: -30px;
+        right: 0;
+        top: 30px;
+        font-size: 8px;
+    }
+
+    header > nav > ul > li {
+        padding: 2px;
+    }
+
+    #Home > section:nth-child(2) > img {
+        right: 0;
+        left: 0;
+        width: 120px;
+        top: -125px;
+    }
+
+    #Home > section:nth-child(1) > h1 {
+        font-size: 22px;
+        left: 22px;
+        top: 335px;
+    }
+
+    #Home > section:nth-child(1) > h4 {
+        top: 382px;
+        font-size: 25px;
+        left: 60px;
+    }
+
+    #media_links {
+        left: 85px;
+        top: 432px;
+    }
+
+}
+
 /*=======================================================*/
 
 /*Page 02-About me*/
@@ -216,6 +243,37 @@ header > nav > ul > li > a:hover {
 #DownloadBtn:hover {
     cursor: pointer;
     box-shadow: 2px 3px 6px 2px darkgrey;
+}
+
+@media all and (max-width: 320px) {
+    #header2 {
+        font-size: 20px;
+    }
+
+    #About_me {
+        height: 65vh;
+    }
+
+    #Myphoto {
+        left: 25px;
+        width: 18vw;
+        height: 40vh;
+        box-shadow: 5px 0px 6px 1px darkgrey;
+    }
+
+    #details {
+        font-size: 9px;
+        right: 3px;
+        top: 90px;
+    }
+
+    #DownloadBtn {
+        width: 75px;
+        top: 250px;
+        height: 20px;
+        font-size: 10px;
+        right: 20px;
+    }
 }
 
 /*=======================================================*/
@@ -506,6 +564,157 @@ header > nav > ul > li > a:hover {
     transition: all .6s ease;
     transform: translate(0, -30px);
     cursor: pointer;
+}
+
+@media all and (max-width: 320px) {
+
+    #Education {
+        height: 70vh;
+    }
+
+    #header3 {
+        font-size: 20px;
+    }
+
+    #chart {
+        height: 67vh;
+        width: 81%;
+        bottom: 30px;
+        left: 26px;
+    }
+
+    #square_1 {
+        top: 35vh;
+        left: -3.5vw;
+        height: 15vh;
+    }
+
+    #primary {
+        width: 45px;
+        height: 45px;
+        left: -20px;
+        top: 34vh;
+    }
+
+    #pLevel {
+        font-size: 6px;
+        top: 135px;
+        left: -19px;
+    }
+
+    #square_2 {
+        height: 17vh;
+        top: 7vh;
+    }
+
+    #ol {
+        width: 45px;
+        height: 45px;
+        left: 1vw;
+        top: 6.5vh;
+    }
+
+    #oLevel {
+        font-size: 6px;
+        top: -3.8vh;
+        left: 18vw;
+    }
+
+    #square_3 {
+        height: 19vh;
+        left: 37vw;
+        top: -27.5vh;
+    }
+
+    #al {
+        left: 23vw;
+        height: 65px;
+        width: 65px;
+        top: -26vh;
+    }
+
+    #aLevel {
+        font-size: 6px;
+        top: -35.1vh;
+        left: 37.5vw;
+    }
+
+    #square_4 {
+        height: 21vh;
+        top: -60.7vh;
+        left: 57vw;
+    }
+
+    #dip1 {
+        width: 50px;
+        height: 50px;
+        top: -59vh;
+        left: 46vw;
+    }
+
+    #dip11Level {
+        font-size: 6px;
+        top: -67.8vh;
+        left: 59.1vw;
+    }
+
+    #dip12Level {
+        font-size: 6px;
+        top: -66.1vh;
+        left: 48.3vw;
+    }
+
+    #square_5 {
+        height: 23vh;
+        top: -93.6vh;
+        left: 77vw;
+    }
+
+    #dip2 {
+        width: 35px;
+        height: 40px;
+        top: -95vh;
+    }
+
+    #dip21Level {
+        top: -95vh;
+        font-size: 6px;
+        left: 75vw;
+    }
+
+    #dip22Level {
+        font-size: 6px;
+        top: -93.5vh;
+        left: 60.7vw;
+    }
+
+    #arrow1 {
+        width: 30px;
+        height: 20px;
+        bottom: -51vh;
+        left: 15.5vw;
+    }
+
+    #arrow2 {
+        width: 30px;
+        height: 20px;
+        left: 25vw;
+        top: 47vh;
+    }
+
+    #arrow3 {
+        width: 30px;
+        height: 20px;
+        bottom: -43vh;
+        left: 34vw;
+    }
+
+    #arrow4 {
+        width: 30px;
+        height: 20px;
+        bottom: -39vh;
+        left: 43vw;
+    }
 }
 
 /*=======================================================*/
@@ -1081,84 +1290,94 @@ header > nav > ul > li > a:hover {
     text-shadow: 4px 4px 5px darkgrey;
 }
 
-body{
+body {
     background: black;
 }
-.wrapper{
-    width: 500px ;
+
+.wrapper {
+    width: 500px;
     height: 500px;
     margin: 15% auto;
 }
-.box-area{
+
+.box-area {
     animation: animate2 10s ease-in-out infinite;
     transform-style: preserve-3d;
     transform-origin: 250px 250px 0;
 }
-.box-area div{
+
+.box-area div {
     position: absolute;
     width: 500px;
     height: 500px;
     line-height: 500px;
 }
-.box-area .box1{
+
+.box-area .box1 {
     background-image: url("Gallery/1.jpeg");
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center center;
     transform: translateZ(250px);
 }
-.box-area .box2{
+
+.box-area .box2 {
     background-image: url("Gallery/2.jpeg");
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center center;
     transform: rotateY(90deg) translateZ(250px);
 }
-.box-area .box3{
+
+.box-area .box3 {
     background-image: url("Gallery/3.jpeg");
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center center;
     transform: rotateY(90deg) rotateX(90deg) translateZ(250px);
 }
-.box-area .box4{
+
+.box-area .box4 {
     background-image: url("Gallery/6.jpg");
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center center;
     transform: rotateY(180deg) rotateZ(90deg) translateZ(250px);
 }
-.box-area .box5{
+
+.box-area .box5 {
     background-image: url("Gallery/5.jpeg");
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center center;
     transform: rotateY(-90deg) rotateZ(90deg) translateZ(250px);
 }
-.box-area .box6{
+
+.box-area .box6 {
     background-image: url("Gallery/7.jpg");
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center center;
-    transform:rotateX(-90deg) translateZ(250px);
+    transform: rotateX(-90deg) translateZ(250px);
 }
+
 @keyframes animate2 {
-    from,to{
-        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) ;
+    from, to {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
     }
-    16%{
+    16% {
         transform: rotateY(-90deg);
     }
-    33%{
+    33% {
         transform: rotateY(-90deg) rotateZ(90deg);
     }
-    50%{
+    50% {
         transform: rotateY(-180deg) rotateZ(90deg);
     }
-    66%{
+    66% {
         transform: rotateY(-270deg) rotateX(90deg);
     }
-    83%{
+    83% {
         transform: rotateX(90deg);
     }
 }
