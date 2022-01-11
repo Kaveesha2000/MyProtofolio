@@ -906,6 +906,124 @@ header > nav > ul > li > a:hover {
     padding-left: 20px;
 }
 
+@media all and (max-width: 320px){
+    #Skills{
+        height: 55vh;
+    }
+    #header4{
+        font-size: 20px;
+    }
+    #grid{
+        grid-template-rows: repeat(2, 90px);
+        grid-template-columns: repeat(3, 93px);
+        left: 9px;
+        top: 50px;
+        grid-gap: 10px;
+    }
+    #grid>section{
+        box-shadow: 6px 6px 8px 1px #888888;
+    }
+
+    .skillheader{
+        font-size: 10px;
+        padding: 2px 4px 2px 3px
+    }
+    #img1{
+        width: 20px;
+        left: 3px;
+        top: -2px;
+    }
+    #img2{
+        width: 20px;
+        left: 3px;
+        top: -2px;
+    }
+    #img3{
+        width: 20px;
+        left: 3px;
+        top: -2px;
+    }
+    #img4{
+        width: 20px;
+        left: 3px;
+        top: -2px;
+    }
+    #img5{
+        width: 20px;
+        left: 3px;
+        top: -2px;
+    }
+    #img6{
+        width: 20px;
+        left: 3px;
+        top: -2px;
+    }
+    .one > #star1, #star2 {
+        width: 10px;
+        left: 1px;
+        top: -7px;
+    }
+
+    .two > #star3, #star4, #star5{
+        width: 10px;
+        left: 1px;
+        top: -7px;
+    }
+
+    .three > #star6 {
+        width: 10px;
+        left: 1px;
+        top: -7px;
+    }
+    .four > #star7, #star8 {
+        width: 10px;
+        left: 1px;
+        top: -7px;
+     }
+
+    .five > #star9, #star10, #star11 {
+        width: 10px;
+        left: 1px;
+        top: -7px;
+       }
+
+    .six > #star12, #star13 {
+        width: 10px;
+        left: 1px;
+        top: -7px;
+    }
+
+    .one>p{
+        font-size: 5px;
+        width: 80px;
+        padding: 4px;
+    }
+    .two>p{
+        font-size: 5px;
+        width: 80px;
+        padding: 4px;
+    }
+    .three>p{
+        font-size: 5px;
+        width: 80px;
+        padding: 4px;
+    }
+    .four>p{
+        font-size: 5px;
+        width: 80px;
+        padding: 4px;
+    }
+    .five>p{
+        font-size: 5px;
+        width: 80px;
+        padding: 4px;
+    }
+    .six>p{
+        font-size: 5px;
+        width: 80px;
+        padding: 4px;
+    }
+}
 /*=================================*/
 
 /*Page 05-Projects*/
