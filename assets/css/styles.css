@@ -906,65 +906,75 @@ header > nav > ul > li > a:hover {
     padding-left: 20px;
 }
 
-@media all and (max-width: 320px){
-    #Skills{
+@media all and (max-width: 320px) {
+    #Skills {
         height: 55vh;
     }
-    #header4{
+
+    #header4 {
         font-size: 20px;
     }
-    #grid{
+
+    #grid {
         grid-template-rows: repeat(2, 90px);
         grid-template-columns: repeat(3, 93px);
         left: 9px;
         top: 50px;
         grid-gap: 10px;
     }
-    #grid>section{
+
+    #grid > section {
         box-shadow: 6px 6px 8px 1px #888888;
     }
 
-    .skillheader{
+    .skillheader {
         font-size: 10px;
         padding: 2px 4px 2px 3px
     }
-    #img1{
+
+    #img1 {
         width: 20px;
         left: 3px;
         top: -2px;
     }
-    #img2{
+
+    #img2 {
         width: 20px;
         left: 3px;
         top: -2px;
     }
-    #img3{
+
+    #img3 {
         width: 20px;
         left: 3px;
         top: -2px;
     }
-    #img4{
+
+    #img4 {
         width: 20px;
         left: 3px;
         top: -2px;
     }
-    #img5{
+
+    #img5 {
         width: 20px;
         left: 3px;
         top: -2px;
     }
-    #img6{
+
+    #img6 {
         width: 20px;
         left: 3px;
         top: -2px;
     }
+
     .one > #star1, #star2 {
         width: 10px;
         left: 1px;
         top: -7px;
     }
 
-    .two > #star3, #star4, #star5{
+    .two > #star3, #star4, #star5 {
         width: 10px;
         left: 1px;
         top: -7px;
@@ -975,17 +985,18 @@ header > nav > ul > li > a:hover {
         left: 1px;
         top: -7px;
     }
+
     .four > #star7, #star8 {
         width: 10px;
         left: 1px;
         top: -7px;
-     }
+    }
 
     .five > #star9, #star10, #star11 {
         width: 10px;
         left: 1px;
         top: -7px;
-       }
+    }
 
     .six > #star12, #star13 {
         width: 10px;
@@ -993,37 +1004,43 @@ header > nav > ul > li > a:hover {
         top: -7px;
     }
 
-    .one>p{
+    .one > p {
         font-size: 5px;
         width: 80px;
         padding: 4px;
     }
-    .two>p{
+
+    .two > p {
         font-size: 5px;
         width: 80px;
         padding: 4px;
     }
-    .three>p{
+
+    .three > p {
         font-size: 5px;
         width: 80px;
         padding: 4px;
     }
-    .four>p{
+
+    .four > p {
         font-size: 5px;
         width: 80px;
         padding: 4px;
     }
-    .five>p{
+
+    .five > p {
         font-size: 5px;
         width: 80px;
         padding: 4px;
     }
-    .six>p{
+
+    .six > p {
         font-size: 5px;
         width: 80px;
         padding: 4px;
     }
 }
+
 /*=================================*/
 
 /*Page 05-Projects*/
@@ -1114,6 +1131,56 @@ header > nav > ul > li > a:hover {
     left: 1030px;
     color: #44C6E2;
     font-family: cursive;
+}
+
+@media all and (max-width: 320px) {
+    #Project {
+        height: 40vh;
+    }
+
+    #header5 {
+        font-size: 20px;
+    }
+
+    #projectflex {
+        top: 65px;
+    }
+
+    #projectflex > section:nth-child(1) > a > img {
+        height: 80px;
+        width: 80px;
+        box-shadow: 0px 0px 10px 2px #44c6e2;
+    }
+
+    #projectflex > section:nth-child(2) > a > img {
+        height: 80px;
+        width: 80px;
+        box-shadow: 0px 0px 10px 2px #44c6e2;
+    }
+
+    #projectflex > section:nth-child(3) > a > img {
+        height: 80px;
+        width: 80px;
+        box-shadow: 0px 0px 10px 2px #44c6e2;
+    }
+
+    #projectflex > section:nth-child(1) > h3 {
+        font-size: 10px;
+        top: 20vh;
+        left: 9vw;
+    }
+
+    #projectflex > section:nth-child(2) > h3 {
+        font-size: 10px;
+        top: 20vh;
+        left: 39vw;
+    }
+
+    #projectflex > section:nth-child(3) > h3 {
+        font-size: 10px;
+        top: 20vh;
+        left: 71vw;
+    }
 }
 
 /*=======================================================*/
