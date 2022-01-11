@@ -1256,6 +1256,45 @@ header > nav > ul > li > a:hover {
     border-radius: 100%;
 }
 
+@media all and (max-width: 320px) {
+    #Services{
+        height: 40vh;
+    }
+    #header6 {
+        font-size: 20px;
+    }
+
+    #Services > section:nth-child(1) > ul {
+        top: 20px;
+        left: 30px;
+    }
+
+    #Services > section:nth-child(1) > ul > li {
+        font-size: 12px;
+    }
+
+    #header7 {
+        font-size: 20px;
+        top: 100px;
+    }
+
+    #Services > section:nth-child(2) > ul {
+        top: 20px;
+        left: 30px;
+    }
+
+    #Services > section:nth-child(2) > ul > li {
+        top: 95px;
+        font-size: 12px;
+    }
+
+    #Services > section:nth-child(3) > img {
+        width: 60px;
+        height: 60px;
+        right: 12px;
+    }
+}
+
 /*=======================================================*/
 
 /*Page 08-Contact Info*/
