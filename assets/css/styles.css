@@ -1491,7 +1491,66 @@ header > nav > ul > li > a:hover {
     right: 80px;
     top: 450px;
 }
-
+@media all and (max-width: 320px){
+    #header8{
+        font-size: 20px;
+    }
+    #desc1 {
+        left: 40px;
+        font-size: 15px;
+        top: 40px;
+    }
+    #desc2{
+        left: 55px;
+        font-size: 12px;
+        top: 66px;
+    }
+    #contact{
+        width: 30px;
+        top: 100px;
+        left: 45px;
+    }
+    #contactHead{
+        font-size: 12px;
+        left: 40px;
+        top: 130px;
+    }
+    #contactdesc{
+        font-size: 10px;
+        top: 160px;
+        left: 28px;
+    }
+    #residence{
+        width: 30px;
+        top: 100px;
+        left: 145px;
+    }
+    #residenceHead{
+        font-size: 12px;
+        left: 133px;
+        top: 130px;
+    }
+    #residencedesc{
+        font-size: 10px;
+        left: 115px;
+        top: 160px;
+    }
+    #mail{
+        width: 30px;
+        top: 100px;
+        right: 45px;
+    }
+    #mailHead{
+        font-size: 12px;
+        left: 243px;
+        top: 130px;
+    }
+    #maildesc{
+        font-size: 6px;
+        right: 12px;
+        top: 160px;
+    }
+}
 /*=======================================================*/
 /*Page 09-Gallery*/
 /*=======================================================*/
