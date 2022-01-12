@@ -1492,6 +1492,9 @@ header > nav > ul > li > a:hover {
     top: 450px;
 }
 @media all and (max-width: 320px){
+    #Contact_Info{
+        height: 105vh;
+    }
     #header8{
         font-size: 20px;
     }
@@ -1550,6 +1553,57 @@ header > nav > ul > li > a:hover {
         right: 12px;
         top: 160px;
     }
+    #sendSMSDetails > h4:nth-child(1) {
+        font-size: 12px;
+        left: 23px;
+        top: 215px;
+    }
+    #sendSMSDetails > h4:nth-child(2) {
+        font-size: 12px;
+        top: 245px;
+        left: 23px;
+    }
+    #sendSMSDetails > h4:nth-child(3) {
+        font-size: 12px;
+        top: 275px;
+        left: 23px;
+    }
+    #sendSMSDetails > h4:nth-child(4) {
+        font-size: 12px;
+        top: 305px;
+        left: 23px;
+    }
+    #name{
+        left: 85px;
+        top: 224px;
+        width: 190px;
+    }
+    #mail-address {
+        left: 85px;
+        top: 255px;
+        width: 190px;
+    }
+    #subject {
+        left: 85px;
+        top: 287px;
+        width: 190px;
+    }
+    #message {
+        left: 85px;
+        top: 317px;
+        width: 190px;
+        height: 100px;
+    }
+    #gifContact {
+        display: none;
+    }
+    #SendBtn {
+        right: 40px;
+        top: 436px;
+        width: 80px;
+        font-size: 12px;
+        height: 20px;
+    }
 }
 /*=======================================================*/
 /*Page 09-Gallery*/
@@ -1559,7 +1613,7 @@ header > nav > ul > li > a:hover {
     position: relative;
     background-color: black;
     width: 100%;
-    height: 130vh;
+    height: 80vh;
     /*border: 1px solid red;*/
 }
 
@@ -1665,6 +1719,53 @@ body {
     }
 }
 
+@media all and (max-width: 320px){
+    #Gallery {
+        height: 65vh;
+    }
+    #header9{
+        font-size: 20px;
+        top: -55px;
+    }
+    .wrapper {
+        width: 200px;
+        height: 200px;
+    }
+    .box-area div {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+    }
+
+    .box-area {
+        transform-origin: 100px 100px 0;
+    }
+
+    .box-area .box1 {
+        transform: translateZ(100px);
+    }
+
+    .box-area .box2 {
+        transform: rotateY(90deg) translateZ(100px);
+    }
+
+    .box-area .box3 {
+        transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+    }
+
+    .box-area .box4 {
+        transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+    }
+
+    .box-area .box5 {
+        transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+    }
+
+    .box-area .box6 {
+        transform: rotateX(-90deg) translateZ(100px);
+    }
+}
 /*=======================================================*/
 
 /*Page 10-footer*/
