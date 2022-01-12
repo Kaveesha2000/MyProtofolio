@@ -266,6 +266,84 @@ header > nav > ul > li > a:hover {
         top: 432px;
     }
 }
+@media all and (min-width: 426px) and (max-width: 768px) {
+    header > nav {
+        width: 100vw;
+        box-shadow: 1px 2px 1px 1px darkgrey;
+    }
+
+    header > nav > ul {
+        right: 10px;
+        top: 30px;
+        font-size: 13px;
+    }
+
+    header > nav > ul > li {
+        padding: 2px;
+    }
+
+    #Home > section:nth-child(2) > img {
+        right: 70px;
+        width: 182px;
+        top: 70px;
+    }
+
+    #Home > section:nth-child(1) > h1 {
+        font-size: 32px;
+        left: 22px;
+        top: 270px;
+    }
+
+    #Home > section:nth-child(1) > h4 {
+        top: 320px;
+        font-size: 27px;
+        left: 25px;
+    }
+
+    #media_links {
+        left: 35px;
+        top: 370px;
+    }
+}
+@media all and (min-width: 769px) and (max-width: 1024px) {
+    header > nav {
+        width: 100vw;
+        box-shadow: 1px 2px 1px 1px darkgrey;
+    }
+
+    header > nav > ul {
+        right: 10px;
+        top: 30px;
+        font-size: 13px;
+    }
+
+    header > nav > ul > li {
+        padding: 2px;
+    }
+
+    #Home > section:nth-child(2) > img {
+        right: 70px;
+        width: 182px;
+        top: 70px;
+    }
+
+    #Home > section:nth-child(1) > h1 {
+        font-size: 32px;
+        left: 22px;
+        top: 270px;
+    }
+
+    #Home > section:nth-child(1) > h4 {
+        top: 320px;
+        font-size: 27px;
+        left: 25px;
+    }
+
+    #media_links {
+        left: 35px;
+        top: 370px;
+    }
+}
 /*=======================================================*/
 
 /*Page 02-About me*/
@@ -414,6 +492,66 @@ header > nav > ul > li > a:hover {
         height: 20px;
         font-size: 10px;
         right: 27px;
+    }
+}
+@media all and (min-width: 426px) and (max-width: 768px) {
+    #header2 {
+        font-size: 20px;
+    }
+
+    #About_me {
+        height: 80vh;
+    }
+
+    #Myphoto {
+        left: 88px;
+        width: 25vw;
+        height: 60vh;
+        box-shadow: 5px 0px 6px 1px darkgrey;
+    }
+
+    #details {
+        font-size: 15px;
+        right: 60px;
+        top: 95px;
+    }
+
+    #DownloadBtn {
+        width: 85px;
+        top: 345px;
+        height: 20px;
+        font-size: 12px;
+        right: 65px;
+    }
+}
+@media all and (min-width: 769px) and (max-width: 1024px) {
+    #header2 {
+        font-size: 20px;
+    }
+
+    #About_me {
+        height: 80vh;
+    }
+
+    #Myphoto {
+        left: 88px;
+        width: 25vw;
+        height: 60vh;
+        box-shadow: 5px 0px 6px 1px darkgrey;
+    }
+
+    #details {
+        font-size: 15px;
+        right: 60px;
+        top: 95px;
+    }
+
+    #DownloadBtn {
+        width: 85px;
+        top: 345px;
+        height: 20px;
+        font-size: 12px;
+        right: 65px;
     }
 }
 /*=======================================================*/
@@ -1156,6 +1294,306 @@ header > nav > ul > li > a:hover {
         left: 52vw;
     }
 }
+@media all and (min-width: 426px) and (max-width: 768px) {
+    #Education {
+        height: 70vh;
+    }
+
+    #header3 {
+        font-size: 20px;
+    }
+
+    #chart {
+        height: 67vh;
+        width: 81%;
+        bottom: 30px;
+        left: 70px;
+    }
+
+    #square_1 {
+        top: 35vh;
+        left: -3.5vw;
+        height: 15vh;
+    }
+
+    #primary {
+        width: 60px;
+        height: 60px;
+        left: -20px;
+        top: 34vh;
+    }
+
+    #pLevel {
+        font-size: 12px;
+        top: 129px;
+        left: -36px;
+    }
+
+    #square_2 {
+        height: 17vh;
+        top: 2vh;
+    }
+
+    #ol {
+        width: 60px;
+        height: 60px;
+        left: 6.5vw;
+        top: 2.5vh;
+    }
+
+    #oLevel {
+        font-size: 12px;
+        top: -9.8vh;
+        left: 19vw;
+    }
+
+    #square_3 {
+        height: 19vh;
+        left: 37vw;
+        top: -37.1vh;
+    }
+
+    #al {
+        left: 30vw;
+        height: 80px;
+        width: 80px;
+        top: -35vh;
+    }
+
+    #aLevel {
+        font-size: 12px;
+        top: -45.1vh;
+        left: 38.5vw;
+    }
+
+    #square_4 {
+        height: 21vh;
+        top: -73.9vh;
+        left: 57vw;
+    }
+
+    #dip1 {
+        width: 75px;
+        height: 60px;
+        top: -70vh;
+        left: 50vw;
+    }
+
+    #dip11Level {
+        font-size: 10px;
+        top: -82.4vh;
+        left: 60.1vw;
+    }
+
+    #dip12Level {
+        font-size: 12px;
+        top: -79.6vh;
+        left: 52.1vw;
+    }
+
+    #square_5 {
+        height: 23vh;
+        top: -110.6vh;
+        left: 77vw;
+    }
+
+    #dip2 {
+        width: 45px;
+        height: 50px;
+        top: -110vh;
+        left: 62.5vw;
+    }
+
+    #dip21Level {
+        top: -112vh;
+        font-size: 10px;
+        left: 77.5vw;
+    }
+
+    #dip22Level {
+        font-size: 12px;
+        top: -109.5vh;
+        left: 66.7vw;
+    }
+
+    #arrow1 {
+        width: 55px;
+        height: 30px;
+        bottom: -51vh;
+        left: 17.5vw;
+    }
+
+    #arrow2 {
+        width: 55px;
+        height: 30px;
+        left: 30vw;
+        top: 48vh;
+    }
+
+    #arrow3 {
+        width: 55px;
+        height: 30px;
+        bottom: -44vh;
+        left: 42vw;
+    }
+
+    #arrow4 {
+        width: 55px;
+        height: 30px;
+        bottom: -40vh;
+        left: 54vw;
+    }
+}
+@media all and (min-width: 769px) and (max-width: 1024px) {
+    #Education {
+        height: 70vh;
+    }
+
+    #header3 {
+        font-size: 20px;
+    }
+
+    #chart {
+        height: 67vh;
+        width: 81%;
+        bottom: 30px;
+        left: 70px;
+    }
+
+    #square_1 {
+        top: 35vh;
+        left: -3.5vw;
+        height: 15vh;
+    }
+
+    #primary {
+        width: 60px;
+        height: 60px;
+        left: -20px;
+        top: 34vh;
+    }
+
+    #pLevel {
+        font-size: 12px;
+        top: 129px;
+        left: -36px;
+    }
+
+    #square_2 {
+        height: 17vh;
+        top: 2vh;
+    }
+
+    #ol {
+        width: 60px;
+        height: 60px;
+        left: 6.5vw;
+        top: 2.5vh;
+    }
+
+    #oLevel {
+        font-size: 12px;
+        top: -9.8vh;
+        left: 19vw;
+    }
+
+    #square_3 {
+        height: 19vh;
+        left: 37vw;
+        top: -37.1vh;
+    }
+
+    #al {
+        left: 30vw;
+        height: 80px;
+        width: 80px;
+        top: -35vh;
+    }
+
+    #aLevel {
+        font-size: 12px;
+        top: -45.1vh;
+        left: 38.5vw;
+    }
+
+    #square_4 {
+        height: 21vh;
+        top: -73.9vh;
+        left: 57vw;
+    }
+
+    #dip1 {
+        width: 75px;
+        height: 60px;
+        top: -70vh;
+        left: 50vw;
+    }
+
+    #dip11Level {
+        font-size: 10px;
+        top: -82.4vh;
+        left: 60.1vw;
+    }
+
+    #dip12Level {
+        font-size: 12px;
+        top: -79.6vh;
+        left: 52.1vw;
+    }
+
+    #square_5 {
+        height: 23vh;
+        top: -110.6vh;
+        left: 77vw;
+    }
+
+    #dip2 {
+        width: 45px;
+        height: 50px;
+        top: -110vh;
+        left: 62.5vw;
+    }
+
+    #dip21Level {
+        top: -112vh;
+        font-size: 10px;
+        left: 77.5vw;
+    }
+
+    #dip22Level {
+        font-size: 12px;
+        top: -109.5vh;
+        left: 66.7vw;
+    }
+
+    #arrow1 {
+        width: 55px;
+        height: 30px;
+        bottom: -51vh;
+        left: 17.5vw;
+    }
+
+    #arrow2 {
+        width: 55px;
+        height: 30px;
+        left: 30vw;
+        top: 48vh;
+    }
+
+    #arrow3 {
+        width: 55px;
+        height: 30px;
+        bottom: -44vh;
+        left: 42vw;
+    }
+
+    #arrow4 {
+        width: 55px;
+        height: 30px;
+        bottom: -40vh;
+        left: 54vw;
+    }
+}
 /*=======================================================*/
 /*Page 04-Skills*/
 /*=======================================================*/
@@ -1368,7 +1806,7 @@ header > nav > ul > li > a:hover {
 
     .skillheader {
         font-size: 10px;
-        padding: 2px 4px 2px 3px
+        padding: 2px 4px 2px 3px;
     }
 
     #img1 {
@@ -1636,7 +2074,7 @@ header > nav > ul > li > a:hover {
 
     .skillheader {
         font-size: 10px;
-        padding: 2px 4px 2px 3px
+        padding: 2px 4px 2px 3px;
     }
 
     #img1 {
@@ -1745,6 +2183,274 @@ header > nav > ul > li > a:hover {
         font-size: 6.5px;
         width: 100px;
         padding: 1px 0 0 4px;
+    }
+}
+@media all and (min-width: 426px) and (max-width: 768px) {
+    #Skills {
+        height: 80vh;
+    }
+
+    #header4 {
+        font-size: 20px;
+    }
+
+    #grid {
+        grid-template-rows: repeat(2, 135px);
+        grid-template-columns: repeat(3, 230px);
+        left: 23px;
+        top: 50px;
+        grid-gap: 15px;
+    }
+
+    #grid > section {
+        box-shadow: 6px 6px 8px 1px #888888;
+    }
+
+    .skillheader {
+        font-size: 15px;
+        padding: 4px 4px 4px 5px;
+    }
+
+    #img1 {
+        width: 40px;
+        left: 3px;
+        top: -2px;
+    }
+
+    #img2 {
+        width: 40px;
+        left: 3px;
+        top: -2px;
+    }
+
+    #img3 {
+        width: 24px;
+        left: 3px;
+        top: -2px;
+    }
+
+    #img4 {
+        width: 40px;
+        left: 3px;
+        top: -2px;
+    }
+
+    #img5 {
+        width: 40px;
+        left: 3px;
+        top: -2px;
+    }
+
+    #img6 {
+        width: 40px;
+        left: 3px;
+        top: -2px;
+    }
+
+    .one > #star1, #star2 {
+        width: 20px;
+        left: 5px;
+        top: -13px;
+    }
+
+    .two > #star3, #star4, #star5 {
+        width: 20px;
+        left: 5px;
+        top: -13px;
+    }
+
+    .three > #star6 {
+        width: 20px;
+        left: 5px;
+        top: -3px;
+    }
+
+    .four > #star7, #star8 {
+        width: 20px;
+        left: 5px;
+        top: -13px;
+    }
+
+    .five > #star9, #star10, #star11 {
+        width: 20px;
+        left: 5px;
+        top: -13px;
+    }
+
+    .six > #star12, #star13 {
+        width: 20px;
+        left: 5px;
+        top: -13px;
+    }
+
+    .one > p {
+        font-size: 10px;
+        width: 220px;
+        padding: 1px 0 0 3px;
+    }
+
+    .two > p {
+        font-size: 10px;
+        width: 220px;
+        padding: 1px 0 0 3px;
+    }
+
+    .three > p {
+        font-size: 10px;
+        width: 220px;
+        padding: 1px 0 0 3px;
+    }
+
+    .four > p {
+        font-size: 10px;
+        width: 220px;
+        padding: 1px 0 0 3px;
+    }
+
+    .five > p {
+        font-size: 10px;
+        width: 220px;
+        padding: 1px 0 0 3px;
+    }
+
+    .six > p {
+        font-size: 10px;
+        width: 220px;
+        padding: 1px 0 0 3px;
+    }
+}
+@media all and (min-width: 769px) and (max-width: 1024px) {
+    #Skills {
+        height: 80vh;
+    }
+
+    #header4 {
+        font-size: 20px;
+    }
+
+    #grid {
+        grid-template-rows: repeat(2, 135px);
+        grid-template-columns: repeat(3, 230px);
+        left: 23px;
+        top: 50px;
+        grid-gap: 15px;
+    }
+
+    #grid > section {
+        box-shadow: 6px 6px 8px 1px #888888;
+    }
+
+    .skillheader {
+        font-size: 15px;
+        padding: 4px 4px 4px 5px;
+    }
+
+    #img1 {
+        width: 40px;
+        left: 3px;
+        top: -2px;
+    }
+
+    #img2 {
+        width: 40px;
+        left: 3px;
+        top: -2px;
+    }
+
+    #img3 {
+        width: 24px;
+        left: 3px;
+        top: -2px;
+    }
+
+    #img4 {
+        width: 40px;
+        left: 3px;
+        top: -2px;
+    }
+
+    #img5 {
+        width: 40px;
+        left: 3px;
+        top: -2px;
+    }
+
+    #img6 {
+        width: 40px;
+        left: 3px;
+        top: -2px;
+    }
+
+    .one > #star1, #star2 {
+        width: 20px;
+        left: 5px;
+        top: -13px;
+    }
+
+    .two > #star3, #star4, #star5 {
+        width: 20px;
+        left: 5px;
+        top: -13px;
+    }
+
+    .three > #star6 {
+        width: 20px;
+        left: 5px;
+        top: -3px;
+    }
+
+    .four > #star7, #star8 {
+        width: 20px;
+        left: 5px;
+        top: -13px;
+    }
+
+    .five > #star9, #star10, #star11 {
+        width: 20px;
+        left: 5px;
+        top: -13px;
+    }
+
+    .six > #star12, #star13 {
+        width: 20px;
+        left: 5px;
+        top: -13px;
+    }
+
+    .one > p {
+        font-size: 10px;
+        width: 220px;
+        padding: 1px 0 0 3px;
+    }
+
+    .two > p {
+        font-size: 10px;
+        width: 220px;
+        padding: 1px 0 0 3px;
+    }
+
+    .three > p {
+        font-size: 10px;
+        width: 220px;
+        padding: 1px 0 0 3px;
+    }
+
+    .four > p {
+        font-size: 10px;
+        width: 220px;
+        padding: 1px 0 0 3px;
+    }
+
+    .five > p {
+        font-size: 10px;
+        width: 220px;
+        padding: 1px 0 0 3px;
+    }
+
+    .six > p {
+        font-size: 10px;
+        width: 220px;
+        padding: 1px 0 0 3px;
     }
 }
 
@@ -1987,6 +2693,104 @@ header > nav > ul > li > a:hover {
         left: 72vw;
     }
 }
+@media all and (min-width: 426px) and (max-width: 768px) {
+    #Project {
+        height: 70vh;
+    }
+
+    #header5 {
+        font-size: 20px;
+    }
+
+    #projectflex {
+        top: 65px;
+    }
+
+    #projectflex > section:nth-child(1) > a > img {
+        height: 150px;
+        width: 150px;
+        box-shadow: 0px 0px 10px 2px #44c6e2;
+    }
+
+    #projectflex > section:nth-child(2) > a > img {
+        height: 150px;
+        width: 150px;
+        box-shadow: 0px 0px 10px 2px #44c6e2;
+    }
+
+    #projectflex > section:nth-child(3) > a > img {
+        height: 150px;
+        width: 150px;
+        box-shadow: 0px 0px 10px 2px #44c6e2;
+    }
+
+    #projectflex > section:nth-child(1) > h3 {
+        font-size: 15px;
+        top: 37vh;
+        left: 15vw;
+    }
+
+    #projectflex > section:nth-child(2) > h3 {
+        font-size: 15px;
+        top: 37vh;
+        left: 43vw;
+    }
+
+    #projectflex > section:nth-child(3) > h3 {
+        font-size: 15px;
+        top: 37vh;
+        left: 74vw;
+    }
+}
+@media all and (min-width: 769px) and (max-width: 1024px) {
+    #Project {
+        height: 70vh;
+    }
+
+    #header5 {
+        font-size: 20px;
+    }
+
+    #projectflex {
+        top: 65px;
+    }
+
+    #projectflex > section:nth-child(1) > a > img {
+        height: 150px;
+        width: 150px;
+        box-shadow: 0px 0px 10px 2px #44c6e2;
+    }
+
+    #projectflex > section:nth-child(2) > a > img {
+        height: 150px;
+        width: 150px;
+        box-shadow: 0px 0px 10px 2px #44c6e2;
+    }
+
+    #projectflex > section:nth-child(3) > a > img {
+        height: 150px;
+        width: 150px;
+        box-shadow: 0px 0px 10px 2px #44c6e2;
+    }
+
+    #projectflex > section:nth-child(1) > h3 {
+        font-size: 15px;
+        top: 37vh;
+        left: 15vw;
+    }
+
+    #projectflex > section:nth-child(2) > h3 {
+        font-size: 15px;
+        top: 37vh;
+        left: 43vw;
+    }
+
+    #projectflex > section:nth-child(3) > h3 {
+        font-size: 15px;
+        top: 37vh;
+        left: 74vw;
+    }
+}
 
 /*=======================================================*/
 
@@ -2175,6 +2979,84 @@ header > nav > ul > li > a:hover {
         height: 70px;
         right: 35px;
         top: 45px;
+    }
+}
+@media all and (min-width: 426px) and (max-width: 768px) {
+    #Services{
+        height: 50vh;
+    }
+    #header6 {
+        font-size: 20px;
+    }
+
+    #Services > section:nth-child(1) > ul {
+        top: 35px;
+        left: 100px;
+    }
+
+    #Services > section:nth-child(1) > ul > li {
+        font-size: 18px;
+    }
+
+    #header7 {
+        font-size: 20px;
+        top: 130px;
+    }
+
+    #Services > section:nth-child(2) > ul {
+        top: 35px;
+        left: 100px;
+    }
+
+    #Services > section:nth-child(2) > ul > li {
+        top: 120px;
+        font-size: 18px;
+    }
+
+    #Services > section:nth-child(3) > img {
+        width: 150px;
+        height: 150px;
+        right: 35px;
+        top: 35px;
+    }
+}
+@media all and (min-width: 769px) and (max-width: 1024px) {
+    #Services{
+        height: 50vh;
+    }
+    #header6 {
+        font-size: 20px;
+    }
+
+    #Services > section:nth-child(1) > ul {
+        top: 35px;
+        left: 100px;
+    }
+
+    #Services > section:nth-child(1) > ul > li {
+        font-size: 18px;
+    }
+
+    #header7 {
+        font-size: 20px;
+        top: 130px;
+    }
+
+    #Services > section:nth-child(2) > ul {
+        top: 35px;
+        left: 100px;
+    }
+
+    #Services > section:nth-child(2) > ul > li {
+        top: 120px;
+        font-size: 18px;
+    }
+
+    #Services > section:nth-child(3) > img {
+        width: 150px;
+        height: 150px;
+        right: 35px;
+        top: 35px;
     }
 }
 
@@ -2716,6 +3598,234 @@ header > nav > ul > li > a:hover {
         height: 20px;
     }
 }
+@media all and (min-width: 426px) and (max-width: 768px) {
+    #Contact_Info{
+        height: 125vh;
+    }
+    #header8{
+        font-size: 20px;
+    }
+    #desc1 {
+        left: 60px;
+        font-size: 18px;
+        top: 50px;
+    }
+    #desc2{
+        left: 85px;
+        font-size: 15px;
+        top: 80px;
+    }
+    #contact{
+        width: 45px;
+        top: 125px;
+        left: 110px;
+    }
+    #contactHead{
+        font-size: 15px;
+        top: 165px;
+        left: 108px;
+    }
+    #contactdesc{
+        font-size: 13px;
+        top: 205px;
+        left: 90px;
+    }
+    #residence{
+        width: 45px;
+        top: 125px;
+        left: 360px;
+    }
+    #residenceHead{
+        font-size: 15px;
+        top: 165px;
+        left: 347px;
+    }
+    #residencedesc{
+        font-size: 13px;
+        left: 320px;
+        top: 205px;
+    }
+    #mail{
+        width: 45px;
+        top: 125px;
+        right: 110px;
+    }
+    #mailHead{
+        font-size: 15px;
+        top: 165px;
+        left: 615px;
+    }
+    #maildesc{
+        font-size: 13px;
+        right: 32px;
+        top: 205px;
+    }
+    #sendSMSDetails > h4:nth-child(1) {
+        font-size: 15px;
+        left: 150px;
+        top: 52vh;
+    }
+    #sendSMSDetails > h4:nth-child(2) {
+        font-size: 15px;
+        top: 284px;
+        left: 150px;
+    }
+    #sendSMSDetails > h4:nth-child(3) {
+        font-size: 15px;
+        top: 323px;
+        left: 150px;
+    }
+    #sendSMSDetails > h4:nth-child(4) {
+        font-size: 15px;
+        top: 360px;
+        left: 150px;
+    }
+    #name{
+        left: 230px;
+        top: 260px;
+        width: 450px;
+    }
+    #mail-address {
+        left: 230px;
+        top: 300px;
+        width: 450px;
+    }
+    #subject {
+        left: 230px;
+        top: 340px;
+        width: 450px;
+    }
+    #message {
+        left: 230px;
+        top: 380px;
+        width: 450px;
+        height: 120px;
+    }
+    #gifContact {
+        display: none;
+    }
+    #SendBtn {
+        right: 83px;
+        top: 520px;
+        width: 80px;
+        font-size: 15px;
+        height: 23px;
+    }
+}
+@media all and (min-width: 769px) and (max-width: 1024px) {
+    #Contact_Info{
+        height: 125vh;
+    }
+    #header8{
+        font-size: 20px;
+    }
+    #desc1 {
+        left: 60px;
+        font-size: 18px;
+        top: 50px;
+    }
+    #desc2{
+        left: 85px;
+        font-size: 15px;
+        top: 80px;
+    }
+    #contact{
+        width: 45px;
+        top: 125px;
+        left: 110px;
+    }
+    #contactHead{
+        font-size: 15px;
+        top: 165px;
+        left: 108px;
+    }
+    #contactdesc{
+        font-size: 13px;
+        top: 205px;
+        left: 90px;
+    }
+    #residence{
+        width: 45px;
+        top: 125px;
+        left: 360px;
+    }
+    #residenceHead{
+        font-size: 15px;
+        top: 165px;
+        left: 347px;
+    }
+    #residencedesc{
+        font-size: 13px;
+        left: 320px;
+        top: 205px;
+    }
+    #mail{
+        width: 45px;
+        top: 125px;
+        right: 110px;
+    }
+    #mailHead{
+        font-size: 15px;
+        top: 165px;
+        left: 615px;
+    }
+    #maildesc{
+        font-size: 13px;
+        right: 32px;
+        top: 205px;
+    }
+    #sendSMSDetails > h4:nth-child(1) {
+        font-size: 15px;
+        left: 150px;
+        top: 52vh;
+    }
+    #sendSMSDetails > h4:nth-child(2) {
+        font-size: 15px;
+        top: 284px;
+        left: 150px;
+    }
+    #sendSMSDetails > h4:nth-child(3) {
+        font-size: 15px;
+        top: 323px;
+        left: 150px;
+    }
+    #sendSMSDetails > h4:nth-child(4) {
+        font-size: 15px;
+        top: 360px;
+        left: 150px;
+    }
+    #name{
+        left: 230px;
+        top: 260px;
+        width: 450px;
+    }
+    #mail-address {
+        left: 230px;
+        top: 300px;
+        width: 450px;
+    }
+    #subject {
+        left: 230px;
+        top: 340px;
+        width: 450px;
+    }
+    #message {
+        left: 230px;
+        top: 380px;
+        width: 450px;
+        height: 120px;
+    }
+    #gifContact {
+        display: none;
+    }
+    #SendBtn {
+        right: 83px;
+        top: 520px;
+        width: 80px;
+        font-size: 15px;
+        height: 23px;
+    }
+}
 /*=======================================================*/
 /*Page 09-Gallery*/
 /*=======================================================*/
@@ -2971,6 +4081,100 @@ body {
         transform: rotateX(-90deg) translateZ(100px);
     }
 }
+@media all and (min-width: 426px) and (max-width: 768px) {
+    #Gallery {
+        height: 65vh;
+    }
+    #header9{
+        font-size: 20px;
+        top: -55px;
+    }
+    .wrapper {
+        width: 200px;
+        height: 200px;
+    }
+    .box-area div {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+    }
+
+    .box-area {
+        transform-origin: 100px 100px 0;
+    }
+
+    .box-area .box1 {
+        transform: translateZ(100px);
+    }
+
+    .box-area .box2 {
+        transform: rotateY(90deg) translateZ(100px);
+    }
+
+    .box-area .box3 {
+        transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+    }
+
+    .box-area .box4 {
+        transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+    }
+
+    .box-area .box5 {
+        transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+    }
+
+    .box-area .box6 {
+        transform: rotateX(-90deg) translateZ(100px);
+    }
+}
+@media all and (min-width: 769px) and (max-width: 1024px) {
+    #Gallery {
+        height: 65vh;
+    }
+    #header9{
+        font-size: 20px;
+        top: -55px;
+    }
+    .wrapper {
+        width: 200px;
+        height: 200px;
+    }
+    .box-area div {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+    }
+
+    .box-area {
+        transform-origin: 100px 100px 0;
+    }
+
+    .box-area .box1 {
+        transform: translateZ(100px);
+    }
+
+    .box-area .box2 {
+        transform: rotateY(90deg) translateZ(100px);
+    }
+
+    .box-area .box3 {
+        transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+    }
+
+    .box-area .box4 {
+        transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+    }
+
+    .box-area .box5 {
+        transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+    }
+
+    .box-area .box6 {
+        transform: rotateX(-90deg) translateZ(100px);
+    }
+}
 /*=======================================================*/
 
 /*Page 10-footer*/
@@ -3091,7 +4295,6 @@ body {
         padding: 10px;
     }
 }
-
 @media all and (min-width: 321px) and (max-width: 375px) {
     #fullName {
         font-size: 25px;
@@ -3166,6 +4369,100 @@ body {
 
     #footernav > ul > li {
         padding: 2px;
+    }
+
+    #twitter {
+        width: 30px;
+        height: 30px;
+        padding: 10px;
+    }
+
+    #linkedIn {
+        width: 30px;
+        height: 30px;
+        padding: 10px;
+    }
+
+    #gitHub {
+        width: 30px;
+        height: 30px;
+        padding: 10px;
+    }
+}
+@media all and (min-width: 426px) and (max-width: 768px) {
+    #fullName {
+        font-size: 35px;
+        left: 24%;
+        top: 0vh;
+    }
+
+    #linkBar {
+        top: 10vh;
+        left: 43vw;
+        width: 55%;
+    }
+
+    #copyright {
+        left: 58px;
+        top: 18vh;
+        font-size: 14.5px;
+    }
+
+    #footernav > ul {
+        font-size: 13px;
+        right: 13vw;
+        bottom: 34vh;
+    }
+
+    #footernav > ul > li {
+        padding: 5px;
+    }
+
+    #twitter {
+        width: 30px;
+        height: 30px;
+        padding: 10px;
+    }
+
+    #linkedIn {
+        width: 30px;
+        height: 30px;
+        padding: 10px;
+    }
+
+    #gitHub {
+        width: 30px;
+        height: 30px;
+        padding: 10px;
+    }
+}
+@media all and (min-width: 769px) and (max-width: 1024px) {
+    #fullName {
+        font-size: 35px;
+        left: 24%;
+        top: 0vh;
+    }
+
+    #linkBar {
+        top: 10vh;
+        left: 43vw;
+        width: 55%;
+    }
+
+    #copyright {
+        left: 58px;
+        top: 18vh;
+        font-size: 14.5px;
+    }
+
+    #footernav > ul {
+        font-size: 13px;
+        right: 13vw;
+        bottom: 34vh;
+    }
+
+    #footernav > ul > li {
+        padding: 5px;
     }
 
     #twitter {
