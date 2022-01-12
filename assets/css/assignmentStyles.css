@@ -1,0 +1,142 @@
+body{
+    background: url("images/Assignments/background.jpg");
+    background-size: cover;
+    height: 180vh;
+}
+
+#header {
+    position: absolute;
+    font-size: 30px;
+    color: white;
+    margin: auto;
+    left: 45%;
+    top: 10px;
+    text-shadow: 4px 4px 5px darkgrey;
+}
+
+#layout {
+    position: absolute;
+    width: 90%;
+    height: 40vh;
+    left: 5vw;
+    display: grid;
+    margin-top: 15vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40px;
+}
+
+#layout>a{
+    position: relative;
+    background-size: cover;
+}
+#l1 {
+    background-image: url("images/Assignments/L1.png");
+}
+
+#l2 {
+    background-image: url("images/Assignments/L2.png");
+}
+
+#l3 {
+    background-image: url("images/Assignments/L3.png");
+}
+
+#l4 {
+    background-image: url("images/Assignments/L4.png");
+}
+
+#transition {
+    position: absolute;
+    width: 67%;
+    height: 40vh;
+    left: 15.5vw;
+    display: grid;
+    margin-top: 65vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+}
+
+#transition>a{
+    position: relative;
+    background-size: cover;
+}
+
+#t1 {
+    background-image: url("images/Assignments/T1.png");
+}
+
+#t2 {
+    background-image: url("images/Assignments/T2.png");
+}
+
+#t3 {
+    background-image: url("images/Assignments/T3.png");
+}
+
+#animation {
+    position: absolute;
+    width: 90%;
+    height: 40vh;
+    left: 5vw;
+    display: grid;
+    margin-top: 115vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40px;
+}
+
+#animation>a{
+    position: relative;
+    background-size: cover;
+}
+
+#a1 {
+    background-image: url("images/Assignments/A1.png");
+}
+
+#a2 {
+    background-image: url("images/Assignments/A2.png");
+}
+
+#a3 {
+    background-image: url("images/Assignments/A3.png");
+}
+
+#a4 {
+    background-image: url("images/Assignments/A4.png");
+}
+
+.photos {
+    webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.photos:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+@media all and (max-width: 320px){
+    body{
+        height: 100vh;
+    }
+
+    #header{
+        font-size: 20px;
+        left: 36%;
+    }
+    #layout{
+        height: 12vh;
+        grid-gap: 10px;
+    }
+    #transition{
+        margin-top: 30vh;
+        height: 12vh;
+        grid-gap: 10px;
+    }
+    #animation{
+        height: 12vh;
+        margin-top: 45vh;
+        grid-gap: 10px;
+    }
+}

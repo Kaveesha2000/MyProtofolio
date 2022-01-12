@@ -184,7 +184,47 @@ header > nav > ul > li > a:hover {
     }
 
 }
+@media all and (min-width: 320px) and (max-width: 375px) {
+    header > nav {
+        width: 100vw;
+        box-shadow: 1px 2px 1px 1px darkgrey;
+    }
 
+    header > nav > ul {
+        left: -30px;
+        right: 0;
+        top: 30px;
+        font-size: 8px;
+    }
+
+    header > nav > ul > li {
+        padding: 2px;
+    }
+
+    #Home > section:nth-child(2) > img {
+        right: 0;
+        left: 0;
+        width: 120px;
+        top: -125px;
+    }
+
+    #Home > section:nth-child(1) > h1 {
+        font-size: 22px;
+        left: 22px;
+        top: 335px;
+    }
+
+    #Home > section:nth-child(1) > h4 {
+        top: 382px;
+        font-size: 25px;
+        left: 60px;
+    }
+
+    #media_links {
+        left: 85px;
+        top: 432px;
+    }
+}
 /*=======================================================*/
 
 /*Page 02-About me*/
