@@ -140,8 +140,6 @@ body{
         grid-gap: 10px;
     }
 }
-
-
 @media all and (min-width: 321px) and (max-width: 375px){
     body{
         height: 100vh;
@@ -163,6 +161,78 @@ body{
     #animation{
         height: 12vh;
         margin-top: 45vh;
+        grid-gap: 10px;
+    }
+}
+@media all and (min-width: 376px) and (max-width: 425px){
+    body{
+        height: 100vh;
+    }
+
+    #header{
+        font-size: 20px;
+        left: 36%;
+    }
+    #layout{
+        height: 12vh;
+        grid-gap: 10px;
+    }
+    #transition{
+        margin-top: 30vh;
+        height: 12vh;
+        grid-gap: 10px;
+    }
+    #animation{
+        height: 12vh;
+        margin-top: 45vh;
+        grid-gap: 10px;
+    }
+}
+@media all and (min-width: 426px) and (max-width: 768px){
+    body{
+        height: 130vh;
+    }
+
+    #header{
+        font-size: 20px;
+        left: 36%;
+    }
+    #layout{
+        height: 30vh;
+        grid-gap: 10px;
+    }
+    #transition{
+        margin-top: 54vh;
+        height: 30vh;
+        grid-gap: 10px;
+    }
+    #animation{
+        height: 30vh;
+        margin-top: 92vh;
+        grid-gap: 10px;
+    }
+}
+@media all and (min-width: 769px) and (max-width: 1024px){
+    body{
+        height: 200vh;
+    }
+
+    #header{
+        font-size: 20px;
+        left: 36%;
+    }
+    #layout{
+        height: 50vh;
+        grid-gap: 10px;
+    }
+    #transition{
+        margin-top: 75vh;
+        height: 50vh;
+        grid-gap: 10px;
+    }
+    #animation{
+        height: 50vh;
+        margin-top: 136vh;
         grid-gap: 10px;
     }
 }

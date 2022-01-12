@@ -279,7 +279,7 @@ header > nav > ul > li > a:hover {
     }
 
     header > nav > ul > li {
-        padding: 2px;
+        padding: 5px;
     }
 
     #Home > section:nth-child(2) > img {
@@ -318,30 +318,30 @@ header > nav > ul > li > a:hover {
     }
 
     header > nav > ul > li {
-        padding: 2px;
+        padding: 5px;
     }
 
     #Home > section:nth-child(2) > img {
-        right: 70px;
-        width: 182px;
+        right: 115px;
+        width: 251px;
         top: 70px;
     }
 
     #Home > section:nth-child(1) > h1 {
-        font-size: 32px;
-        left: 22px;
+        font-size: 40px;
+        left: 50px;
         top: 270px;
     }
 
     #Home > section:nth-child(1) > h4 {
-        top: 320px;
-        font-size: 27px;
-        left: 25px;
+        top: 325px;
+        font-size: 30px;
+        left: 52px;
     }
 
     #media_links {
-        left: 35px;
-        top: 370px;
+        left: 50px;
+        top: 372px;
     }
 }
 /*=======================================================*/
@@ -526,32 +526,33 @@ header > nav > ul > li > a:hover {
 }
 @media all and (min-width: 769px) and (max-width: 1024px) {
     #header2 {
-        font-size: 20px;
+        font-size: 25px;
     }
 
     #About_me {
-        height: 80vh;
+        height: 100vh;
     }
 
     #Myphoto {
-        left: 88px;
+        left: 89px;
         width: 25vw;
-        height: 60vh;
+        height: 75vh;
+        top: 15vh;
         box-shadow: 5px 0px 6px 1px darkgrey;
     }
 
     #details {
-        font-size: 15px;
-        right: 60px;
+        font-size: 18px;
+        right: 112px;
         top: 95px;
     }
 
     #DownloadBtn {
-        width: 85px;
-        top: 345px;
-        height: 20px;
-        font-size: 12px;
-        right: 65px;
+        width: 100px;
+        top: 400px;
+        height: 25px;
+        font-size: 15px;
+        right: 130px;
     }
 }
 /*=======================================================*/
@@ -1446,24 +1447,25 @@ header > nav > ul > li > a:hover {
 }
 @media all and (min-width: 769px) and (max-width: 1024px) {
     #Education {
-        height: 70vh;
+        height: 90vh;
     }
 
     #header3 {
-        font-size: 20px;
+        font-size: 25px;
     }
 
     #chart {
         height: 67vh;
         width: 81%;
-        bottom: 30px;
-        left: 70px;
+        bottom: 70px;
+        left: 205px;
     }
 
     #square_1 {
         top: 35vh;
-        left: -3.5vw;
+        left: -2.5vw;
         height: 15vh;
+        width: 7vw;
     }
 
     #primary {
@@ -1481,117 +1483,122 @@ header > nav > ul > li > a:hover {
 
     #square_2 {
         height: 17vh;
-        top: 2vh;
+        top: 1vh;
+        width: 7vw;
+        left: 120px;
     }
 
     #ol {
         width: 60px;
         height: 60px;
-        left: 6.5vw;
+        left: 3.8vw;
         top: 2.5vh;
     }
 
     #oLevel {
         font-size: 12px;
         top: -9.8vh;
-        left: 19vw;
+        left: 13vw;
     }
 
     #square_3 {
         height: 19vh;
-        left: 37vw;
-        top: -37.1vh;
+        left: 26vw;
+        top: -39.1vh;
+        width: 7vw;
     }
 
     #al {
-        left: 30vw;
+        left: 20.5vw;
         height: 80px;
         width: 80px;
-        top: -35vh;
+        top: -36vh;
     }
 
     #aLevel {
         font-size: 12px;
-        top: -45.1vh;
-        left: 38.5vw;
+        top: -45.5vh;
+        left: 27.5vw;
     }
 
     #square_4 {
         height: 21vh;
-        top: -73.9vh;
-        left: 57vw;
+        top: -76.9vh;
+        left: 41vw;
+        width: 7vw;
     }
 
     #dip1 {
         width: 75px;
         height: 60px;
-        top: -70vh;
-        left: 50vw;
+        top: -72vh;
+        left: 36vw;
     }
 
     #dip11Level {
         font-size: 10px;
-        top: -82.4vh;
-        left: 60.1vw;
+        top: -84.4vh;
+        left: 43.2vw;
     }
 
     #dip12Level {
         font-size: 12px;
-        top: -79.6vh;
-        left: 52.1vw;
+        top: -80.6vh;
+        left: 37.1vw;
     }
 
     #square_5 {
         height: 23vh;
-        top: -110.6vh;
-        left: 77vw;
+        top: -114.6vh;
+        left: 56vw;
+        width: 7vw;
     }
 
     #dip2 {
         width: 45px;
         height: 50px;
-        top: -110vh;
-        left: 62.5vw;
+        top: -115vh;
+        left: 45.2vw;
     }
 
     #dip21Level {
-        top: -112vh;
+        top: -115vh;
         font-size: 10px;
-        left: 77.5vw;
+        left: 56.5vw;
     }
 
     #dip22Level {
         font-size: 12px;
-        top: -109.5vh;
-        left: 66.7vw;
+        top: -111.5vh;
+        left: 48.7vw;
     }
 
     #arrow1 {
         width: 55px;
         height: 30px;
-        bottom: -51vh;
-        left: 17.5vw;
+        bottom: -63vh;
+        left: 25.5vw;
     }
 
     #arrow2 {
         width: 55px;
         height: 30px;
-        left: 30vw;
-        top: 48vh;
+        left: 34vw;
+        top: 58vh;
     }
 
     #arrow3 {
         width: 55px;
         height: 30px;
-        bottom: -44vh;
-        left: 42vw;
+        bottom: -55vh;
+        left: 43vw;
     }
 
     #arrow4 {
         width: 55px;
         height: 30px;
-        bottom: -40vh;
-        left: 54vw;
+        bottom: -52vh;
+        left: 52vw;
     }
 }
 /*=======================================================*/
@@ -2321,17 +2328,17 @@ header > nav > ul > li > a:hover {
 }
 @media all and (min-width: 769px) and (max-width: 1024px) {
     #Skills {
-        height: 80vh;
+        height: 100vh;
     }
 
     #header4 {
-        font-size: 20px;
+        font-size: 25px;
     }
 
     #grid {
-        grid-template-rows: repeat(2, 135px);
-        grid-template-columns: repeat(3, 230px);
-        left: 23px;
+        grid-template-rows: repeat(2, 180px);
+        grid-template-columns: repeat(3, 310px);
+        left: 40px;
         top: 50px;
         grid-gap: 15px;
     }
@@ -2341,115 +2348,115 @@ header > nav > ul > li > a:hover {
     }
 
     .skillheader {
-        font-size: 15px;
-        padding: 4px 4px 4px 5px;
+        font-size: 20px;
+        padding: 6px 4px 8px 10px;
     }
 
     #img1 {
-        width: 40px;
-        left: 3px;
+        width: 50px;
+        left: 10px;
         top: -2px;
     }
 
     #img2 {
-        width: 40px;
-        left: 3px;
+        width: 50px;
+        left: 10px;
         top: -2px;
     }
 
     #img3 {
-        width: 24px;
-        left: 3px;
+        width: 50px;
+        left: 10px;
         top: -2px;
     }
 
     #img4 {
-        width: 40px;
-        left: 3px;
+        width: 50px;
+        left: 10px;
         top: -2px;
     }
 
     #img5 {
-        width: 40px;
-        left: 3px;
+        width: 50px;
+        left: 10px;
         top: -2px;
     }
 
     #img6 {
-        width: 40px;
-        left: 3px;
+        width: 50px;
+        left: 10px;
         top: -2px;
     }
 
     .one > #star1, #star2 {
-        width: 20px;
-        left: 5px;
-        top: -13px;
+        width: 25px;
+        left: 11px;
+        top: -15px;
     }
 
     .two > #star3, #star4, #star5 {
-        width: 20px;
-        left: 5px;
-        top: -13px;
+        width: 25px;
+        left: 11px;
+        top: -15px;
     }
 
     .three > #star6 {
-        width: 20px;
-        left: 5px;
-        top: -3px;
+        width: 25px;
+        left: 11px;
+        top: -15px;
     }
 
     .four > #star7, #star8 {
-        width: 20px;
-        left: 5px;
-        top: -13px;
+        width: 25px;
+        left: 11px;
+        top: -15px;
     }
 
     .five > #star9, #star10, #star11 {
-        width: 20px;
-        left: 5px;
-        top: -13px;
+        width: 25px;
+        left: 11px;
+        top: -15px;
     }
 
     .six > #star12, #star13 {
-        width: 20px;
-        left: 5px;
-        top: -13px;
+        width: 25px;
+        left: 11px;
+        top: -15px;
     }
 
     .one > p {
-        font-size: 10px;
-        width: 220px;
+        font-size: 14px;
+        width: 295px;
         padding: 1px 0 0 3px;
     }
 
     .two > p {
-        font-size: 10px;
-        width: 220px;
+        font-size: 14px;
+        width: 295px;
         padding: 1px 0 0 3px;
     }
 
     .three > p {
-        font-size: 10px;
-        width: 220px;
+        font-size: 14px;
+        width: 295px;
         padding: 1px 0 0 3px;
     }
 
     .four > p {
-        font-size: 10px;
-        width: 220px;
+        font-size: 14px;
+        width: 295px;
         padding: 1px 0 0 3px;
     }
 
     .five > p {
-        font-size: 10px;
-        width: 220px;
+        font-size: 14px;
+        width: 295px;
         padding: 1px 0 0 3px;
     }
 
     .six > p {
-        font-size: 10px;
-        width: 220px;
+        font-size: 14px;
+        width: 295px;
         padding: 1px 0 0 3px;
     }
 }
@@ -2744,11 +2751,11 @@ header > nav > ul > li > a:hover {
 }
 @media all and (min-width: 769px) and (max-width: 1024px) {
     #Project {
-        height: 70vh;
+        height: 90vh;
     }
 
     #header5 {
-        font-size: 20px;
+        font-size: 25px;
     }
 
     #projectflex {
@@ -2756,39 +2763,39 @@ header > nav > ul > li > a:hover {
     }
 
     #projectflex > section:nth-child(1) > a > img {
-        height: 150px;
-        width: 150px;
+        height: 200px;
+        width: 200px;
         box-shadow: 0px 0px 10px 2px #44c6e2;
     }
 
     #projectflex > section:nth-child(2) > a > img {
-        height: 150px;
-        width: 150px;
+        height: 200px;
+        width: 200px;
         box-shadow: 0px 0px 10px 2px #44c6e2;
     }
 
     #projectflex > section:nth-child(3) > a > img {
-        height: 150px;
-        width: 150px;
+        height: 200px;
+        width: 200px;
         box-shadow: 0px 0px 10px 2px #44c6e2;
     }
 
     #projectflex > section:nth-child(1) > h3 {
-        font-size: 15px;
-        top: 37vh;
+        font-size: 18px;
+        top: 52vh;
         left: 15vw;
     }
 
     #projectflex > section:nth-child(2) > h3 {
-        font-size: 15px;
-        top: 37vh;
-        left: 43vw;
+        font-size: 18px;
+        top: 52vh;
+        left: 44vw;
     }
 
     #projectflex > section:nth-child(3) > h3 {
-        font-size: 15px;
-        top: 37vh;
-        left: 74vw;
+        font-size: 18px;
+        top: 52vh;
+        left: 75vw;
     }
 }
 
@@ -3022,15 +3029,15 @@ header > nav > ul > li > a:hover {
 }
 @media all and (min-width: 769px) and (max-width: 1024px) {
     #Services{
-        height: 50vh;
+        height: 70vh;
     }
     #header6 {
-        font-size: 20px;
+        font-size: 25px;
     }
 
     #Services > section:nth-child(1) > ul {
-        top: 35px;
-        left: 100px;
+        top: 40px;
+        left: 105px;
     }
 
     #Services > section:nth-child(1) > ul > li {
@@ -3038,8 +3045,8 @@ header > nav > ul > li > a:hover {
     }
 
     #header7 {
-        font-size: 20px;
-        top: 130px;
+        font-size: 25px;
+        top: 155px;
     }
 
     #Services > section:nth-child(2) > ul {
@@ -3048,15 +3055,15 @@ header > nav > ul > li > a:hover {
     }
 
     #Services > section:nth-child(2) > ul > li {
-        top: 120px;
+        top: 155px;
         font-size: 18px;
     }
 
     #Services > section:nth-child(3) > img {
-        width: 150px;
-        height: 150px;
+        width: 300px;
+        height: 300px;
         right: 35px;
-        top: 35px;
+        top: -10px;
     }
 }
 
@@ -3717,110 +3724,110 @@ header > nav > ul > li > a:hover {
         height: 125vh;
     }
     #header8{
-        font-size: 20px;
+        font-size: 25px;
     }
     #desc1 {
         left: 60px;
-        font-size: 18px;
+        font-size: 20px;
         top: 50px;
     }
     #desc2{
         left: 85px;
-        font-size: 15px;
-        top: 80px;
+        font-size: 17px;
+        top: 85px;
     }
     #contact{
         width: 45px;
         top: 125px;
-        left: 110px;
+        left: 150px;
     }
     #contactHead{
-        font-size: 15px;
+        font-size: 18px;
         top: 165px;
-        left: 108px;
+        left: 145px;
     }
     #contactdesc{
-        font-size: 13px;
-        top: 205px;
-        left: 90px;
+        font-size: 15px;
+        top: 216px;
+        left: 125px;
     }
     #residence{
         width: 45px;
         top: 125px;
-        left: 360px;
+        left: 495px;
     }
     #residenceHead{
-        font-size: 15px;
+        font-size: 18px;
         top: 165px;
-        left: 347px;
+        left: 473px;
     }
     #residencedesc{
-        font-size: 13px;
-        left: 320px;
-        top: 205px;
+        font-size: 15px;
+        left: 440px;
+        top: 216px;
     }
     #mail{
         width: 45px;
         top: 125px;
-        right: 110px;
+        right: 150px;
     }
     #mailHead{
-        font-size: 15px;
+        font-size: 18px;
         top: 165px;
-        left: 615px;
+        left: 827px;
     }
     #maildesc{
-        font-size: 13px;
-        right: 32px;
-        top: 205px;
+        font-size: 15px;
+        right: 55px;
+        top: 216px;
     }
     #sendSMSDetails > h4:nth-child(1) {
-        font-size: 15px;
-        left: 150px;
-        top: 52vh;
+        font-size: 18px;
+        left: 285px;
+        top: 60vh;
     }
     #sendSMSDetails > h4:nth-child(2) {
-        font-size: 15px;
-        top: 284px;
-        left: 150px;
+        font-size: 18px;
+        top: 302px;
+        left: 285px;
     }
     #sendSMSDetails > h4:nth-child(3) {
-        font-size: 15px;
-        top: 323px;
-        left: 150px;
+        font-size: 18px;
+        top: 342px;
+        left: 285px;
     }
     #sendSMSDetails > h4:nth-child(4) {
-        font-size: 15px;
-        top: 360px;
-        left: 150px;
+        font-size: 18px;
+        top: 380px;
+        left: 285px;
     }
     #name{
-        left: 230px;
-        top: 260px;
-        width: 450px;
+        left: 375px;
+        top: 290px;
+        width: 500px;
     }
     #mail-address {
-        left: 230px;
-        top: 300px;
-        width: 450px;
+        left: 375px;
+        top: 326px;
+        width: 500px;
     }
     #subject {
-        left: 230px;
-        top: 340px;
-        width: 450px;
+        left: 375px;
+        top: 365px;
+        width: 500px;
     }
     #message {
-        left: 230px;
-        top: 380px;
-        width: 450px;
+        left: 375px;
+        top: 405px;
+        width: 500px;
         height: 120px;
     }
     #gifContact {
         display: none;
     }
     #SendBtn {
-        right: 83px;
-        top: 520px;
+        right: 145px;
+        top: 570px;
         width: 80px;
         font-size: 15px;
         height: 23px;
@@ -4130,10 +4137,10 @@ body {
 }
 @media all and (min-width: 769px) and (max-width: 1024px) {
     #Gallery {
-        height: 65vh;
+        height: 70vh;
     }
     #header9{
-        font-size: 20px;
+        font-size: 25px;
         top: -55px;
     }
     .wrapper {
@@ -4438,8 +4445,8 @@ body {
 }
 @media all and (min-width: 769px) and (max-width: 1024px) {
     #fullName {
-        font-size: 35px;
-        left: 24%;
+        font-size: 40px;
+        left: 26%;
         top: 0vh;
     }
 
@@ -4450,15 +4457,15 @@ body {
     }
 
     #copyright {
-        left: 58px;
-        top: 18vh;
-        font-size: 14.5px;
+        left: 134px;
+        top: 20vh;
+        font-size: 16.5px;
     }
 
     #footernav > ul {
-        font-size: 13px;
-        right: 13vw;
-        bottom: 34vh;
+        font-size: 15px;
+        right: 22vw;
+        bottom: 30vh;
     }
 
     #footernav > ul > li {
@@ -4466,20 +4473,20 @@ body {
     }
 
     #twitter {
-        width: 30px;
-        height: 30px;
+        width: 35px;
+        height: 35px;
         padding: 10px;
     }
 
     #linkedIn {
-        width: 30px;
-        height: 30px;
+        width: 35px;
+        height: 35px;
         padding: 10px;
     }
 
     #gitHub {
-        width: 30px;
-        height: 30px;
+        width: 35px;
+        height: 35px;
         padding: 10px;
     }
 }

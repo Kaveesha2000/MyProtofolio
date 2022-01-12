@@ -98,3 +98,57 @@ body{
         height: 20vh;
     }
 }
+@media all and (min-width: 376px) and (max-width: 425px){
+    body{
+        height: 100vh;
+    }
+
+    #header{
+        font-size: 20px;
+        left: 36%;
+    }
+    #standAlone {
+        height: 50vh;
+        width: 92%;
+        grid-gap: 10px;
+    }
+    #standAlone > a {
+        height: 20vh;
+    }
+}
+@media all and (min-width: 426px) and (max-width: 768px){
+    body{
+        height: 140vh;
+    }
+
+    #header{
+        font-size: 20px;
+        left: 36%;
+    }
+    #standAlone {
+        height: 50vh;
+        width: 92%;
+        grid-gap: 10px;
+    }
+    #standAlone > a {
+        height: 38vh;
+    }
+}
+@media all and (min-width: 769px) and (max-width: 1024px){
+    body{
+        height: 150vh;
+    }
+
+    #header{
+        font-size: 20px;
+        left: 36%;
+    }
+    #standAlone {
+        height: 50vh;
+        width: 92%;
+        grid-gap: 10px;
+    }
+    #standAlone > a {
+        height: 50vh;
+    }
+}
