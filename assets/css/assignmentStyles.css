@@ -140,3 +140,29 @@ body{
         grid-gap: 10px;
     }
 }
+
+
+@media all and (min-width: 320px) and (max-width: 375px){
+    body{
+        height: 100vh;
+    }
+
+    #header{
+        font-size: 20px;
+        left: 36%;
+    }
+    #layout{
+        height: 12vh;
+        grid-gap: 10px;
+    }
+    #transition{
+        margin-top: 30vh;
+        height: 12vh;
+        grid-gap: 10px;
+    }
+    #animation{
+        height: 12vh;
+        margin-top: 45vh;
+        grid-gap: 10px;
+    }
+}

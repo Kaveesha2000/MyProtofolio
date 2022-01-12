@@ -80,3 +80,21 @@ body{
         height: 20vh;
     }
 }
+@media all and (min-width: 320px) and (max-width: 375px){
+    body{
+        height: 100vh;
+    }
+
+    #header{
+        font-size: 20px;
+        left: 36%;
+    }
+    #standAlone {
+        height: 50vh;
+        width: 92%;
+        grid-gap: 10px;
+    }
+    #standAlone > a {
+        height: 20vh;
+    }
+}
