@@ -11,6 +11,6 @@ My Personal Web Mockup : https://www.figma.com/file/4SIki44FpSMQD72dx3pcWZ/Figma
 
 My Github Page Link : https://kaveesha2000.github.io/MyProtofolio/
 
-My Personal Profile : https://kaveeshasanduni.000webhostapp.com/
+My Personal Profile : https://kaveeshasanduni200066.000webhost
 
 Project Link: [https://github.com/Kaveesha2000/MyProtofolio](https://github.com/Kaveesha2000/MyProtofolio)
