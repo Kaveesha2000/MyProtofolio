@@ -1613,7 +1613,7 @@ header > nav > ul > li > a:hover {
     position: relative;
     background-color: black;
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     /*border: 1px solid red;*/
 }
 
@@ -1846,4 +1846,44 @@ body {
     color: #44C6E2;
 }
 
+@media all and (max-width: 320px){
+    #fullName {
+        font-size: 23px;
+        left: 6%;
+        top: 0vh;
+    }
+    #linkBar {
+        top: 5vh;
+        left: 30vw;
+        width: 60%;
+    }
+    #copyright{
+        left: 12px;
+        top: 15vh;
+        font-size: 6.5px;
+    }
+    #footernav >ul {
+        font-size: 7px;
+        right: 12vw;
+        bottom: 42vh;
+    }
+    #footernav>ul>li{
+        padding: 0;
+    }
+    #twitter{
+        width: 25px;
+        height: 25px;
+        padding: 10px;
+    }
+    #linkedIn{
+        width: 25px;
+        height: 25px;
+        padding: 10px;
+    }
+    #gitHub{
+        width: 25px;
+        height: 25px;
+        padding: 10px;
+    }
+}
 /*=======================================================*/
