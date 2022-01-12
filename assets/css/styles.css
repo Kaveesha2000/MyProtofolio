@@ -184,7 +184,7 @@ header > nav > ul > li > a:hover {
     }
 
 }
-@media all and (min-width: 320px) and (max-width: 375px) {
+@media all and (min-width: 321px) and (max-width: 375px) {
     header > nav {
         width: 100vw;
         box-shadow: 1px 2px 1px 1px darkgrey;
@@ -222,6 +222,47 @@ header > nav > ul > li > a:hover {
 
     #media_links {
         left: 108px;
+        top: 432px;
+    }
+}
+@media all and (min-width: 376px) and (max-width: 425px) {
+    header > nav {
+        width: 100vw;
+        box-shadow: 1px 2px 1px 1px darkgrey;
+    }
+
+    header > nav > ul {
+        left: -25px;
+        right: 0;
+        top: 30px;
+        font-size: 11px;
+    }
+
+    header > nav > ul > li {
+        padding: 2px;
+    }
+
+    #Home > section:nth-child(2) > img {
+        right: 0;
+        left: 0;
+        width: 140px;
+        top: -125px;
+    }
+
+    #Home > section:nth-child(1) > h1 {
+        font-size: 30px;
+        left: 22px;
+        top: 335px;
+    }
+
+    #Home > section:nth-child(1) > h4 {
+        top: 382px;
+        font-size: 25px;
+        left: 110px;
+    }
+
+    #media_links {
+        left: 140px;
         top: 432px;
     }
 }
@@ -315,7 +356,7 @@ header > nav > ul > li > a:hover {
         right: 20px;
     }
 }
-@media all and (min-width: 320px) and (max-width: 375px) {
+@media all and (min-width: 321px) and (max-width: 375px) {
     #header2 {
         font-size: 20px;
     }
@@ -343,6 +384,36 @@ header > nav > ul > li > a:hover {
         height: 20px;
         font-size: 10px;
         right: 20px;
+    }
+}
+@media all and (min-width: 376px) and (max-width: 425px) {
+    #header2 {
+        font-size: 20px;
+    }
+
+    #About_me {
+        height: 65vh;
+    }
+
+    #Myphoto {
+        left: 25px;
+        width: 20vw;
+        height: 40vh;
+        box-shadow: 5px 0px 6px 1px darkgrey;
+    }
+
+    #details {
+        font-size: 12px;
+        right: 8px;
+        top: 72px;
+    }
+
+    #DownloadBtn {
+        width: 75px;
+        top: 261px;
+        height: 20px;
+        font-size: 10px;
+        right: 27px;
     }
 }
 /*=======================================================*/
@@ -785,7 +856,7 @@ header > nav > ul > li > a:hover {
         left: 43vw;
     }
 }
-@media all and (min-width: 320px) and (max-width: 375px) {
+@media all and (min-width: 321px) and (max-width: 375px) {
     #Education {
         height: 70vh;
     }
@@ -933,6 +1004,156 @@ header > nav > ul > li > a:hover {
         height: 20px;
         bottom: -39vh;
         left: 49vw;
+    }
+}
+@media all and (min-width: 376px) and (max-width: 425px) {
+    #Education {
+        height: 70vh;
+    }
+
+    #header3 {
+        font-size: 20px;
+    }
+
+    #chart {
+        height: 67vh;
+        width: 81%;
+        bottom: 30px;
+        left: 32px;
+    }
+
+    #square_1 {
+        top: 35vh;
+        left: -3.5vw;
+        height: 15vh;
+    }
+
+    #primary {
+        width: 45px;
+        height: 45px;
+        left: -20px;
+        top: 34vh;
+    }
+
+    #pLevel {
+        font-size: 8px;
+        top: 135px;
+        left: -24px;
+    }
+
+    #square_2 {
+        height: 17vh;
+        top: 7vh;
+    }
+
+    #ol {
+        width: 45px;
+        height: 45px;
+        left: 3vw;
+        top: 6.5vh;
+    }
+
+    #oLevel {
+        font-size: 8px;
+        top: -3.8vh;
+        left: 18vw;
+    }
+
+    #square_3 {
+        height: 19vh;
+        left: 37vw;
+        top: -27.5vh;
+    }
+
+    #al {
+        left: 26vw;
+        height: 65px;
+        width: 65px;
+        top: -26vh;
+    }
+
+    #aLevel {
+        font-size: 8px;
+        top: -35.1vh;
+        left: 37.5vw;
+    }
+
+    #square_4 {
+        height: 21vh;
+        top: -60.7vh;
+        left: 57vw;
+    }
+
+    #dip1 {
+        width: 50px;
+        height: 50px;
+        top: -59vh;
+        left: 48vw;
+    }
+
+    #dip11Level {
+        font-size: 8px;
+        top: -67.8vh;
+        left: 59.1vw;
+    }
+
+    #dip12Level {
+        font-size: 8px;
+        top: -66.1vh;
+        left: 48.3vw;
+    }
+
+    #square_5 {
+        height: 23vh;
+        top: -93.6vh;
+        left: 77vw;
+    }
+
+    #dip2 {
+        width: 35px;
+        height: 40px;
+        top: -95vh;
+        left: 57vw;
+    }
+
+    #dip21Level {
+        top: -95vh;
+        font-size: 8px;
+        left: 76vw;
+    }
+
+    #dip22Level {
+        font-size: 8px;
+        top: -93.5vh;
+        left: 61.7vw;
+    }
+
+    #arrow1 {
+        width: 30px;
+        height: 20px;
+        bottom: -51vh;
+        left: 15.5vw;
+    }
+
+    #arrow2 {
+        width: 30px;
+        height: 20px;
+        left: 28vw;
+        top: 47vh;
+    }
+
+    #arrow3 {
+        width: 30px;
+        height: 20px;
+        bottom: -43vh;
+        left: 40vw;
+    }
+
+    #arrow4 {
+        width: 30px;
+        height: 20px;
+        bottom: -39vh;
+        left: 52vw;
     }
 }
 /*=======================================================*/
@@ -1258,7 +1479,7 @@ header > nav > ul > li > a:hover {
         padding: 4px;
     }
 }
-@media all and (min-width: 320px) and (max-width: 375px) {
+@media all and (min-width: 321px) and (max-width: 375px) {
     #Skills {
         height: 60vh;
     }
@@ -1270,6 +1491,140 @@ header > nav > ul > li > a:hover {
     #grid {
         grid-template-rows: repeat(2, 100px);
         grid-template-columns: repeat(3, 110px);
+        left: 9px;
+        top: 50px;
+        grid-gap: 10px;
+    }
+
+    #grid > section {
+        box-shadow: 6px 6px 8px 1px #888888;
+    }
+
+    .skillheader {
+        font-size: 10px;
+        padding: 2px 4px 2px 3px
+    }
+
+    #img1 {
+        width: 24px;
+        left: 3px;
+        top: -2px;
+    }
+
+    #img2 {
+        width: 24px;
+        left: 3px;
+        top: -2px;
+    }
+
+    #img3 {
+        width: 24px;
+        left: 3px;
+        top: -2px;
+    }
+
+    #img4 {
+        width: 24px;
+        left: 3px;
+        top: -2px;
+    }
+
+    #img5 {
+        width: 24px;
+        left: 3px;
+        top: -2px;
+    }
+
+    #img6 {
+        width: 24px;
+        left: 3px;
+        top: -2px;
+    }
+
+    .one > #star1, #star2 {
+        width: 10px;
+        left: 1px;
+        top: -7px;
+    }
+
+    .two > #star3, #star4, #star5 {
+        width: 10px;
+        left: 1px;
+        top: -7px;
+    }
+
+    .three > #star6 {
+        width: 10px;
+        left: 1px;
+        top: -7px;
+    }
+
+    .four > #star7, #star8 {
+        width: 10px;
+        left: 1px;
+        top: -7px;
+    }
+
+    .five > #star9, #star10, #star11 {
+        width: 10px;
+        left: 1px;
+        top: -7px;
+    }
+
+    .six > #star12, #star13 {
+        width: 10px;
+        left: 1px;
+        top: -7px;
+    }
+
+    .one > p {
+        font-size: 6.5px;
+        width: 100px;
+        padding: 1px 0 0 3px;
+    }
+
+    .two > p {
+        font-size: 6.5px;
+        width: 100px;
+        padding: 4px;
+    }
+
+    .three > p {
+        font-size: 6.5px;
+        width: 100px;
+        padding: 4px;
+    }
+
+    .four > p {
+        font-size: 6.5px;
+        width: 100px;
+        padding: 4px;
+    }
+
+    .five > p {
+        font-size: 6.5px;
+        width: 100px;
+        padding: 1px 0 0 4px;
+    }
+
+    .six > p {
+        font-size: 6.5px;
+        width: 100px;
+        padding: 1px 0 0 4px;
+    }
+}
+@media all and (min-width: 376px) and (max-width: 425px) {
+    #Skills {
+        height: 70vh;
+    }
+
+    #header4 {
+        font-size: 20px;
+    }
+
+    #grid {
+        grid-template-rows: repeat(2, 110px);
+        grid-template-columns: repeat(3, 126px);
         left: 9px;
         top: 50px;
         grid-gap: 10px;
@@ -1534,7 +1889,7 @@ header > nav > ul > li > a:hover {
         left: 71vw;
     }
 }
-@media all and (min-width: 320px) and (max-width: 375px) {
+@media all and (min-width: 321px) and (max-width: 375px) {
     #Project {
         height: 40vh;
     }
@@ -1575,6 +1930,55 @@ header > nav > ul > li > a:hover {
         font-size: 10px;
         top: 20vh;
         left: 41vw;
+    }
+
+    #projectflex > section:nth-child(3) > h3 {
+        font-size: 10px;
+        top: 20vh;
+        left: 72vw;
+    }
+}
+@media all and (min-width: 376px) and (max-width: 425px) {
+    #Project {
+        height: 40vh;
+    }
+
+    #header5 {
+        font-size: 20px;
+    }
+
+    #projectflex {
+        top: 65px;
+    }
+
+    #projectflex > section:nth-child(1) > a > img {
+        height: 80px;
+        width: 80px;
+        box-shadow: 0px 0px 10px 2px #44c6e2;
+    }
+
+    #projectflex > section:nth-child(2) > a > img {
+        height: 80px;
+        width: 80px;
+        box-shadow: 0px 0px 10px 2px #44c6e2;
+    }
+
+    #projectflex > section:nth-child(3) > a > img {
+        height: 80px;
+        width: 80px;
+        box-shadow: 0px 0px 10px 2px #44c6e2;
+    }
+
+    #projectflex > section:nth-child(1) > h3 {
+        font-size: 10px;
+        top: 20vh;
+        left: 12vw;
+    }
+
+    #projectflex > section:nth-child(2) > h3 {
+        font-size: 10px;
+        top: 20vh;
+        left: 42vw;
     }
 
     #projectflex > section:nth-child(3) > h3 {
@@ -1695,7 +2099,7 @@ header > nav > ul > li > a:hover {
         right: 12px;
     }
 }
-@media all and (min-width: 320px) and (max-width: 375px) {
+@media all and (min-width: 321px) and (max-width: 375px) {
     #Services{
         height: 40vh;
     }
@@ -1731,6 +2135,45 @@ header > nav > ul > li > a:hover {
         width: 70px;
         height: 70px;
         right: 24px;
+        top: 45px;
+    }
+}
+@media all and (min-width: 376px) and (max-width: 425px) {
+    #Services{
+        height: 40vh;
+    }
+    #header6 {
+        font-size: 20px;
+    }
+
+    #Services > section:nth-child(1) > ul {
+        top: 20px;
+        left: 30px;
+    }
+
+    #Services > section:nth-child(1) > ul > li {
+        font-size: 14px;
+    }
+
+    #header7 {
+        font-size: 20px;
+        top: 100px;
+    }
+
+    #Services > section:nth-child(2) > ul {
+        top: 20px;
+        left: 30px;
+    }
+
+    #Services > section:nth-child(2) > ul > li {
+        top: 95px;
+        font-size: 14px;
+    }
+
+    #Services > section:nth-child(3) > img {
+        width: 70px;
+        height: 70px;
+        right: 35px;
         top: 45px;
     }
 }
@@ -2045,7 +2488,7 @@ header > nav > ul > li > a:hover {
         height: 20px;
     }
 }
-@media all and (min-width: 320px) and (max-width: 375px) {
+@media all and (min-width: 321px) and (max-width: 375px) {
     #Contact_Info{
         height: 105vh;
     }
@@ -2154,6 +2597,120 @@ header > nav > ul > li > a:hover {
     #SendBtn {
         right: 35px;
         top: 436px;
+        width: 80px;
+        font-size: 12px;
+        height: 20px;
+    }
+}
+@media all and (min-width: 376px) and (max-width: 425px) {
+    #Contact_Info{
+        height: 105vh;
+    }
+    #header8{
+        font-size: 20px;
+    }
+    #desc1 {
+        left: 40px;
+        font-size: 15px;
+        top: 45px;
+    }
+    #desc2{
+        left: 53px;
+        font-size: 12px;
+        top: 69px;
+    }
+    #contact{
+        width: 30px;
+        top: 110px;
+        left: 45px;
+    }
+    #contactHead{
+        font-size: 12px;
+        left: 43px;
+        top: 140px;
+    }
+    #contactdesc{
+        font-size: 10px;
+        top: 165px;
+        left: 32px;
+    }
+    #residence{
+        width: 30px;
+        top: 110px;
+        left: 205px;
+    }
+    #residenceHead{
+        font-size: 12px;
+        left: 190px;
+        top: 140px;
+    }
+    #residencedesc{
+        font-size: 10px;
+        left: 171px;
+        top: 165px;
+    }
+    #mail{
+        width: 30px;
+        top: 110px;
+        right: 45px;
+    }
+    #mailHead{
+        font-size: 12px;
+        left: 350px;
+        top: 140px;
+    }
+    #maildesc{
+        font-size: 6px;
+        right: 12px;
+        top: 167px;
+    }
+    #sendSMSDetails > h4:nth-child(1) {
+        font-size: 12px;
+        left: 23px;
+        top: 215px;
+    }
+    #sendSMSDetails > h4:nth-child(2) {
+        font-size: 12px;
+        top: 245px;
+        left: 23px;
+    }
+    #sendSMSDetails > h4:nth-child(3) {
+        font-size: 12px;
+        top: 275px;
+        left: 23px;
+    }
+    #sendSMSDetails > h4:nth-child(4) {
+        font-size: 12px;
+        top: 305px;
+        left: 23px;
+    }
+    #name{
+        left: 85px;
+        top: 224px;
+        width: 300px;
+    }
+    #mail-address {
+        left: 85px;
+        top: 255px;
+        width: 300px;
+    }
+    #subject {
+        left: 85px;
+        top: 287px;
+        width: 300px;
+    }
+    #message {
+        left: 85px;
+        top: 317px;
+        width: 300px;
+        height: 120px;
+    }
+    #gifContact {
+        display: none;
+    }
+    #SendBtn {
+        right: 35px;
+        top: 452px;
         width: 80px;
         font-size: 12px;
         height: 20px;
@@ -2320,7 +2877,54 @@ body {
         transform: rotateX(-90deg) translateZ(100px);
     }
 }
-@media all and (min-width: 320px) and (max-width: 375px) {
+@media all and (min-width: 321px) and (max-width: 375px) {
+    #Gallery {
+        height: 65vh;
+    }
+    #header9{
+        font-size: 20px;
+        top: -55px;
+    }
+    .wrapper {
+        width: 200px;
+        height: 200px;
+    }
+    .box-area div {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+    }
+
+    .box-area {
+        transform-origin: 100px 100px 0;
+    }
+
+    .box-area .box1 {
+        transform: translateZ(100px);
+    }
+
+    .box-area .box2 {
+        transform: rotateY(90deg) translateZ(100px);
+    }
+
+    .box-area .box3 {
+        transform: rotateY(90deg) rotateX(90deg) translateZ(100px);
+    }
+
+    .box-area .box4 {
+        transform: rotateY(180deg) rotateZ(90deg) translateZ(100px);
+    }
+
+    .box-area .box5 {
+        transform: rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+    }
+
+    .box-area .box6 {
+        transform: rotateX(-90deg) translateZ(100px);
+    }
+}
+@media all and (min-width: 376px) and (max-width: 425px) {
     #Gallery {
         height: 65vh;
     }
@@ -2488,7 +3092,7 @@ body {
     }
 }
 
-@media all and (min-width: 320px) and (max-width: 375px) {
+@media all and (min-width: 321px) and (max-width: 375px) {
     #fullName {
         font-size: 25px;
         left: 10%;
@@ -2532,6 +3136,53 @@ body {
     #gitHub {
         width: 25px;
         height: 25px;
+        padding: 10px;
+    }
+}
+@media all and (min-width: 376px) and (max-width: 425px) {
+    #fullName {
+        font-size: 28px;
+        left: 10%;
+        top: 0vh;
+    }
+
+    #linkBar {
+        top: 5vh;
+        left: 30vw;
+        width: 60%;
+    }
+
+    #copyright {
+        left: 19px;
+        top: 14vh;
+        font-size: 8.5px;
+    }
+
+    #footernav > ul {
+        font-size: 9px;
+        right: 9vw;
+        bottom: 42vh;
+    }
+
+    #footernav > ul > li {
+        padding: 2px;
+    }
+
+    #twitter {
+        width: 30px;
+        height: 30px;
+        padding: 10px;
+    }
+
+    #linkedIn {
+        width: 30px;
+        height: 30px;
+        padding: 10px;
+    }
+
+    #gitHub {
+        width: 30px;
+        height: 30px;
         padding: 10px;
     }
 }
