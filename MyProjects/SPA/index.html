@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <meta content="width=device-width, initial-scale=1" name="viewport">
 </head>
+
 <body>
+
 <!--Nav Bar-->
 <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark text-center">
     <div class="container-fluid">
         <img alt="" class="d-inline-block align-text-top" height="24" src="assets/images/logo.png" width="30">
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav text-center">
-                <li class="nav-item" style="font-family: cursive; font-weight: bold;">
-                    <a aria-current="page" class="nav-link active" href="index.html">Home</a>
+                <li class="nav-item" style="font-family: cursive; font-weight: bold; cursor: pointer;" id="homeBtn">
+                    <a aria-current="page" class="nav-link active">Home</a>
                 </li>
-                <li class="nav-item" style="font-family: cursive; font-weight: bold">
-                    <a class="nav-link" href="customer.html">Customer</a>
+                <li class="nav-item" style="font-family: cursive; font-weight: bold; cursor:pointer;" id="customerBtn">
+                    <a class="nav-link">Customer</a>
                 </li>
-                <li class="nav-item" style="font-family: cursive; font-weight: bold">
-                    <a class="nav-link" href="item.html">Item</a>
+                <li class="nav-item" style="font-family: cursive; font-weight: bold; cursor:pointer;" id="itemBtn">
+                    <a class="nav-link">Item</a>
                 </li>
-                <li class="nav-item" style="font-family: cursive; font-weight: bold">
-                    <a class="nav-link" href="placeOrder.html">Place Order</a>
+                <li class="nav-item" style="font-family: cursive; font-weight: bold; cursor:pointer;" id="placeOrderBtn">
+                    <a class="nav-link">Place Order</a>
                 </li>
             </ul>
         </div>
@@ -31,7 +34,7 @@
 </nav>
 
 <!--home section-->
-<section class="container-fluid">
+<section class="container-fluid" id="homeSection">
 
     <!--Picture section-->
     <section>
@@ -105,22 +108,22 @@
         <div class="mt-5">
             <section class="container-fluid">
                 <div class="row justify-content-center">
-                    <div class="col-4">
-                        <a href="customer.html">
+                    <div class="col-4" id="customerpicBtn">
+                        <a>
                             <img src="assets/images/customerfront.png" width="400px">
                             <label class="form-label align-content-center"
                                    style="font-weight: bold; font-size: 15px; color: #ff3f34">Customers</label>
                         </a>
                     </div>
-                    <div class="col-4">
-                        <a href="item.html">
+                    <div class="col-4" id="itempicBtn">
+                        <a>
                             <img src="assets/images/itemfront.png" width="400px">
                             <label class="form-label align-content-center"
                                    style="font-weight: bold; font-size: 15px; color: #ff3f34">Items</label>
                         </a>
                     </div>
-                    <div class="col-4">
-                        <a href="placeOrder.html">
+                    <div class="col-4" id="placeOrderpicBtn">
+                        <a>
                             <img src="assets/images/placeorderfront.png" width="400px">
                             <label class="form-label align-content-center"
                                    style="font-weight: bold; font-size: 15px; color: #ff3f34">Place Orders</label>
@@ -133,7 +136,7 @@
 </section>
 
 <!--customer section-->
-<section class="container-fluid">
+<section class="container-fluid" id="customerSection">
     <!--title (Customer)-->
     <section>
         <img alt="Customer image" class="rounded mx-auto d-block mt-3" src="assets/images/customer.png" width="100px">
@@ -214,10 +217,10 @@
 </section>
 
 <!--item section-->
-<section class="container-fluid">
+<section class="container-fluid" id="itemSection">
     <!--title (Item)-->
     <section>
-        <img alt="Item image" class="rounded mx-auto d-block mt-3" src="assets/images/item.png" width="100px">
+        <img alt="Item image" class="rounded mx-auto d-block mt-2" src="assets/images/item.png" width="100px">
         <h1 class="text-primary text-center" id="header2">Items Registration</h1>
     </section>
     <!--Registration-->
@@ -295,7 +298,7 @@
 </section>
 
 <!--place order section-->
-<section class="container-fluid">
+<section class="container-fluid" id="placeOrderSection">
     <!--title (Place Order)-->
     <section>
         <img src="assets/images/placeorder.png" class="rounded mx-auto d-block mt-4" alt="Customer image" width="100px">
@@ -478,6 +481,62 @@
         </table>
     </section>
 </section>
+
+<script>
+
+    document.getElementById("homeSection").style.display="block";
+    document.getElementById("customerSection").style.display="none";
+    document.getElementById("itemSection").style.display="none";
+    document.getElementById("placeOrderSection").style.display="none";
+
+    document.getElementById("homeBtn").addEventListener("click" , function () {
+        document.getElementById("homeSection").style.display="block";
+        document.getElementById("customerSection").style.display="none";
+        document.getElementById("itemSection").style.display="none";
+        document.getElementById("placeOrderSection").style.display="none";
+    })
+
+    document.getElementById("customerBtn").addEventListener("click" , function () {
+        document.getElementById("customerSection").style.display="block";
+        document.getElementById("homeSection").style.display="none";
+        document.getElementById("itemSection").style.display="none";
+        document.getElementById("placeOrderSection").style.display="none";
+    })
+    document.getElementById("itemBtn").addEventListener("click" , function () {
+        document.getElementById("itemSection").style.display="block";
+        document.getElementById("homeSection").style.display="none";
+        document.getElementById("customerSection").style.display="none";
+        document.getElementById("placeOrderSection").style.display="none";
+    })
+    document.getElementById("placeOrderBtn").addEventListener("click" , function () {
+        document.getElementById("placeOrderSection").style.display="block";
+        document.getElementById("homeSection").style.display="none";
+        document.getElementById("customerSection").style.display="none";
+        document.getElementById("itemSection").style.display="none";
+    })
+
+    /*picture buttons*/
+
+    document.getElementById("customerpicBtn").addEventListener("click" , function () {
+        document.getElementById("customerSection").style.display="block";
+        document.getElementById("homeSection").style.display="none";
+        document.getElementById("itemSection").style.display="none";
+        document.getElementById("placeOrderSection").style.display="none";
+    })
+    document.getElementById("itempicBtn").addEventListener("click" , function () {
+        document.getElementById("itemSection").style.display="block";
+        document.getElementById("homeSection").style.display="none";
+        document.getElementById("customerSection").style.display="none";
+        document.getElementById("placeOrderSection").style.display="none";
+    })
+    document.getElementById("placeOrderpicBtn").addEventListener("click" , function () {
+        document.getElementById("placeOrderSection").style.display="block";
+        document.getElementById("homeSection").style.display="none";
+        document.getElementById("customerSection").style.display="none";
+        document.getElementById("itemSection").style.display="none";
+    })
+
+</script>
 
 <script crossorigin="anonymous"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
