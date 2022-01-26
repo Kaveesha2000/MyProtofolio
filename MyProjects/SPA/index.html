@@ -3,9 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
+
     <title>Home</title>
+
     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <meta content="width=device-width, initial-scale=1" name="viewport">
+
 </head>
 
 <body>
@@ -16,16 +19,17 @@
         <img alt="" class="d-inline-block align-text-top" height="24" src="assets/images/logo.png" width="30">
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav text-center">
-                <li class="nav-item" style="font-family: cursive; font-weight: bold; cursor: pointer;" id="homeBtn">
+                <li class="nav-item" id="homeBtn" style="font-family: cursive; font-weight: bold; cursor: pointer;">
                     <a aria-current="page" class="nav-link active">Home</a>
                 </li>
-                <li class="nav-item" style="font-family: cursive; font-weight: bold; cursor:pointer;" id="customerBtn">
+                <li class="nav-item" id="customerBtn" style="font-family: cursive; font-weight: bold; cursor:pointer;">
                     <a class="nav-link">Customer</a>
                 </li>
-                <li class="nav-item" style="font-family: cursive; font-weight: bold; cursor:pointer;" id="itemBtn">
+                <li class="nav-item" id="itemBtn" style="font-family: cursive; font-weight: bold; cursor:pointer;">
                     <a class="nav-link">Item</a>
                 </li>
-                <li class="nav-item" style="font-family: cursive; font-weight: bold; cursor:pointer;" id="placeOrderBtn">
+                <li class="nav-item" id="placeOrderBtn"
+                    style="font-family: cursive; font-weight: bold; cursor:pointer;">
                     <a class="nav-link">Place Order</a>
                 </li>
             </ul>
@@ -301,31 +305,36 @@
 <section class="container-fluid" id="placeOrderSection">
     <!--title (Place Order)-->
     <section>
-        <img src="assets/images/placeorder.png" class="rounded mx-auto d-block mt-4" alt="Customer image" width="100px">
-        <h1 id="header3" class="text-secondary text-center">Placement Of An Order</h1>
+        <img alt="Customer image" class="rounded mx-auto d-block mt-4" src="assets/images/placeorder.png" width="100px">
+        <h1 class="text-secondary text-center" id="header3">Placement Of An Order</h1>
     </section>
     <!--details section-->
     <section class="row">
         <!--invoice details-->
         <div class="col-4 mt-3">
             <div class="card border-success mb-3" style="max-width: 30rem; min-height: 22rem">
-                <div class="card-header text-white" style="font-weight: bold; background-color: #38ada9">Invoice Details</div>
+                <div class="card-header text-white" style="font-weight: bold; background-color: #38ada9">Invoice
+                    Details
+                </div>
                 <div class="card-body">
                     <form>
                         <section class="row" style="width: 100%">
                             <div class="mb-2 col-6">
-                                <label for="exampleInputId" class="form-label" style="font-weight: bold; font-size: 12px">Order ID</label>
-                                <input type="text" class="form-control" id="exampleInputId2" aria-describedby="idHelp2">
-                                <div id="idHelp2" class="form-text"></div>
+                                <label class="form-label" for="exampleInputId"
+                                       style="font-weight: bold; font-size: 12px">Order ID</label>
+                                <input aria-describedby="idHelp2" class="form-control" id="exampleInputId2" type="text">
+                                <div class="form-text" id="idHelp2"></div>
                             </div>
                             <div class="mb-2 col-6">
-                                <label for="exampleInputDate" class="form-label" style="font-weight: bold; font-size: 12px">Date</label>
-                                <input type="date" class="form-control" id="exampleInputDate" aria-describedby="dateHelp">
-                                <div id="dateHelp" class="form-text"></div>
+                                <label class="form-label" for="exampleInputDate"
+                                       style="font-weight: bold; font-size: 12px">Date</label>
+                                <input aria-describedby="dateHelp" class="form-control" id="exampleInputDate"
+                                       type="date">
+                                <div class="form-text" id="dateHelp"></div>
                             </div>
                             <div class="mb-2 col-6">
                                 <label class="form-label" style="font-weight: bold; font-size: 12px">Customer ID</label>
-                                <select class="form-select" aria-label="Default select example">
+                                <select aria-label="Default select example" class="form-select">
                                     <option selected>None</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -333,19 +342,25 @@
                                 </select>
                             </div>
                             <div class="mb-2 col-6">
-                                <label for="exampleInputItemName" class="form-label" style="font-weight: bold; font-size: 12px">Name</label>
-                                <input type="text" class="form-control" id="exampleInputItemName" aria-describedby="itemNameHelp">
-                                <div id="itemNameHelp" class="form-text"></div>
+                                <label class="form-label" for="exampleInputItemName"
+                                       style="font-weight: bold; font-size: 12px">Name</label>
+                                <input aria-describedby="itemNameHelp" class="form-control" id="exampleInputItemName"
+                                       type="text">
+                                <div class="form-text" id="itemNameHelp"></div>
                             </div>
                             <div class="mb-2 col-6">
-                                <label for="exampleInputTelephoneNo" class="form-label" style="font-weight: bold; font-size: 12px">Tel No</label>
-                                <input type="text" class="form-control" id="exampleInputTelephoneNo2" aria-describedby="telNoHelp2">
-                                <div id="telNoHelp2" class="form-text"></div>
+                                <label class="form-label" for="exampleInputTelephoneNo"
+                                       style="font-weight: bold; font-size: 12px">Tel No</label>
+                                <input aria-describedby="telNoHelp2" class="form-control" id="exampleInputTelephoneNo2"
+                                       type="text">
+                                <div class="form-text" id="telNoHelp2"></div>
                             </div>
                             <div class="mb-2 col-6">
-                                <label for="exampleInputAddress" class="form-label" style="font-weight: bold; font-size: 12px">Address</label>
-                                <input type="text" class="form-control" id="exampleInputAddress2" aria-describedby="addressHelp2">
-                                <div id="addressHelp2" class="form-text"></div>
+                                <label class="form-label" for="exampleInputAddress"
+                                       style="font-weight: bold; font-size: 12px">Address</label>
+                                <input aria-describedby="addressHelp2" class="form-control" id="exampleInputAddress2"
+                                       type="text">
+                                <div class="form-text" id="addressHelp2"></div>
                             </div>
                         </section>
                     </form>
@@ -355,13 +370,15 @@
         <!--item selection-->
         <div class="col-4 mt-3">
             <div class="card border-warning mb-3" style="max-width: 30rem; min-height: 22rem">
-                <div class="card-header text-white" style="font-weight: bold; background-color: #f6b93b">Item Selection</div>
+                <div class="card-header text-white" style="font-weight: bold; background-color: #f6b93b">Item
+                    Selection
+                </div>
                 <div class="card-body">
                     <form>
                         <section class="row" style="width: 100%">
                             <div class="mb-2 col-6">
                                 <label class="form-label" style="font-weight: bold; font-size: 12px">Item ID</label>
-                                <select class="form-select" aria-label="Default select example">
+                                <select aria-label="Default select example" class="form-select">
                                     <option selected>None</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -371,28 +388,35 @@
                             <div class="mb-2 col-6">
                                 <label class="form-label" for="exampleInputName"
                                        style="font-weight: bold; font-size: 12px">Name</label>
-                                <input type="text" class="form-control" id="exampleInputName2" aria-describedby="nameHelp2">
-                                <div id="nameHelp2" class="form-text"></div>
+                                <input aria-describedby="nameHelp2" class="form-control" id="exampleInputName2"
+                                       type="text">
+                                <div class="form-text" id="nameHelp2"></div>
                             </div>
                             <div class="mb-2 col-6">
-                                <label for="exampleInputUnitPrice" class="form-label" style="font-weight: bold; font-size: 12px">Unit Price</label>
-                                <input type="text" class="form-control" id="exampleInputUnitPrice2" aria-describedby="unitPriceHelp2">
-                                <div id="unitPriceHelp2" class="form-text"></div>
+                                <label class="form-label" for="exampleInputUnitPrice"
+                                       style="font-weight: bold; font-size: 12px">Unit Price</label>
+                                <input aria-describedby="unitPriceHelp2" class="form-control" id="exampleInputUnitPrice2"
+                                       type="text">
+                                <div class="form-text" id="unitPriceHelp2"></div>
                             </div>
                             <div class="mb-2 col-6">
-                                <label for="exampleInputQtyOnHand" class="form-label" style="font-weight: bold; font-size: 12px">QTY On Hand</label>
-                                <input type="text" class="form-control" id="exampleInputQtyOnHand2" aria-describedby="qtyOnHandHelp2">
-                                <div id="qtyOnHandHelp2" class="form-text"></div>
+                                <label class="form-label" for="exampleInputQtyOnHand"
+                                       style="font-weight: bold; font-size: 12px">QTY On Hand</label>
+                                <input aria-describedby="qtyOnHandHelp2" class="form-control" id="exampleInputQtyOnHand2"
+                                       type="text">
+                                <div class="form-text" id="qtyOnHandHelp2"></div>
                             </div>
                             <div class="mb-2 col-12">
-                                <label for="exampleInputOrderQty" class="form-label" style="font-weight: bold; font-size: 12px">Order QTY</label>
-                                <input type="text" class="form-control" id="exampleInputOrderQty" aria-describedby="orderQtyHelp">
-                                <div id="orderQtyHelp" class="form-text"></div>
+                                <label class="form-label" for="exampleInputOrderQty"
+                                       style="font-weight: bold; font-size: 12px">Order QTY</label>
+                                <input aria-describedby="orderQtyHelp" class="form-control" id="exampleInputOrderQty"
+                                       type="text">
+                                <div class="form-text" id="orderQtyHelp"></div>
                             </div>
                         </section>
                         <section class="row justify-content-center">
                             <div class="mt-2 col-5">
-                                <button type="button" class="btn btn-primary  btn-sm" style="width: 100%;">+Add</button>
+                                <button class="btn btn-primary  btn-sm" style="width: 100%;" type="button">+Add</button>
                             </div>
                         </section>
                     </form>
@@ -406,16 +430,19 @@
                     <form>
                         <section class="row" style="width: 100%">
                             <div class="mb-2 col-12 mt-3">
-                                <label for="exampleInputName" class="form-label" style="font-weight: bold; font-size: 25px; color: #f53b57">Total :- </label>
+                                <label class="form-label" for="exampleInputName"
+                                       style="font-weight: bold; font-size: 25px; color: #f53b57">Total :- </label>
                             </div>
                             <div class="mb-2 col-6 mt-3">
-                                <label for="exampleInputCash" class="form-label" style="font-weight: bold; font-size: 12px">Cash</label>
-                                <input type="text" class="form-control" id="exampleInputCash" aria-describedby="cashHelp">
-                                <div id="cashHelp" class="form-text"></div>
+                                <label class="form-label" for="exampleInputCash"
+                                       style="font-weight: bold; font-size: 12px">Cash</label>
+                                <input aria-describedby="cashHelp" class="form-control" id="exampleInputCash"
+                                       type="text">
+                                <div class="form-text" id="cashHelp"></div>
                             </div>
                             <div class="mb-2 col-6 mt-3">
                                 <label class="form-label" style="font-weight: bold; font-size: 12px">Discount</label>
-                                <select class="form-select" aria-label="Default select example">
+                                <select aria-label="Default select example" class="form-select">
                                     <option selected>0.00</option>
                                     <option value="1">10</option>
                                     <option value="2">20</option>
@@ -430,12 +457,14 @@
                                 </select>
                             </div>
                             <div class="mb-2 col-12 mt-4">
-                                <label for="exampleInputUnitPrice" class="form-label" style="font-weight: bold; font-size: 20px; color: #0fbcf9">Balance :- </label>
+                                <label class="form-label" for="exampleInputUnitPrice"
+                                       style="font-weight: bold; font-size: 20px; color: #0fbcf9">Balance :- </label>
                             </div>
                         </section>
                         <section class="row justify-content-center">
                             <div class="mt-4 col-5">
-                                <button type="button" class="btn btn-success  btn-sm" style="width: 100%;">Purchase</button>
+                                <button class="btn btn-success  btn-sm" style="width: 100%;" type="button">Purchase
+                                </button>
                             </div>
                         </section>
                     </form>
@@ -484,56 +513,56 @@
 
 <script>
 
-    document.getElementById("homeSection").style.display="block";
-    document.getElementById("customerSection").style.display="none";
-    document.getElementById("itemSection").style.display="none";
-    document.getElementById("placeOrderSection").style.display="none";
+    document.getElementById("homeSection").style.display = "block";
+    document.getElementById("customerSection").style.display = "none";
+    document.getElementById("itemSection").style.display = "none";
+    document.getElementById("placeOrderSection").style.display = "none";
 
-    document.getElementById("homeBtn").addEventListener("click" , function () {
-        document.getElementById("homeSection").style.display="block";
-        document.getElementById("customerSection").style.display="none";
-        document.getElementById("itemSection").style.display="none";
-        document.getElementById("placeOrderSection").style.display="none";
+    document.getElementById("homeBtn").addEventListener("click", function () {
+        document.getElementById("homeSection").style.display = "block";
+        document.getElementById("customerSection").style.display = "none";
+        document.getElementById("itemSection").style.display = "none";
+        document.getElementById("placeOrderSection").style.display = "none";
     })
 
-    document.getElementById("customerBtn").addEventListener("click" , function () {
-        document.getElementById("customerSection").style.display="block";
-        document.getElementById("homeSection").style.display="none";
-        document.getElementById("itemSection").style.display="none";
-        document.getElementById("placeOrderSection").style.display="none";
+    document.getElementById("customerBtn").addEventListener("click", function () {
+        document.getElementById("customerSection").style.display = "block";
+        document.getElementById("homeSection").style.display = "none";
+        document.getElementById("itemSection").style.display = "none";
+        document.getElementById("placeOrderSection").style.display = "none";
     })
-    document.getElementById("itemBtn").addEventListener("click" , function () {
-        document.getElementById("itemSection").style.display="block";
-        document.getElementById("homeSection").style.display="none";
-        document.getElementById("customerSection").style.display="none";
-        document.getElementById("placeOrderSection").style.display="none";
+    document.getElementById("itemBtn").addEventListener("click", function () {
+        document.getElementById("itemSection").style.display = "block";
+        document.getElementById("homeSection").style.display = "none";
+        document.getElementById("customerSection").style.display = "none";
+        document.getElementById("placeOrderSection").style.display = "none";
     })
-    document.getElementById("placeOrderBtn").addEventListener("click" , function () {
-        document.getElementById("placeOrderSection").style.display="block";
-        document.getElementById("homeSection").style.display="none";
-        document.getElementById("customerSection").style.display="none";
-        document.getElementById("itemSection").style.display="none";
+    document.getElementById("placeOrderBtn").addEventListener("click", function () {
+        document.getElementById("placeOrderSection").style.display = "block";
+        document.getElementById("homeSection").style.display = "none";
+        document.getElementById("customerSection").style.display = "none";
+        document.getElementById("itemSection").style.display = "none";
     })
 
     /*picture buttons*/
 
-    document.getElementById("customerpicBtn").addEventListener("click" , function () {
-        document.getElementById("customerSection").style.display="block";
-        document.getElementById("homeSection").style.display="none";
-        document.getElementById("itemSection").style.display="none";
-        document.getElementById("placeOrderSection").style.display="none";
+    document.getElementById("customerpicBtn").addEventListener("click", function () {
+        document.getElementById("customerSection").style.display = "block";
+        document.getElementById("homeSection").style.display = "none";
+        document.getElementById("itemSection").style.display = "none";
+        document.getElementById("placeOrderSection").style.display = "none";
     })
-    document.getElementById("itempicBtn").addEventListener("click" , function () {
-        document.getElementById("itemSection").style.display="block";
-        document.getElementById("homeSection").style.display="none";
-        document.getElementById("customerSection").style.display="none";
-        document.getElementById("placeOrderSection").style.display="none";
+    document.getElementById("itempicBtn").addEventListener("click", function () {
+        document.getElementById("itemSection").style.display = "block";
+        document.getElementById("homeSection").style.display = "none";
+        document.getElementById("customerSection").style.display = "none";
+        document.getElementById("placeOrderSection").style.display = "none";
     })
-    document.getElementById("placeOrderpicBtn").addEventListener("click" , function () {
-        document.getElementById("placeOrderSection").style.display="block";
-        document.getElementById("homeSection").style.display="none";
-        document.getElementById("customerSection").style.display="none";
-        document.getElementById("itemSection").style.display="none";
+    document.getElementById("placeOrderpicBtn").addEventListener("click", function () {
+        document.getElementById("placeOrderSection").style.display = "block";
+        document.getElementById("homeSection").style.display = "none";
+        document.getElementById("customerSection").style.display = "none";
+        document.getElementById("itemSection").style.display = "none";
     })
 
 </script>
