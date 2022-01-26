@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+</head>
+<body>
+<!--Nav Bar-->
+<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark text-center">
+    <div class="container-fluid">
+        <img alt="" class="d-inline-block align-text-top" height="24" src="assets/images/logo.png" width="30">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav text-center">
+                <li class="nav-item" style="font-family: cursive; font-weight: bold;">
+                    <a aria-current="page" class="nav-link active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item" style="font-family: cursive; font-weight: bold">
+                    <a class="nav-link" href="customer.html">Customer</a>
+                </li>
+                <li class="nav-item" style="font-family: cursive; font-weight: bold">
+                    <a class="nav-link" href="item.html">Item</a>
+                </li>
+                <li class="nav-item" style="font-family: cursive; font-weight: bold">
+                    <a class="nav-link" href="placeOrder.html">Place Order</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<main class="container-fluid">
+
+    <!--Picture section-->
+    <section>
+        <!--slider-->
+        <section class="row justify-content-center mt-3">
+            <div class="col-12">
+                <div class="carousel carousel-dark slide" data-bs-ride="carousel" id="carouselExampleDark">
+                    <div class="carousel-indicators">
+                        <button aria-current="true" aria-label="Slide 1" class="active" data-bs-slide-to="0"
+                                data-bs-target="#carouselExampleDark" type="button"></button>
+                        <button aria-label="Slide 2" data-bs-slide-to="1" data-bs-target="#carouselExampleDark"
+                                type="button"></button>
+                        <button aria-label="Slide 3" data-bs-slide-to="2" data-bs-target="#carouselExampleDark"
+                                type="button"></button>
+                        <button aria-label="Slide 4" data-bs-slide-to="3" data-bs-target="#carouselExampleDark"
+                                type="button"></button>
+                        <button aria-label="Slide 5" data-bs-slide-to="4" data-bs-target="#carouselExampleDark"
+                                type="button"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="2000">
+                            <img alt="..." class="d-block" src="assets/images/slideritem1.jpg">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 class="text-secondary">Welcome To The Supermarket</h5>
+                                <p>Enjoy your shopping with us.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img alt="..." class="d-block" src="assets/images/slideritem2.jpg">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 class="text-primary">Buy and Happy</h5>
+                                <p>You can get good things for good prices.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img alt="..." class="d-block" src="assets/images/slideritem3.jpg">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 class="text-warning">Your place for your choice</h5>
+                                <p>Be happy with your shopping.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img alt="..." class="d-block" src="assets/images/slideritem4.jpg">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 class="text-danger">Come and get your chance with discounts</h5>
+                                <p>Be happy with shopping.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img alt="..." class="d-block" src="assets/images/slideritem5.jpg">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 class="text-success">Come Again!</h5>
+                                <p>Have a nice day.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExampleDark"
+                            type="button">
+                        <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselExampleDark"
+                            type="button">
+                        <span aria-hidden="true" class="carousel-control-next-icon"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!--navigation-->
+        <div class="mt-5">
+            <section class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-4">
+                        <a href="customer.html">
+                            <img src="assets/images/customerfront.png" width="400px">
+                            <label class="form-label align-content-center"
+                                   style="font-weight: bold; font-size: 15px; color: #ff3f34">Customers</label>
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <a href="item.html">
+                            <img src="assets/images/itemfront.png" width="400px">
+                            <label class="form-label align-content-center"
+                                   style="font-weight: bold; font-size: 15px; color: #ff3f34">Items</label>
+                        </a>
+                    </div>
+                    <div class="col-4">
+                        <a href="placeOrder.html">
+                            <img src="assets/images/placeorderfront.png" width="400px">
+                            <label class="form-label align-content-center"
+                                   style="font-weight: bold; font-size: 15px; color: #ff3f34">Place Orders</label>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+</main>
+<script crossorigin="anonymous"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

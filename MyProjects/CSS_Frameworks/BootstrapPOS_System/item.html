@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Item Registration</title>
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+</head>
+<body>
+<main class="container-fluid">
+    <!--title (Item)-->
+    <section>
+        <img alt="Item image" class="rounded mx-auto d-block mt-3" src="assets/images/item.png" width="100px">
+        <h1 class="text-primary text-center" id="header">Items Registration</h1>
+    </section>
+    <!--Registration-->
+    <section>
+        <form>
+            <section class="row" style="width: 100%">
+                <div class="mb-2 col-6">
+                    <label class="form-label" for="exampleInputId" style="font-weight: bold">ID</label>
+                    <input aria-describedby="idHelp" class="form-control" id="exampleInputId" type="text">
+                    <div class="form-text" id="idHelp"></div>
+                </div>
+                <div class="mb-2 col-6">
+                    <label class="form-label" for="exampleInputName" style="font-weight: bold">Name</label>
+                    <input aria-describedby="nameHelp" class="form-control" id="exampleInputName" type="text">
+                    <div class="form-text" id="nameHelp"></div>
+                </div>
+                <div class="mb-2 col-6">
+                    <label class="form-label" for="exampleInputUnitPrice" style="font-weight: bold">Unit Price</label>
+                    <input aria-describedby="unitPriceHelp" class="form-control" id="exampleInputUnitPrice" type="text">
+                    <div class="form-text" id="unitPriceHelp"></div>
+                </div>
+                <div class="mb-2 col-6">
+                    <label class="form-label" for="exampleInputQTYOnHand" style="font-weight: bold">Quantity On
+                        Hand</label>
+                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="exampleInputQTYOnHand" type="text">
+                    <div class="form-text" id="qtyOnHandHelp"></div>
+                </div>
+            </section>
+        </form>
+    </section>
+    <!--buttom set and search bar-->
+    <section class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <div style="width: 80%">
+            <input aria-describedby="searchBarHelp" class="form-control" id="exampleInputSearch" type="text">
+            <div class="form-text" id="searchBarHelp"></div>
+        </div>
+        <button class="btn btn-primary  btn-sm" type="button">Search</button>
+        <button class="btn btn-success  btn-sm" type="button">+Add</button>
+        <button class="btn btn-warning  btn-sm" type="button">Update</button>
+        <button class="btn btn-danger  btn-sm" type="button">Delete</button>
+    </section>
+    <!--table-->
+    <section>
+        <table class="table table-primary table-striped mt-3">
+            <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Unit Price</th>
+                <th scope="col">Qty On Hand</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Milk</td>
+                <td>50.00/=</td>
+                <td>400</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Rice</td>
+                <td>160.00/=</td>
+                <td>80kg</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Soap</td>
+                <td>80.00/=</td>
+                <td>250</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
+<script crossorigin="anonymous"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
