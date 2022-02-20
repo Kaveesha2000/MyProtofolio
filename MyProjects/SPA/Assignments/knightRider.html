@@ -63,11 +63,11 @@
 
     <section>
 
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div id="1"></div>
+        <div id="2"></div>
+        <div id="3"></div>
+        <div id="4"></div>
+        <div id="5"></div>
 
     </section>
 
@@ -80,15 +80,43 @@
     </section>
 
 </section>
-
-<script src="assets/jQuery/jquery-3.6.0.min.js"></script>
 <script crossorigin="anonymous"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         src="assets/bootstrap/js/bootstrap.bundle.min.js">
-
 </script>
+<script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+
 <script>
 
+    var colors = ['red','green','blue','orange','pink'];
+
+    var rectangles = [$('#1'),$('#2'),$('#3'),$('#4'),$('#5')];
+
+    function colorChange() {
+
+        let col = colors.pop();
+        colors.unshift(col);
+
+        for (var s in rectangles) {
+            rectangles[s].css("background",colors[s]);
+        }
+
+        setInterval(colorChangeReverse,2000);
+
+    }
+
+    function colorChangeReverse() {
+
+        let col = colors.pop();
+        colors.unshift(col);
+
+        for (let i = rectangles.length-1; i >= 0; i--) {
+            rectangles[i].css("background",colors[i]);
+        }
+
+    }
+
+    let interval = setInterval(colorChange,2000);
 
 </script>
 </body>
