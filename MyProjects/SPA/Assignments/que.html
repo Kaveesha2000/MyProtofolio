@@ -6,7 +6,7 @@
 
     <style>
 
-        body{
+        body {
             background-color: #3a483b;
         }
 
@@ -14,28 +14,63 @@
             width: 98vw;
             height: 95vh;
             display: flex;
-            border: 2px solid yellow;
             justify-content: center;
             align-items: center;
         }
 
         body > section > section {
             display: flex;
-            width: 500px;
+            width: 600px;
             flex-direction: column;
-            border: 2px solid pink;
         }
 
         body > section > section > section {
-            border-top: 2px solid red;
             display: flex;
-            height: 60px;
+            height: 40px;
+            padding: 10px;
         }
 
-        div{
+        body > section > section > section:nth-child(2) {
+            justify-content: center;
+            border-top: 2px solid white;
+            border-bottom: 2px solid white;
+        }
+
+        body > section > section > section:nth-child(2) > div {
+            margin-right: 10px;
+        }
+
+        body > section > section > section:nth-child(3) {
+            justify-content: flex-end;
+        }
+
+        div {
             width: 80px;
-            height: 40px;
-            border: 2px solid white;
+            border-radius: 15%;
+        }
+
+        body > section > section > section:nth-child(1) > div {
+            background-color: red;
+        }
+
+        body > section > section > section:nth-child(2) > div:nth-child(1) {
+            background-color: green;
+        }
+
+        body > section > section > section:nth-child(2) > div:nth-child(2) {
+            background-color: blue;
+        }
+
+        body > section > section > section:nth-child(2) > div:nth-child(3) {
+            background-color: yellow;
+        }
+
+        body > section > section > section:nth-child(2) > div:nth-child(4) {
+            background-color: pink;
+        }
+
+        body > section > section > section:nth-child(3) > div {
+            background-color: hotpink;
         }
 
     </style>
@@ -48,22 +83,22 @@
 
         <section>
 
-            <div>1</div>
+            <div id="1"></div>
 
         </section>
 
         <section>
 
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
+            <div id="2"></div>
+            <div id="3"></div>
+            <div id="4"></div>
+            <div id="5"></div>
 
         </section>
 
         <section>
 
-            <div>6</div>
+            <div id="6"></div>
 
         </section>
 
@@ -78,6 +113,22 @@
 </script>
 <script>
 
+    var colors = ['red','green','blue','yellow','pink','hotpink'];
+
+    var squares = [$('#1'),$('#2'),$('#3'),$('#4'),$('#5'),$('#6')];
+
+    function colorChange() {
+
+        let col = colors.pop();
+        colors.unshift(col);
+
+        for (var s in squares) {
+            squares[s].css("background",colors[s]);
+        }
+    }
+
+    setInterval(colorChange,500);
+    
 </script>
 </body>
 </html>
