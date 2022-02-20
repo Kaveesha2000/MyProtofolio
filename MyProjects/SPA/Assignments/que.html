@@ -6,61 +6,36 @@
 
     <style>
 
-        body {
+        body{
             background-color: #3a483b;
         }
 
-        section {
-            position: relative;
+        body > section {
+            width: 98vw;
+            height: 95vh;
+            display: flex;
+            border: 2px solid yellow;
+            justify-content: center;
+            align-items: center;
         }
 
-        section > section {
-            position: absolute;
-            border-top: 1px solid white;
-            border-bottom: 1px solid white;
-            width: 50%;
-            top: 0;
-            right: 0;
-            left: 0;
-            bottom: 0;
-            margin: auto;
+        body > section > section {
+            display: flex;
+            width: 500px;
+            flex-direction: column;
+            border: 2px solid pink;
         }
 
-        div {
-            position: absolute;
-            height: 40px;
+        body > section > section > section {
+            border-top: 2px solid red;
+            display: flex;
+            height: 60px;
+        }
+
+        div{
             width: 80px;
-            border-radius: 15%;
-        }
-
-        #red {
-            left: 25%;
-            background-color: red;
-        }
-
-        #green {
-            left: 25%;
-            background-color: forestgreen;
-        }
-
-        #blue {
-            left: 38%;
-            background-color: blue;
-        }
-
-        #yellow {
-            left: 51%;
-            background-color: yellow;
-        }
-
-        #cream {
-            left: 64%;
-            background-color: pink;
-        }
-
-        #pink {
-            left: 69%;
-            background-color: hotpink;
+            height: 40px;
+            border: 2px solid white;
         }
 
     </style>
@@ -69,16 +44,30 @@
 <body>
 <section>
 
-    <div id="red"></div>
-
     <section>
-        <div id="green"></div>
-        <div id="blue"></div>
-        <div id="yellow"></div>
-        <div id="cream"></div>
-    </section>
 
-    <div id="pink"></div>
+        <section>
+
+            <div>1</div>
+
+        </section>
+
+        <section>
+
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+
+        </section>
+
+        <section>
+
+            <div>6</div>
+
+        </section>
+
+    </section>
 
 </section>
 <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
