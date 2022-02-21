@@ -514,6 +514,14 @@
         $("#placeOrderSection").css('display', 'block');
     })
 
+    //=========================================================================
+    //calling border colors
+    customerBorderColor();
+    itemBorderColor();
+    //=========================================================================
+
+    //=========================================================================
+    // clearing text fields
     function clearCustomerTextFields() {
         $("#id").val('');
         $("#name").val('');
@@ -527,6 +535,24 @@
         $("#itemUnitPrice").val('');
         $("#itemQTYOnHand").val('');
     }
+
+    //=========================================================================
+    // border colors
+    function customerBorderColor() {
+        $("#id").css('border', '2px solid black');
+        $("#name").css('border', '2px solid black');
+        $("#address").css('border', '2px solid black');
+        $("#telNo").css('border', '2px solid black');
+    }
+
+    function itemBorderColor() {
+        $("#itemId").css('border', '2px solid black');
+        $("#itemName").css('border', '2px solid black');
+        $("#itemUnitPrice").css('border', '2px solid black');
+        $("#itemQTYOnHand").css('border', '2px solid black');
+    }
+    //=========================================================================
+
 
     // Customer
     /*selecting the button*/
@@ -542,6 +568,8 @@
         console.log(row);
 
         $("#tblCustomer").append(row);
+
+        customerBorderColor();
 
         // clearing the text fields
         clearCustomerTextFields();
@@ -663,6 +691,8 @@
         console.log(row);
 
         $("#tblItem").append(row);
+
+        itemBorderColor();
 
         // clearing the text fields
         clearItemTextFields();
