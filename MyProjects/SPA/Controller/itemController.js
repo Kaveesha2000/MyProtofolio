@@ -24,6 +24,26 @@ function itemBorderColor() {
 }
 //=========================================================================
 
+
+//=========================================================================
+//enter key press function of item
+$("#itemId").keydown(function (event) {
+    if ((event.keyCode == 13)) {
+        $("#itemName").focus();
+    }
+});
+$("#itemName").keydown(function (event) {
+    if ((event.keyCode == 13)) {
+        $("#itemUnitPrice").focus();
+    }
+});
+$("#itemUnitPrice").keydown(function (event) {
+    if ((event.keyCode == 13)) {
+        $("#itemQTYOnHand").focus();
+    }
+});
+//=========================================================================
+
 // Item
 /*selecting the button*/
 $("#saveBtnItem").click(function () {
