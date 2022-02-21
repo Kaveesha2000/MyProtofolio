@@ -153,22 +153,22 @@
                 <div class="mb-2 col-6">
                     <label class="form-label" for="id" style="font-weight: bold">ID</label>
                     <input class="form-control" id="id" placeholder="ID" type="text">
-                    <p><small id="errorid" class="text-danger pl-1"></small> </p>
+                    <p><small class="text-danger pl-1" id="errorid"></small></p>
                 </div>
                 <div class="mb-2 col-6">
                     <label class="form-label" for="name" style="font-weight: bold">Name</label>
                     <input class="form-control" id="name" placeholder="Name" type="text">
-                    <p><small id="errorname" class="text-danger pl-1"></small> </p>
+                    <p><small class="text-danger pl-1" id="errorname"></small></p>
                 </div>
                 <div class="mb-2 col-6">
                     <label class="form-label" for="address" style="font-weight: bold">Address</label>
                     <input class="form-control" id="address" placeholder="Address" type="text">
-                    <p><small id="erroraddress" class="text-danger pl-1"></small> </p>
+                    <p><small class="text-danger pl-1" id="erroraddress"></small></p>
                 </div>
                 <div class="mb-2 col-6">
                     <label class="form-label" for="telNo" style="font-weight: bold">Telephone No</label>
                     <input class="form-control" id="telNo" placeholder="Telephone No" type="text">
-                    <p><small id="errortelNo" class="text-danger pl-1"></small> </p>
+                    <p><small class="text-danger pl-1" id="errortelNo"></small></p>
                 </div>
             </section>
         </form>
@@ -216,22 +216,22 @@
                 <div class="mb-2 col-6">
                     <label class="form-label" for="itemId" style="font-weight: bold">ID</label>
                     <input aria-describedby="idHelp1" class="form-control" id="itemId" type="text">
-                    <p><small id="errorItemid" class="text-danger pl-1"></small> </p>
+                    <p><small class="text-danger pl-1" id="errorItemid"></small></p>
                 </div>
                 <div class="mb-2 col-6">
                     <label class="form-label" for="itemName" style="font-weight: bold">Name</label>
                     <input aria-describedby="nameHelp1" class="form-control" id="itemName" type="text">
-                    <p><small id="errorItemname" class="text-danger pl-1"></small> </p>
+                    <p><small class="text-danger pl-1" id="errorItemname"></small></p>
                 </div>
                 <div class="mb-2 col-6">
                     <label class="form-label" for="itemUnitPrice" style="font-weight: bold">Unit Price</label>
                     <input aria-describedby="unitPriceHelp" class="form-control" id="itemUnitPrice" type="text">
-                    <p><small id="errorItemUnitPrice" class="text-danger pl-1"></small> </p>
+                    <p><small class="text-danger pl-1" id="errorItemUnitPrice"></small></p>
                 </div>
                 <div class="mb-2 col-6">
                     <label class="form-label" for="itemQTYOnHand" style="font-weight: bold">Quantity On Hand</label>
                     <input aria-describedby="qtyOnHandHelp" class="form-control" id="itemQTYOnHand" type="text">
-                    <p><small id="errorItemQTYOnHand" class="text-danger pl-1"></small> </p>
+                    <p><small class="text-danger pl-1" id="errorItemQTYOnHand"></small></p>
                 </div>
             </section>
         </form>
@@ -353,13 +353,15 @@
                             <div class="mb-2 col-6">
                                 <label class="form-label" for="exampleInputUnitPrice2"
                                        style="font-weight: bold; font-size: 12px">Unit Price</label>
-                                <input aria-describedby="unitPriceHelp2" class="form-control" id="exampleInputUnitPrice2"
+                                <input aria-describedby="unitPriceHelp2" class="form-control"
+                                       id="exampleInputUnitPrice2"
                                        type="text">
                             </div>
                             <div class="mb-2 col-6">
                                 <label class="form-label" for="exampleInputQtyOnHand2"
                                        style="font-weight: bold; font-size: 12px">QTY On Hand</label>
-                                <input aria-describedby="qtyOnHandHelp2" class="form-control" id="exampleInputQtyOnHand2"
+                                <input aria-describedby="qtyOnHandHelp2" class="form-control"
+                                       id="exampleInputQtyOnHand2"
                                        type="text">
                             </div>
                             <div class="mb-2 col-12">
@@ -385,7 +387,8 @@
                     <form>
                         <section class="row" style="width: 100%">
                             <div class="mb-2 col-12 mt-3">
-                                <label class="form-label" style="font-weight: bold; font-size: 25px; color: #f53b57">Total :- </label>
+                                <label class="form-label" style="font-weight: bold; font-size: 25px; color: #f53b57">Total
+                                    :- </label>
                             </div>
                             <div class="mb-2 col-6 mt-3">
                                 <label class="form-label" for="exampleInputCash"
@@ -416,7 +419,8 @@
                         </section>
                         <section class="row justify-content-center">
                             <div class="mt-4 col-5">
-                                <button class="btn btn-success  btn-sm" style="width: 100%;" id="purchaseBtn" type="button">Purchase
+                                <button class="btn btn-success  btn-sm" id="purchaseBtn" style="width: 100%;"
+                                        type="button">Purchase
                                 </button>
                             </div>
                         </section>
@@ -495,18 +499,34 @@
         $("#itemSection").css('display', 'none');
         $("#placeOrderSection").css('display', 'none');
     })
+
     $("#itempicBtn").click(function () {
         $("#homeSection").css('display', 'none');
         $("#customerSection").css('display', 'none');
         $("#itemSection").css('display', 'block');
         $("#placeOrderSection").css('display', 'none');
     })
+
     $("#placeOrderpicBtn").click(function () {
         $("#homeSection").css('display', 'none');
         $("#customerSection").css('display', 'none');
         $("#itemSection").css('display', 'none');
         $("#placeOrderSection").css('display', 'block');
     })
+
+    function clearCustomerTextFields() {
+        $("#id").val('');
+        $("#name").val('');
+        $("#address").val('');
+        $("#telNo").val('');
+    }
+
+    function clearItemTextFields() {
+        $("#itemId").val('');
+        $("#itemName").val('');
+        $("#itemUnitPrice").val('');
+        $("#itemQTYOnHand").val('');
+    }
 
     // Customer
     /*selecting the button*/
@@ -523,13 +543,11 @@
 
         $("#tblCustomer").append(row);
 
-        $("#id").val('');
-        $("#name").val('');
-        $("#address").val('');
-        $("#telNo").val('');
+        // clearing the text fields
+        clearCustomerTextFields();
 
         //disabling the row addings
-        $("#tblCustomer > tr").off();
+        $("#tblCustomer > tr").off('click');
 
         //selecting the table row
         $("#tblCustomer > tr").click(function () {
@@ -548,20 +566,20 @@
 
         });
 
+        $("#tblCustomer > tr").off('dblclick');
+
         $("#tblCustomer > tr").dblclick(function () {
             $(this).remove();
 
-            $("#id").val('');
-            $("#name").val('');
-            $("#address").val('');
-            $("#telNo").val('');
+            // clearing the text fields
+            clearCustomerTextFields();
 
         });
 
     });
 
     const cusIDRegEx = /^(C00-)[0-9]{3,4}$/;
-    const cusNameRegEx = /^[A-z]{5,20}$/;
+    const cusNameRegEx = /^[A-z ]{3,20}$/;
     const cusAddressRegEx = /^[0-9/A-z. ,]{7,}$/;
     const cusTelNoRegEx = /^[0-9]{10}$/;
 
@@ -646,13 +664,11 @@
 
         $("#tblItem").append(row);
 
-        $("#itemId").val('');
-        $("#itemName").val('');
-        $("#itemUnitPrice").val('');
-        $("#itemQTYOnHand").val('');
+        // clearing the text fields
+        clearItemTextFields();
 
         //disabling the row addings
-        $("#tblItem > tr").off();
+        $("#tblItem > tr").off('click');
 
         //selecting the table row
         $("#tblItem > tr").click(function () {
@@ -671,13 +687,14 @@
 
         });
 
+
+        $("#tblItem > tr").off('dblclick');
+
         $("#tblItem > tr").dblclick(function () {
             $(this).remove();
 
-            $("#itemId").val('');
-            $("#itemName").val('');
-            $("#itemUnitPrice").val('');
-            $("#itemQTYOnHand").val('');
+            // clearing the text fields
+            clearItemTextFields();
 
         });
 
