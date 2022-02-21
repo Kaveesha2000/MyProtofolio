@@ -130,6 +130,27 @@ $("#telNo").keyup(function () {
         $("#errortelNo").text("Wrong format");
     }
 });
+//========================================================================
+/*Row Click*/
+function rowClick() {
+    //selecting the table row
+    $("#tblCustomer > tr").click(function () {
+
+        let cusId = $(this).children(":eq(0)").text();
+        let cusName = $(this).children(":eq(1)").text();
+        let cusAddress = $(this).children(":eq(2)").text();
+        let cusTelNo = $(this).children(":eq(3)").text();
+
+        console.log(cusId, cusName, cusAddress, cusTelNo);
+
+        $("#id").val(cusId);
+        $("#name").val(cusName);
+        $("#address").val(cusAddress);
+        $("#telNo").val(cusTelNo);
+
+    });
+}
+//=====================================================================
 /*Save On Action*/
 $("#saveBtn").click(function () {
 
@@ -152,22 +173,7 @@ $("#saveBtn").click(function () {
     //disabling the row addings
     $("#tblCustomer > tr").off('click');
 
-    //selecting the table row
-    $("#tblCustomer > tr").click(function () {
-
-        let cusId = $(this).children(":eq(0)").text();
-        let cusName = $(this).children(":eq(1)").text();
-        let cusAddress = $(this).children(":eq(2)").text();
-        let cusTelNo = $(this).children(":eq(3)").text();
-
-        console.log(cusId, cusName, cusAddress, cusTelNo);
-
-        $("#id").val(cusId);
-        $("#name").val(cusName);
-        $("#address").val(cusAddress);
-        $("#telNo").val(cusTelNo);
-
-    });
+    rowClick();
 
     $("#tblCustomer > tr").off('dblclick');
 
@@ -180,3 +186,9 @@ $("#saveBtn").click(function () {
     });
 
 });
+
+/*Update On Action*/
+$("#updateBtn").click(function () {
+    rowClick();
+
+})

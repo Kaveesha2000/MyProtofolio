@@ -114,6 +114,29 @@ $("#itemQTYOnHand").keyup(function () {
         $("#errorItemQTYOnHand").text("Wrong format");
     }
 });
+
+//========================================================================
+/* Row Click */
+function rowClick() {
+    //selecting the table row
+    $("#tblItem > tr").click(function () {
+
+        let itId = $(this).children(":eq(0)").text();
+        let itName = $(this).children(":eq(1)").text();
+        let itUnitPrice = $(this).children(":eq(2)").text();
+        let itQtyOnHand = $(this).children(":eq(3)").text();
+
+        console.log(itId, itName, itUnitPrice, itQtyOnHand);
+
+        $("#itemId").val(itId);
+        $("#itemName").val(itName);
+        $("#itemUnitPrice").val(itUnitPrice);
+        $("#itemQTYOnHand").val(itQtyOnHand);
+
+    });
+}
+//========================================================================
+
 /*Save On Action*/
 $("#saveBtnItem").click(function () {
 
@@ -136,23 +159,7 @@ $("#saveBtnItem").click(function () {
     //disabling the row addings
     $("#tblItem > tr").off('click');
 
-    //selecting the table row
-    $("#tblItem > tr").click(function () {
-
-        let itId = $(this).children(":eq(0)").text();
-        let itName = $(this).children(":eq(1)").text();
-        let itUnitPrice = $(this).children(":eq(2)").text();
-        let itQtyOnHand = $(this).children(":eq(3)").text();
-
-        console.log(itId, itName, itUnitPrice, itQtyOnHand);
-
-        $("#itemId").val(itId);
-        $("#itemName").val(itName);
-        $("#itemUnitPrice").val(itUnitPrice);
-        $("#itemQTYOnHand").val(itQtyOnHand);
-
-    });
-
+    rowClick();
 
     $("#tblItem > tr").off('dblclick');
 
@@ -165,3 +172,8 @@ $("#saveBtnItem").click(function () {
     });
 
 });
+
+/*Update On Action*/
+$("#updateItem").click(function () {
+
+})
