@@ -88,7 +88,8 @@
 
 <script>
 
-    var colors = ['red','green','blue','orange','pink'];
+    /*var colors = ['red','green','blue','orange','pink'];
+    var colorsReverse = ['pink','orange','blue','green','red'];
 
     var rectangles = [$('#1'),$('#2'),$('#3'),$('#4'),$('#5')];
 
@@ -107,16 +108,86 @@
 
     function colorChangeReverse() {
 
-        let col = colors.pop();
-        colors.unshift(col);
+        let col = colorsReverse.pop();
+        colorsReverse.unshift(col);
 
         for (let i = rectangles.length-1; i >= 0; i--) {
-            rectangles[i].css("background",colors[i]);
+            rectangles[i].css("background",colorsReverse[i]);
         }
 
     }
 
-    let interval = setInterval(colorChange,2000);
+    let interval = setInterval(colorChange,2000);*/
+
+    var colorBox1 = ["red", "#bb2d3b", "brown", "indianred", "#dfc2c4", "white"];
+    count1 = 0;
+
+    function changeFifthBox() {
+        $("#5").css('background-color', colorBox1[count1]);
+        count1++;
+
+        if (count1 == colorBox1.length) {
+            count1 = 0;
+        }
+    }
+
+    setInterval(changeFifthBox, 500);
+
+    var colorBox2 = ["white", "red", "#bb2d3b", "brown", "indianred", "#dfc2c4"];
+    count2 = 0;
+
+    function changeForthBox() {
+        $("#4").css('background-color', colorBox2[count2]);
+        count2++;
+
+        if (count2 == colorBox2.length) {
+            count2 = 0;
+        }
+    }
+
+    setInterval(changeForthBox, 500);
+
+    var colorBox3 = ["white", "white", "red", "#bb2d3b", "brown", "indianred", "#dfc2c4"];
+    count3 = 0;
+
+    function changeThirdBox() {
+        $("#3").css('background-color', colorBox3[count3]);
+        count3++;
+
+        if (count3 == colorBox3.length) {
+            count3 = 0;
+        }
+    }
+
+    setInterval(changeThirdBox, 500);
+
+    var colorBox4 = ["white", "white", "white", "red", "#bb2d3b", "brown", "indianred", "#dfc2c4"];
+    count4 = 0;
+
+    function changeSecondBox() {
+        $("#2").css('background-color', colorBox4[count4]);
+        count4++;
+
+        if (count4 == colorBox4.length) {
+            count4 = 0;
+        }
+    }
+
+    setInterval(changeSecondBox, 500);
+
+    var colorBox5 = ["white", "white", "white", "white", "red", "#bb2d3b", "brown", "indianred", "#dfc2c4"];
+    count5 = 0;
+
+    function changeFirstBox() {
+        $("#1").css('background-color', colorBox5[count5]);
+        count5++;
+
+        if (count5 == colorBox5.length) {
+            count5 = 0;
+        }
+    }
+
+    setInterval(changeFirstBox, 500);
 
 </script>
 </body>
