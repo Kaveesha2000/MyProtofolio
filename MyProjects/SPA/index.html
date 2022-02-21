@@ -443,12 +443,15 @@
         </table>
     </section>
 </section>
+
 <script src="assets/jQuery/jquery-3.6.0.min.js"></script>
+
 <script crossorigin="anonymous"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         src="assets/bootstrap/js/bootstrap.bundle.min.js">
 
 </script>
+
 <script>
 
     $("#homeSection").css('display', 'block');
@@ -520,6 +523,11 @@
 
         $("#tblCustomer").append(row);
 
+        $("#id").val('');
+        $("#name").val('');
+        $("#address").val('');
+        $("#telNo").val('');
+
         //disabling the row addings
         $("#tblCustomer > tr").off();
 
@@ -542,6 +550,12 @@
 
         $("#tblCustomer > tr").dblclick(function () {
             $(this).remove();
+
+            $("#id").val('');
+            $("#name").val('');
+            $("#address").val('');
+            $("#telNo").val('');
+
         });
 
     });
@@ -632,6 +646,11 @@
 
         $("#tblItem").append(row);
 
+        $("#itemId").val('');
+        $("#itemName").val('');
+        $("#itemUnitPrice").val('');
+        $("#itemQTYOnHand").val('');
+
         //disabling the row addings
         $("#tblItem > tr").off();
 
@@ -645,15 +664,21 @@
 
             console.log(itId, itName, itUnitPrice, itQtyOnHand);
 
-            $("#id").val(itId);
-            $("#name").val(itName);
-            $("#address").val(itUnitPrice);
-            $("#telNo").val(itQtyOnHand);
+            $("#itemId").val(itId);
+            $("#itemName").val(itName);
+            $("#itemUnitPrice").val(itUnitPrice);
+            $("#itemQTYOnHand").val(itQtyOnHand);
 
         });
 
         $("#tblItem > tr").dblclick(function () {
             $(this).remove();
+
+            $("#itemId").val('');
+            $("#itemName").val('');
+            $("#itemUnitPrice").val('');
+            $("#itemQTYOnHand").val('');
+
         });
 
     });
@@ -730,5 +755,6 @@
 
 
 </script>
+
 </body>
 </html>
