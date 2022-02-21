@@ -179,10 +179,10 @@
             <input aria-describedby="searchBarHelp" class="form-control" id="exampleInputSearch" type="text">
             <div class="form-text" id="searchBarHelp"></div>
         </div>
-        <button class="btn btn-primary  btn-sm" type="button">Search</button>
+        <button class="btn btn-primary  btn-sm" id="serchBtn" type="button">Search</button>
         <button class="btn btn-success  btn-sm" id="saveBtn" type="button">+Add</button>
-        <button class="btn btn-warning  btn-sm" type="button">Update</button>
-        <button class="btn btn-danger  btn-sm" type="button">Delete</button>
+        <button class="btn btn-warning  btn-sm" id="updateBtn" type="button">Update</button>
+        <button class="btn btn-danger  btn-sm" id="deleteBtn" type="button">Delete</button>
     </section>
     <!--table-->
     <section>
@@ -214,38 +214,38 @@
         <form>
             <section class="row" style="width: 100%">
                 <div class="mb-2 col-6">
-                    <label class="form-label" style="font-weight: bold">ID</label>
-                    <input aria-describedby="idHelp1" class="form-control" id="exampleInputId1" type="text">
+                    <label class="form-label" for="itemId" style="font-weight: bold">ID</label>
+                    <input aria-describedby="idHelp1" class="form-control" id="itemId" type="text">
                     <p><small id="errorItemid" class="text-danger pl-1"></small> </p>
                 </div>
                 <div class="mb-2 col-6">
-                    <label class="form-label" style="font-weight: bold">Name</label>
-                    <input aria-describedby="nameHelp1" class="form-control" id="exampleInputName1" type="text">
+                    <label class="form-label" for="itemName" style="font-weight: bold">Name</label>
+                    <input aria-describedby="nameHelp1" class="form-control" id="itemName" type="text">
                     <p><small id="errorItemname" class="text-danger pl-1"></small> </p>
                 </div>
                 <div class="mb-2 col-6">
-                    <label class="form-label" style="font-weight: bold">Unit Price</label>
-                    <input aria-describedby="unitPriceHelp" class="form-control" id="exampleInputUnitPrice" type="text">
+                    <label class="form-label" for="itemUnitPrice" style="font-weight: bold">Unit Price</label>
+                    <input aria-describedby="unitPriceHelp" class="form-control" id="itemUnitPrice" type="text">
                     <p><small id="errorItemUnitPrice" class="text-danger pl-1"></small> </p>
                 </div>
                 <div class="mb-2 col-6">
-                    <label class="form-label" style="font-weight: bold">Quantity On Hand</label>
-                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="exampleInputQTYOnHand" type="text">
+                    <label class="form-label" for="itemQTYOnHand" style="font-weight: bold">Quantity On Hand</label>
+                    <input aria-describedby="qtyOnHandHelp" class="form-control" id="itemQTYOnHand" type="text">
                     <p><small id="errorItemQTYOnHand" class="text-danger pl-1"></small> </p>
                 </div>
             </section>
         </form>
     </section>
-    <!--buttom set and search bar-->
+    <!--button set and search bar-->
     <section class="d-grid gap-2 d-md-flex justify-content-md-end">
         <div style="width: 80%">
             <input aria-describedby="searchBarHelp1" class="form-control" id="exampleInputSearch1" type="text">
             <div class="form-text" id="searchBarHelp1"></div>
         </div>
-        <button class="btn btn-primary  btn-sm" type="button">Search</button>
-        <button class="btn btn-success  btn-sm" type="button">+Add</button>
-        <button class="btn btn-warning  btn-sm" type="button">Update</button>
-        <button class="btn btn-danger  btn-sm" type="button">Delete</button>
+        <button class="btn btn-primary  btn-sm" id="searchBtnItem" type="button">Search</button>
+        <button class="btn btn-success  btn-sm" id="saveBtnItem" type="button">+Add</button>
+        <button class="btn btn-warning  btn-sm" id="updateItem" type="button">Update</button>
+        <button class="btn btn-danger  btn-sm" id="deleteBtnItem" type="button">Delete</button>
     </section>
     <!--table-->
     <section>
@@ -284,12 +284,12 @@
                     <form>
                         <section class="row" style="width: 100%">
                             <div class="mb-2 col-6">
-                                <label class="form-label"
+                                <label class="form-label" for="exampleInputId2"
                                        style="font-weight: bold; font-size: 12px">Order ID</label>
                                 <input aria-describedby="idHelp2" class="form-control" id="exampleInputId2" type="text">
                             </div>
                             <div class="mb-2 col-6">
-                                <label class="form-label"
+                                <label class="form-label" for="exampleInputDate"
                                        style="font-weight: bold; font-size: 12px">Date</label>
                                 <input aria-describedby="dateHelp" class="form-control" id="exampleInputDate"
                                        type="date">
@@ -304,19 +304,19 @@
                                 </select>
                             </div>
                             <div class="mb-2 col-6">
-                                <label class="form-label"
+                                <label class="form-label" for="exampleInputItemName"
                                        style="font-weight: bold; font-size: 12px">Name</label>
                                 <input aria-describedby="itemNameHelp" class="form-control" id="exampleInputItemName"
                                        type="text">
                             </div>
                             <div class="mb-2 col-6">
-                                <label class="form-label"
+                                <label class="form-label" for="exampleInputTelephoneNo2"
                                        style="font-weight: bold; font-size: 12px">Tel No</label>
                                 <input aria-describedby="telNoHelp2" class="form-control" id="exampleInputTelephoneNo2"
                                        type="text">
                             </div>
                             <div class="mb-2 col-6">
-                                <label class="form-label"
+                                <label class="form-label" for="exampleInputAddress2"
                                        style="font-weight: bold; font-size: 12px">Address</label>
                                 <input aria-describedby="addressHelp2" class="form-control" id="exampleInputAddress2"
                                        type="text">
@@ -345,25 +345,25 @@
                                 </select>
                             </div>
                             <div class="mb-2 col-6">
-                                <label class="form-label"
+                                <label class="form-label" for="exampleInputName2"
                                        style="font-weight: bold; font-size: 12px">Name</label>
                                 <input aria-describedby="nameHelp2" class="form-control" id="exampleInputName2"
                                        type="text">
                             </div>
                             <div class="mb-2 col-6">
-                                <label class="form-label"
+                                <label class="form-label" for="exampleInputUnitPrice2"
                                        style="font-weight: bold; font-size: 12px">Unit Price</label>
                                 <input aria-describedby="unitPriceHelp2" class="form-control" id="exampleInputUnitPrice2"
                                        type="text">
                             </div>
                             <div class="mb-2 col-6">
-                                <label class="form-label"
+                                <label class="form-label" for="exampleInputQtyOnHand2"
                                        style="font-weight: bold; font-size: 12px">QTY On Hand</label>
                                 <input aria-describedby="qtyOnHandHelp2" class="form-control" id="exampleInputQtyOnHand2"
                                        type="text">
                             </div>
                             <div class="mb-2 col-12">
-                                <label class="form-label"
+                                <label class="form-label" for="exampleInputOrderQty"
                                        style="font-weight: bold; font-size: 12px">Order QTY</label>
                                 <input aria-describedby="orderQtyHelp" class="form-control" id="exampleInputOrderQty"
                                        type="text">
@@ -388,7 +388,7 @@
                                 <label class="form-label" style="font-weight: bold; font-size: 25px; color: #f53b57">Total :- </label>
                             </div>
                             <div class="mb-2 col-6 mt-3">
-                                <label class="form-label"
+                                <label class="form-label" for="exampleInputCash"
                                        style="font-weight: bold; font-size: 12px">Cash</label>
                                 <input aria-describedby="cashHelp" class="form-control" id="exampleInputCash"
                                        type="text">
@@ -410,13 +410,13 @@
                                 </select>
                             </div>
                             <div class="mb-2 col-12 mt-4">
-                                <label class="form-label" for="exampleInputUnitPrice"
+                                <label class="form-label"
                                        style="font-weight: bold; font-size: 20px; color: #0fbcf9">Balance :- </label>
                             </div>
                         </section>
                         <section class="row justify-content-center">
                             <div class="mt-4 col-5">
-                                <button class="btn btn-success  btn-sm" style="width: 100%;" type="button">Purchase
+                                <button class="btn btn-success  btn-sm" style="width: 100%;" id="purchaseBtn" type="button">Purchase
                                 </button>
                             </div>
                         </section>
@@ -505,6 +505,7 @@
         $("#placeOrderSection").css('display', 'block');
     })
 
+    // Customer
     /*selecting the button*/
     $("#saveBtn").click(function () {
 
@@ -546,9 +547,9 @@
     });
 
     const cusIDRegEx = /^(C00-)[0-9]{3,4}$/;
-    const cusNameRegEx = /^[A-z ]{5,20}$/;
+    const cusNameRegEx = /^[A-z]{5,20}$/;
     const cusAddressRegEx = /^[0-9/A-z. ,]{7,}$/;
-    const cusTelNo = /^[0-9]{10}$/;
+    const cusTelNoRegEx = /^[0-9]{10}$/;
 
     $("#id").keyup(function () {
 
@@ -566,6 +567,7 @@
         }
     });
 
+    //validation of customer
     $("#name").keyup(function () {
 
         let input = $("#name").val();
@@ -602,7 +604,7 @@
 
         let input = $("#telNo").val();
 
-        if (cusTelNo.test(input)) {
+        if (cusTelNoRegEx.test(input)) {
 
             $("#telNo").css('border', '2px solid green');
             $("#errortelNo").text("");
@@ -611,6 +613,118 @@
 
             $("#telNo").css('border', '2px solid red');
             $("#errortelNo").text("Wrong format");
+        }
+    });
+
+    //===================================================================================
+    // Item
+    /*selecting the button*/
+    $("#saveBtnItem").click(function () {
+
+        //gather customer information
+        let itemId = $("#itemId").val();
+        let itemName = $("#itemName").val();
+        let itemUnitPrice = $("#itemUnitPrice").val();
+        let itemQTYOnHand = $("#itemQTYOnHand").val();
+
+        let row = `<tr><td>${itemId}</td><td>${itemName}</td><td>${itemUnitPrice}</td><td>${itemQTYOnHand}</td></tr>`;
+        console.log(row);
+
+        $("#tblItem").append(row);
+
+        //disabling the row addings
+        $("#tblItem > tr").off();
+
+        //selecting the table row
+        $("#tblItem > tr").click(function () {
+
+            let itId = $(this).children(":eq(0)").text();
+            let itName = $(this).children(":eq(1)").text();
+            let itUnitPrice = $(this).children(":eq(2)").text();
+            let itQtyOnHand = $(this).children(":eq(3)").text();
+
+            console.log(itId, itName, itUnitPrice, itQtyOnHand);
+
+            $("#id").val(itId);
+            $("#name").val(itName);
+            $("#address").val(itUnitPrice);
+            $("#telNo").val(itQtyOnHand);
+
+        });
+
+        $("#tblItem > tr").dblclick(function () {
+            $(this).remove();
+        });
+
+    });
+
+    const itemIDRegEx = /^(I00-)[0-9]{3,4}$/;
+    const itemNameRegEx = /^[A-z]{1,20}$/;
+    const itemUnitPriceRegEx = /^[0-9]{2,8}$/;
+    const itemQTYOnHand = /^[0-9]{1,10}$/;
+
+    $("#itemId").keyup(function () {
+
+        let input = $("#itemId").val();
+
+        if (itemIDRegEx.test(input)) {
+
+            $("#itemId").css('border', '2px solid green');
+            $("#errorItemid").text("");
+
+        } else {
+
+            $("#itemId").css('border', '2px solid red');
+            $("#errorItemid").text("Wrong format : I00-001");
+        }
+    });
+
+    //validation of item
+    $("#itemName").keyup(function () {
+
+        let input = $("#itemName").val();
+
+        if (itemNameRegEx.test(input)) {
+
+            $("#itemName").css('border', '2px solid green');
+            $("#errorItemname").text("");
+
+        } else {
+
+            $("#itemName").css('border', '2px solid red');
+            $("#errorItemname").text("Wrong format");
+        }
+    });
+
+    $("#itemUnitPrice").keyup(function () {
+
+        let input = $("#itemUnitPrice").val();
+
+        if (itemUnitPriceRegEx.test(input)) {
+
+            $("#itemUnitPrice").css('border', '2px solid green');
+            $("#errorItemUnitPrice").text("");
+
+        } else {
+
+            $("#itemUnitPrice").css('border', '2px solid red');
+            $("#errorItemUnitPrice").text("Wrong format");
+        }
+    });
+
+    $("#itemQTYOnHand").keyup(function () {
+
+        let input = $("#itemQTYOnHand").val();
+
+        if (itemQTYOnHand.test(input)) {
+
+            $("#itemQTYOnHand").css('border', '2px solid green');
+            $("#errorItemQTYOnHand").text("");
+
+        } else {
+
+            $("#itemQTYOnHand").css('border', '2px solid red');
+            $("#errorItemQTYOnHand").text("Wrong format");
         }
     });
 
