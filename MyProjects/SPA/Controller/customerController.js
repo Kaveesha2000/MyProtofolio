@@ -59,9 +59,78 @@ $("#address").keydown(function (event) {
 });
 //=========================================================================
 
-
 // Customer
 /*selecting the button*/
+//validation of customer
+const cusIDRegEx = /^(C00-)[0-9]{3,4}$/;
+const cusNameRegEx = /^[A-z ]{3,20}$/;
+const cusAddressRegEx = /^[0-9/A-z. ,]{7,}$/;
+const cusTelNoRegEx = /^[0-9]{10}$/;
+
+$("#id").keyup(function () {
+
+    let input = $("#id").val();
+
+    if (cusIDRegEx.test(input)) {
+
+        $("#id").css('border', '2px solid green');
+        $("#errorid").text("");
+
+    } else {
+
+        $("#id").css('border', '2px solid red');
+        $("#errorid").text("Wrong format : C00-001");
+    }
+});
+
+$("#name").keyup(function () {
+
+    let input = $("#name").val();
+
+    if (cusNameRegEx.test(input)) {
+
+        $("#name").css('border', '2px solid green');
+        $("#errorname").text("");
+
+    } else {
+
+        $("#name").css('border', '2px solid red');
+        $("#errorname").text("Wrong format");
+    }
+});
+
+$("#address").keyup(function () {
+
+    let input = $("#address").val();
+
+    if (cusAddressRegEx.test(input)) {
+
+        $("#address").css('border', '2px solid green');
+        $("#erroraddress").text("");
+
+    } else {
+
+        $("#address").css('border', '2px solid red');
+        $("#erroraddress").text("Wrong format");
+    }
+});
+
+$("#telNo").keyup(function () {
+
+    let input = $("#telNo").val();
+
+    if (cusTelNoRegEx.test(input)) {
+
+        $("#telNo").css('border', '2px solid green');
+        $("#errortelNo").text("");
+
+    } else {
+
+        $("#telNo").css('border', '2px solid red');
+        $("#errortelNo").text("Wrong format");
+    }
+});
+/*Save On Action*/
 $("#saveBtn").click(function () {
 
     //gather customer information
@@ -110,74 +179,4 @@ $("#saveBtn").click(function () {
 
     });
 
-});
-
-const cusIDRegEx = /^(C00-)[0-9]{3,4}$/;
-const cusNameRegEx = /^[A-z ]{3,20}$/;
-const cusAddressRegEx = /^[0-9/A-z. ,]{7,}$/;
-const cusTelNoRegEx = /^[0-9]{10}$/;
-
-$("#id").keyup(function () {
-
-    let input = $("#id").val();
-
-    if (cusIDRegEx.test(input)) {
-
-        $("#id").css('border', '2px solid green');
-        $("#errorid").text("");
-
-    } else {
-
-        $("#id").css('border', '2px solid red');
-        $("#errorid").text("Wrong format : C00-001");
-    }
-});
-
-//validation of customer
-$("#name").keyup(function () {
-
-    let input = $("#name").val();
-
-    if (cusNameRegEx.test(input)) {
-
-        $("#name").css('border', '2px solid green');
-        $("#errorname").text("");
-
-    } else {
-
-        $("#name").css('border', '2px solid red');
-        $("#errorname").text("Wrong format");
-    }
-});
-
-$("#address").keyup(function () {
-
-    let input = $("#address").val();
-
-    if (cusAddressRegEx.test(input)) {
-
-        $("#address").css('border', '2px solid green');
-        $("#erroraddress").text("");
-
-    } else {
-
-        $("#address").css('border', '2px solid red');
-        $("#erroraddress").text("Wrong format");
-    }
-});
-
-$("#telNo").keyup(function () {
-
-    let input = $("#telNo").val();
-
-    if (cusTelNoRegEx.test(input)) {
-
-        $("#telNo").css('border', '2px solid green');
-        $("#errortelNo").text("");
-
-    } else {
-
-        $("#telNo").css('border', '2px solid red');
-        $("#errortelNo").text("Wrong format");
-    }
 });
