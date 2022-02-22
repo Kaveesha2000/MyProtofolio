@@ -42,6 +42,13 @@ $("#itemUnitPrice").keydown(function (event) {
     }
 });
 //=========================================================================
+/*Tab focus off*/
+$('#itemId,#itemName,#itemUnitPrice,#itemQTYOnHand').on('keydown', function (eventOb) {
+    if (eventOb.key == "Tab") {
+        eventOb.preventDefault(); // stop execution of the button
+    }
+});
+//=========================================================================
 
 // Item
 /*selecting the button*/

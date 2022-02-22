@@ -58,6 +58,13 @@ $("#address").keydown(function (event) {
     }
 });
 //=========================================================================
+/*Tab focus off*/
+$('#id,#name,#address,#telNo').on('keydown', function (eventOb) {
+    if (eventOb.key == "Tab") {
+        eventOb.preventDefault(); // stop execution of the button
+    }
+});
+//=========================================================================
 
 // Customer
 /*selecting the button*/
