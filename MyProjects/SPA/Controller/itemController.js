@@ -164,12 +164,14 @@ $("#saveBtnItem").click(function () {
     itemDB.push(item);
     console.log(item);
 
-    for (let i = 0; i < itemDB.length; i++) {
-        let row = `<tr><td>${itemDB[i].itemId}</td><td>${itemDB[i].itemName}</td><td>${itemDB[i].itemUnitPrice}</td><td>${itemDB[i].itemQTYOnHand}</td></tr>`;
-        console.log(row);
+    var row;
 
-        $("#tblItem").append(row);
+    for (let i = 0; i < itemDB.length; i++) {
+        row = `<tr><td>${itemDB[i].itemId}</td><td>${itemDB[i].itemName}</td><td>${itemDB[i].itemUnitPrice}</td><td>${itemDB[i].itemQTYOnHand}</td></tr>`;
+        console.log(row);
     }
+
+    $("#tblItem").append(row);
 
     itemBorderColor();
 

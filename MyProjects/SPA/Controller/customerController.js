@@ -178,11 +178,14 @@ $("#saveBtn").click(function () {
     customerDB.push(customer);
     console.log(customer);
 
+    var row;
+
     for (var i = 0; i < customerDB.length; i++) {
-        let row = `<tr><td>${customerDB[i].id}</td><td>${customerDB[i].name}</td><td>${customerDB[i].address}</td><td>${customerDB[i].telNo}</td></tr>`;
+        row = `<tr><td>${customerDB[i].id}</td><td>${customerDB[i].name}</td><td>${customerDB[i].address}</td><td>${customerDB[i].telNo}</td></tr>`;
         console.log(row);
-        $("#tblCustomer").append(row);
     }
+
+    $("#tblCustomer").append(row);
 
     customerBorderColor();
 
@@ -210,7 +213,7 @@ $("#saveBtn").click(function () {
 
     });
 
-    //$("#tblCustomer > tr").off('dblclick');
+    $("#tblCustomer > tr").off('dblclick');
 
     $("#tblCustomer > tr").dblclick(function () {
         $(this).remove();
