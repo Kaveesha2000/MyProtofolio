@@ -153,10 +153,23 @@ $("#saveBtnItem").click(function () {
     let itemUnitPrice = $("#itemUnitPrice").val();
     let itemQTYOnHand = $("#itemQTYOnHand").val();
 
-    let row = `<tr><td>${itemId}</td><td>${itemName}</td><td>${itemUnitPrice}</td><td>${itemQTYOnHand}</td></tr>`;
-    console.log(row);
+    //making the item object
+    var item = {
+        itemId:itemId,
+        itemName:itemName,
+        itemUnitPrice:itemUnitPrice,
+        itemQTYOnHand:itemQTYOnHand
+    }
 
-    $("#tblItem").append(row);
+    itemDB.push(item);
+    console.log(item);
+
+    for (let i = 0; i < itemDB.length; i++) {
+        let row = `<tr><td>${itemDB[i].itemId}</td><td>${itemDB[i].itemName}</td><td>${itemDB[i].itemUnitPrice}</td><td>${itemDB[i].itemQTYOnHand}</td></tr>`;
+        console.log(row);
+
+        $("#tblItem").append(row);
+    }
 
     itemBorderColor();
 
