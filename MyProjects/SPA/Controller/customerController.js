@@ -167,22 +167,50 @@ $("#saveBtn").click(function () {
     let customerAddress = $("#address").val();
     let customerTp = $("#telNo").val();
 
-    let row = `<tr><td>${customerId}</td><td>${customerName}</td><td>${customerAddress}</td><td>${customerTp}</td></tr>`;
-    console.log(row);
+    //making the customer object
+    var customer = {
+        id:customerId,
+        name:customerName,
+        address:customerAddress,
+        telNo:customerTp
+    }
 
-    $("#tblCustomer").append(row);
+    customerDB.push(customer);
+    console.log(customer);
+
+    for (var i = 0; i < customerDB.length; i++) {
+        let row = `<tr><td>${customerDB[i].id}</td><td>${customerDB[i].name}</td><td>${customerDB[i].address}</td><td>${customerDB[i].telNo}</td></tr>`;
+        console.log(row);
+        $("#tblCustomer").append(row);
+    }
 
     customerBorderColor();
 
     // clearing the text fields
     clearCustomerTextFields();
 
+    //rowClick();
+
     //disabling the row addings
     $("#tblCustomer > tr").off('click');
 
-    rowClick();
+    $("#tblCustomer > tr").click(function () {
 
-    $("#tblCustomer > tr").off('dblclick');
+        let cusId = $(this).children(":eq(0)").text();
+        let cusName = $(this).children(":eq(1)").text();
+        let cusAddress = $(this).children(":eq(2)").text();
+        let cusTelNo = $(this).children(":eq(3)").text();
+
+        console.log(cusId, cusName, cusAddress, cusTelNo);
+
+        $("#id").val(cusId);
+        $("#name").val(cusName);
+        $("#address").val(cusAddress);
+        $("#telNo").val(cusTelNo);
+
+    });
+
+    //$("#tblCustomer > tr").off('dblclick');
 
     $("#tblCustomer > tr").dblclick(function () {
         $(this).remove();
