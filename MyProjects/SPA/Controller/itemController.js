@@ -163,6 +163,12 @@ $("#updateItem").click(function () {
 
 })
 
+/*Delete On Action*/
+$("#deleteBtnItem").click(function () {
+    deleteItem();
+    loadAllItems();
+})
+
 // Item CRUD Operation
 function saveItem() {
     //gather customer information
@@ -183,6 +189,22 @@ function saveItem() {
     console.log(item);
 }
 
+function deleteItem() {
+    var index = -1;
+
+    for (var j = 0; j < itemDB.length; j++) {
+        if ($('#tblItem>tr').itemId==(itemDB[j].itemId)){
+            console.log(itemDB[j].itemId);
+            index = j;
+        }
+    }
+
+    itemDB.splice(index,1);
+
+    // clearing the text fields
+    clearItemTextFields();
+}
+
 function loadAllItems() {
     $("#tblItem").empty();
     for (let i = 0; i < itemDB.length; i++) {
@@ -199,11 +221,10 @@ function loadAllItems() {
     $("#tblItem > tr").off('dblclick');
 
     $("#tblItem > tr").dblclick(function () {
-
         var index = -1;
 
         for (var j = 0; j < itemDB.length; j++) {
-            if ($('#id').val()==itemDB[j].itemId){
+            if ($('#tblItem>tr').itemId==(itemDB[j].itemId)){
                 console.log(itemDB[j].itemId);
                 index = j;
             }
@@ -215,6 +236,5 @@ function loadAllItems() {
 
         // clearing the text fields
         clearItemTextFields();
-
     });
 }
