@@ -169,6 +169,22 @@ $("#deleteBtnItem").click(function () {
     loadAllItems();
 })
 
+/*Search On Action*/
+$("#searchBtnItem").click(function () {
+    var searchID = $("#exampleInputSearch1").val();
+
+    var response = searchItem(searchID);
+    if (response) {
+        $("#itemId").val(response.itemId);
+        $("#itemName").val(response.itemName);
+        $("#itemUnitPrice").val(response.itemUnitPrice);
+        $("#itemQTYOnHand").val(response.itemQTYOnHand);
+    }else{
+        clearItemTextFields();
+        alert("No Such a Item");
+    }
+});
+
 // Item CRUD Operation
 function saveItem() {
     //gather customer information
@@ -203,6 +219,14 @@ function deleteItem() {
 
     // clearing the text fields
     clearItemTextFields();
+}
+
+function searchItem(id) {
+    for (let i = 0; i < itemDB.length; i++) {
+        if (itemDB[i].itemId == id) {
+            return itemDB[i];
+        }
+    }
 }
 
 function loadAllItems() {
