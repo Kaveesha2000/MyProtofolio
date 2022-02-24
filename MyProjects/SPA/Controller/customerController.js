@@ -188,6 +188,22 @@ $("#deleteBtn").click(function () {
     loadAllCustomers();
 });
 
+/*Search On Action*/
+$("#searchBtn").click(function () {
+    var searchID = $("#exampleInputSearch").val();
+
+    var response = searchCustomer(searchID);
+    if (response) {
+        $("#id").val(response.id);
+        $("#name").val(response.name);
+        $("#address").val(response.address);
+        $("#telNo").val(response.telNo);
+    }else{
+        clearCustomerTextFields();
+        alert("No Such a Customer");
+    }
+});
+
 
 // Customer Crud Operations
 function saveCustomer() {
@@ -223,6 +239,14 @@ function deleteCustomer() {
 
     // clearing the text fields
     clearCustomerTextFields();
+}
+
+function searchCustomer(id) {
+    for (let i = 0; i < customerDB.length; i++) {
+        if (customerDB[i].id == id) {
+            return customerDB[i];
+        }
+    }
 }
 
 function loadAllCustomers() {
