@@ -186,6 +186,18 @@ $("#saveBtnItem").click(function () {
     $("#tblItem > tr").off('dblclick');
 
     $("#tblItem > tr").dblclick(function () {
+
+        var index = -1;
+
+        for (var j = 0; j < itemDB.length; j++) {
+            if ($('#id').val()==itemDB[j].itemId){
+                console.log(itemDB[j].itemId);
+                index = j;
+            }
+        }
+
+        itemDB.splice(index,1);
+
         $(this).remove();
 
         // clearing the text fields

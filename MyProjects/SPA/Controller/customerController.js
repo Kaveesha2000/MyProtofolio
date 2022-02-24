@@ -157,35 +157,14 @@ function rowClick() {
 
     });
 }
+
 //=====================================================================
 /*Save On Action*/
 $("#saveBtn").click(function () {
 
-    //gather customer information
-    let customerId = $("#id").val();
-    let customerName = $("#name").val();
-    let customerAddress = $("#address").val();
-    let customerTp = $("#telNo").val();
+    saveCustomer();
 
-    //making the customer object
-    var customer = {
-        id:customerId,
-        name:customerName,
-        address:customerAddress,
-        telNo:customerTp
-    }
-
-    customerDB.push(customer);
-    console.log(customer);
-
-    var row;
-
-    for (var i = 0; i < customerDB.length; i++) {
-        row = `<tr><td>${customerDB[i].id}</td><td>${customerDB[i].name}</td><td>${customerDB[i].address}</td><td>${customerDB[i].telNo}</td></tr>`;
-        console.log(row);
-    }
-
-    $("#tblCustomer").append(row);
+    loadAllCustomers();
 
     customerBorderColor();
 
@@ -194,11 +173,46 @@ $("#saveBtn").click(function () {
 
     //rowClick();
 
-    //disabling the row addings
-    $("#tblCustomer > tr").off('click');
 
-    $("#tblCustomer > tr").click(function () {
 
+});
+
+/*Update On Action*/
+$("#updateBtn").click(function () {
+    rowClick();
+
+});
+
+
+// Customer Crud Operations
+function saveCustomer() {
+    //gather customer information
+    let customerId = $("#id").val();
+    let customerName = $("#name").val();
+    let customerAddress = $("#address").val();
+    let customerTp = $("#telNo").val();
+
+    //making the customer object
+    var customer = {
+        id: customerId,
+        name: customerName,
+        address: customerAddress,
+        telNo: customerTp
+    }
+
+    customerDB.push(customer);
+    console.log(customer);
+}
+
+function loadAllCustomers() {
+    $("#tblCustomer").empty();
+    for (var i = 0; i < customerDB.length; i++) {
+        var row = `<tr><td>${customerDB[i].id}</td><td>${customerDB[i].name}</td><td>${customerDB[i].address}</td><td>${customerDB[i].telNo}</td></tr>`;
+        console.log(row);
+        $("#tblCustomer").append(row);
+    }
+
+    $("#tblCustomer>tr").click(function () {
         let cusId = $(this).children(":eq(0)").text();
         let cusName = $(this).children(":eq(1)").text();
         let cusAddress = $(this).children(":eq(2)").text();
@@ -213,20 +227,13 @@ $("#saveBtn").click(function () {
 
     });
 
-    $("#tblCustomer > tr").off('dblclick');
 
-    $("#tblCustomer > tr").dblclick(function () {
+    $("#tblCustomer>tr").dblclick(function () {
         $(this).remove();
-
         // clearing the text fields
         clearCustomerTextFields();
-
     });
 
-});
+    // double  click wenna kalin click event eka eka parak enawa
+}
 
-/*Update On Action*/
-$("#updateBtn").click(function () {
-    rowClick();
-
-})
