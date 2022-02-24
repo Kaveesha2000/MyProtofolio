@@ -160,7 +160,8 @@ $("#saveBtnItem").click(function () {
 
 /*Update On Action*/
 $("#updateItem").click(function () {
-
+    updateItem();
+    loadAllItems();
 })
 
 /*Delete On Action*/
@@ -225,6 +226,22 @@ function searchItem(id) {
     for (let i = 0; i < itemDB.length; i++) {
         if (itemDB[i].itemId == id) {
             return itemDB[i];
+        }
+    }
+}
+
+function updateItem() {
+    let itemId = $("#itemId").val();
+    let itemName = $("#itemName").val();
+    let itemUnitPrice = $("#itemUnitPrice").val();
+    let itemQTYOnHand = $("#itemQTYOnHand").val();
+
+    for (var i = 0; i < itemDB.length; i++) {
+        if ($("#itemId").val()==itemDB[i].itemId){
+            itemDB[i].itemId= itemId;
+            itemDB[i].itemName=itemName;
+            itemDB[i].itemUnitPrice=itemUnitPrice;
+            itemDB[i].itemQTYOnHand=itemQTYOnHand;
         }
     }
 }
