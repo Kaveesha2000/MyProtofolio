@@ -147,6 +147,24 @@ function rowClick() {
 /*Save On Action*/
 $("#saveBtnItem").click(function () {
 
+    saveItem();
+
+    loadAllItems();
+
+    itemBorderColor();
+
+    // clearing the text fields
+    clearItemTextFields();
+
+});
+
+/*Update On Action*/
+$("#updateItem").click(function () {
+
+})
+
+// Item CRUD Operation
+function saveItem() {
     //gather customer information
     let itemId = $("#itemId").val();
     let itemName = $("#itemName").val();
@@ -163,20 +181,15 @@ $("#saveBtnItem").click(function () {
 
     itemDB.push(item);
     console.log(item);
+}
 
-    var row;
-
+function loadAllItems() {
+    $("#tblItem").empty();
     for (let i = 0; i < itemDB.length; i++) {
-        row = `<tr><td>${itemDB[i].itemId}</td><td>${itemDB[i].itemName}</td><td>${itemDB[i].itemUnitPrice}</td><td>${itemDB[i].itemQTYOnHand}</td></tr>`;
+        var row = `<tr><td>${itemDB[i].itemId}</td><td>${itemDB[i].itemName}</td><td>${itemDB[i].itemUnitPrice}</td><td>${itemDB[i].itemQTYOnHand}</td></tr>`;
         console.log(row);
+        $("#tblItem").append(row);
     }
-
-    $("#tblItem").append(row);
-
-    itemBorderColor();
-
-    // clearing the text fields
-    clearItemTextFields();
 
     //disabling the row addings
     $("#tblItem > tr").off('click');
@@ -204,10 +217,4 @@ $("#saveBtnItem").click(function () {
         clearItemTextFields();
 
     });
-
-});
-
-/*Update On Action*/
-$("#updateItem").click(function () {
-
-})
+}
