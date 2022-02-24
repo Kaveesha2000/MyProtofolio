@@ -180,7 +180,12 @@ $("#saveBtn").click(function () {
 /*Update On Action*/
 $("#updateBtn").click(function () {
     rowClick();
+});
 
+/*Delete On Action*/
+$("#deleteBtn").click(function () {
+    deleteCustomer();
+    loadAllCustomers();
 });
 
 
@@ -202,6 +207,22 @@ function saveCustomer() {
 
     customerDB.push(customer);
     console.log(customer);
+}
+
+function deleteCustomer() {
+    var index = -1;
+
+    for (var j = 0; j < customerDB.length; j++) {
+        if ($('#tblCustomer>tr').id==(customerDB[j].id)){
+            console.log(itemDB[j].id);
+            index = j;
+        }
+    }
+
+    customerDB.splice(index,1);
+
+    // clearing the text fields
+    clearCustomerTextFields();
 }
 
 function loadAllCustomers() {
@@ -229,11 +250,22 @@ function loadAllCustomers() {
 
 
     $("#tblCustomer>tr").dblclick(function () {
+        var index = -1;
+
+        for (var j = 0; j < customerDB.length; j++) {
+            if ($('#tblCustomer>tr').id==(customerDB[j].id)){
+                console.log(itemDB[j].id);
+                index = j;
+            }
+        }
+
+        customerDB.splice(index,1);
+
         $(this).remove();
+
         // clearing the text fields
         clearCustomerTextFields();
     });
 
-    // double  click wenna kalin click event eka eka parak enawa
 }
 
