@@ -205,10 +205,8 @@ $("#searchBtn").click(function () {
     }
 });
 
-
-
-
 // Customer Crud Operations
+//START
 function saveCustomer() {
     //gather customer information
     let customerId = $("#id").val();
@@ -267,6 +265,7 @@ function updateCustomer() {
         }
     }
 }
+//END
 
 function loadAllCustomers() {
     $("#tblCustomer").empty();

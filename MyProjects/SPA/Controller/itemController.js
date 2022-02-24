@@ -187,6 +187,7 @@ $("#searchBtnItem").click(function () {
 });
 
 // Item CRUD Operation
+//START
 function saveItem() {
     //gather customer information
     let itemId = $("#itemId").val();
@@ -245,6 +246,7 @@ function updateItem() {
         }
     }
 }
+//END
 
 function loadAllItems() {
     $("#tblItem").empty();
