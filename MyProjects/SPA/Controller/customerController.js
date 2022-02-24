@@ -71,7 +71,7 @@ $('#id,#name,#address,#telNo').on('keydown', function (eventOb) {
 //validation of customer
 const cusIDRegEx = /^(C00-)[0-9]{3,4}$/;
 const cusNameRegEx = /^[A-z ]{3,20}$/;
-const cusAddressRegEx = /^[0-9/A-z. ,]{7,}$/;
+const cusAddressRegEx = /^[0-9/A-z. ,]{2,}$/;
 const cusTelNoRegEx = /^[0-9]{10}$/;
 
 $("#id").keyup(function () {
@@ -179,7 +179,8 @@ $("#saveBtn").click(function () {
 
 /*Update On Action*/
 $("#updateBtn").click(function () {
-    rowClick();
+    updateCustomer();
+    loadAllCustomers();
 });
 
 /*Delete On Action*/
@@ -203,6 +204,8 @@ $("#searchBtn").click(function () {
         alert("No Such a Customer");
     }
 });
+
+
 
 
 // Customer Crud Operations
@@ -245,6 +248,22 @@ function searchCustomer(id) {
     for (let i = 0; i < customerDB.length; i++) {
         if (customerDB[i].id == id) {
             return customerDB[i];
+        }
+    }
+}
+
+function updateCustomer() {
+    let customerId = $("#id").val();
+    let customerName = $("#name").val();
+    let customerAddress = $("#address").val();
+    let customerTelNo = $("#telNo").val();
+
+    for (var i = 0; i < customerDB.length; i++) {
+        if ($("#id").val()==customerDB[i].id){
+            customerDB[i].id= customerId;
+            customerDB[i].name=customerName;
+            customerDB[i].address=customerAddress;
+            customerDB[i].telNo=customerTelNo;
         }
     }
 }
