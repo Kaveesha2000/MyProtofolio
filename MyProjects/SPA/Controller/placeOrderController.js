@@ -26,3 +26,24 @@ $('#itemComboBox').click(function () {
         }
     }
 })
+
+//add to cart
+$('#addBtn').click(function () {
+    loadCart();
+})
+
+//load cart
+function loadCart() {
+    $("#tblPlaceOrder").empty();
+
+    var itemCode = $('#itemComboBox').val();
+    var itemName = $('#exampleInputName2').val();
+    var price = $('#exampleInputUnitPrice2').val();
+    var orderqty = $('#exampleInputOrderQty').val();
+
+    var total = orderqty*price;
+
+    var row = `<tr><td>${itemCode}</td><td>${itemName}</td><td>${price}</td><td>${orderqty}</td><td>${total}</td></tr>`;
+    console.log(row);
+    $("#tblPlaceOrder").append(row);
+}
