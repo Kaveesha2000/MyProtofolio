@@ -14,3 +14,15 @@ $('#customerComboBox').click(function () {
         }
     }
 })
+
+//load item data to text field
+$('#itemComboBox').click(function () {
+    var itemId = $('#itemComboBox').val();
+    for (let i = 0; i < itemDB.length; i++) {
+        if (itemDB[i].itemId == itemId) {
+            $('#exampleInputName2').val(itemDB[i].itemName);
+            $('#exampleInputUnitPrice2').val(itemDB[i].itemUnitPrice);
+            $('#exampleInputQtyOnHand2').val(itemDB[i].itemQTYOnHand);
+        }
+    }
+})
