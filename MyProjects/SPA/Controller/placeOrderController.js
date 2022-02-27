@@ -34,7 +34,14 @@ $('#addBtn').click(function () {
 
 //purchase
 $('#purchaseBtn').click(function () {
+    var cash = $('#exampleInputCash').val();
+    var total = $('#exampleInputTotal').val();
+    var discount = $('#discountComboBox').val();
 
+    //calculating balance of the cash
+    var balance = cash - (total - (total*discount/100));
+
+    $('#exampleInputBalance').val(balance);
 })
 
 var fullTotal = 0;
