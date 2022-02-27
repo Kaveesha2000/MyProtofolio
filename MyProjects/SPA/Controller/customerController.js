@@ -214,6 +214,8 @@ function saveCustomer() {
     let customerAddress = $("#address").val();
     let customerTp = $("#telNo").val();
 
+    loadCustomerIds("<option>"+customerId+"</option>");
+
     //making the customer object
     var customer = {
         id: customerId,
@@ -310,4 +312,10 @@ function loadAllCustomers() {
     });
 
 }
+
+//load all customerIds to the combo box
+function loadCustomerIds(id) {
+    $('#customerComboBox').append(id);
+}
+
 
