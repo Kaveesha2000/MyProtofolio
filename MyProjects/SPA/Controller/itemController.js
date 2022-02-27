@@ -195,6 +195,8 @@ function saveItem() {
     let itemUnitPrice = $("#itemUnitPrice").val();
     let itemQTYOnHand = $("#itemQTYOnHand").val();
 
+    loadItemIds("<option>"+itemId+"</option>");
+
     //making the item object
     var item = {
         itemId:itemId,
@@ -280,4 +282,9 @@ function loadAllItems() {
         // clearing the text fields
         clearItemTextFields();
     });
+}
+
+//load all itemIds to the item combo box
+function loadItemIds(itemId) {
+    $('#itemComboBox').append(itemId);
 }
