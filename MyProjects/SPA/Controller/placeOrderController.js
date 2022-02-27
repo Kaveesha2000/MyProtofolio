@@ -32,6 +32,12 @@ $('#addBtn').click(function () {
     loadCart();
 })
 
+//purchase
+$('#purchaseBtn').click(function () {
+
+})
+
+var fullTotal = 0;
 //load cart
 function loadCart() {
     $("#tblPlaceOrder").empty();
@@ -41,9 +47,13 @@ function loadCart() {
     var price = $('#exampleInputUnitPrice2').val();
     var orderqty = $('#exampleInputOrderQty').val();
 
-    var total = orderqty*price;
+    var total = orderqty * price;
+
+    fullTotal = fullTotal + total;
 
     var row = `<tr><td>${itemCode}</td><td>${itemName}</td><td>${price}</td><td>${orderqty}</td><td>${total}</td></tr>`;
     console.log(row);
     $("#tblPlaceOrder").append(row);
+
+    $('#exampleInputTotal').val(fullTotal);
 }
