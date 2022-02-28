@@ -54,8 +54,17 @@ function loadCart() {
     var itemName = $('#exampleInputName2').val();
     var price = $('#exampleInputUnitPrice2').val();
     var orderqty = $('#exampleInputOrderQty').val();
+    var qtyOnHand = $('#exampleInputQtyOnHand2').val();
 
     var total = orderqty * price;
+    qtyOnHand = qtyOnHand - orderqty;
+
+    for (let i = 0; i < itemDB.length; i++) {
+        if ($('#itemComboBox').val()==itemDB[i].itemId){
+            itemDB[i].itemQTYOnHand = qtyOnHand;
+            console.log(qtyOnHand);
+        }
+    }
 
     fullTotal = fullTotal + total;
 

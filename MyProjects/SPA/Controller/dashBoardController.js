@@ -22,6 +22,13 @@ $("#itemBtn").click(function () {
     $("#customerSection").css('display', 'none');
     $("#itemSection").css('display', 'block');
     $("#placeOrderSection").css('display', 'none');
+
+    $("#tblItem").empty();
+    for (let i = 0; i < itemDB.length; i++) {
+        var row = `<tr><td>${itemDB[i].itemId}</td><td>${itemDB[i].itemName}</td><td>${itemDB[i].itemUnitPrice}</td><td>${itemDB[i].itemQTYOnHand}</td></tr>`;
+        console.log(row);
+        $("#tblItem").append(row);
+    }
 })
 
 $("#placeOrderBtn").click(function () {
