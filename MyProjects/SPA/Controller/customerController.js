@@ -172,9 +172,6 @@ $("#saveBtn").click(function () {
     clearCustomerTextFields();
 
     //rowClick();
-
-
-
 });
 
 /*Update On Action*/
@@ -217,15 +214,15 @@ function saveCustomer() {
     loadCustomerIds("<option>"+customerId+"</option>");
 
     //making the customer object
-    var customer = {
+    /*var customer = {
         id: customerId,
         name: customerName,
         address: customerAddress,
         telNo: customerTp
-    }
-
-    customerDB.push(customer);
-    console.log(customer);
+    }*/
+    var customerDTO = new CustomerDTO(customerId,customerName,customerAddress,customerTp);
+    customerDB.push(customerDTO);
+    console.log(customerDTO);
 }
 
 function deleteCustomer() {

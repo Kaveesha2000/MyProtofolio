@@ -198,15 +198,16 @@ function saveItem() {
     loadItemIds("<option>"+itemId+"</option>");
 
     //making the item object
-    var item = {
+    /*var item = {
         itemId:itemId,
         itemName:itemName,
         itemUnitPrice:itemUnitPrice,
         itemQTYOnHand:itemQTYOnHand
     }
-
-    itemDB.push(item);
-    console.log(item);
+*/
+    var itemDTO = new ItemDTO(itemId,itemName,itemUnitPrice,itemQTYOnHand);
+    itemDB.push(itemDTO);
+    console.log(itemDTO);
 }
 
 function deleteItem() {
