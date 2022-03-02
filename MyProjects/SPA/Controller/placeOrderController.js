@@ -56,7 +56,8 @@ function loadCart() {
     var orderqty = $('#exampleInputOrderQty').val();
     var qtyOnHand = $('#exampleInputQtyOnHand2').val();
 
-    var total = orderqty * price;
+    var total = 0;
+    //var total = orderqty * price;
     qtyOnHand = qtyOnHand - orderqty;
 
     for (let i = 0; i < itemDB.length; i++) {
@@ -66,12 +67,40 @@ function loadCart() {
         }
     }
 
-    fullTotal = fullTotal + total;
+    //fullTotal = fullTotal + total;
 
-    var row = `<tr><td>${itemCode}</td><td>${itemName}</td><td>${price}</td><td>${orderqty}</td><td>${total}</td></tr>`;
-    console.log(row);
-    $("#tblPlaceOrder").append(row);
+    var duplicate = false;
+    var newQty = 0;
+    var newTotal = 0;
+    for (let i = 0; i < $('#tblPlaceOrder tr').length; i++) {
+        if (itemCode==$('#tblPlaceOrder tr').children(":eq(0)")[i].innerText){
+            duplicate=true;
+            newQty = parseInt($('#exampleInputOrderQty').val());
+            var oldQty = parseInt($('#tblPlaceOrder tr').children(":eq(3)")[i].innerText);
+            console.log(oldQty);
+            var newQty1 = newQty + oldQty;
+           // $('#tblPlaceOrder tr').children(":eq(3)")[i].value(newQty);
+            newTotal = newQty * price;
+            var newTotal1 = newQty1 * price;
+            fullTotal = fullTotal + newTotal;
+            $('#tblPlaceOrder tr').children(":eq(0),:eq(1),:eq(2),:eq(3),:eq(4)").remove();
+            var row = `<tr><td>${itemCode}</td><td>${itemName}</td><td>${price}</td><td>${newQty1}</td><td>${newTotal1}</td></tr>`;
+            $("#tblPlaceOrder").append(row);
+            $('#exampleInputTotal').val(fullTotal);
+            console.log(newQty1);
+        }
+    }
+    if (duplicate!=true){
+        total = orderqty * price;
+        fullTotal = fullTotal + total;
+        var row = `<tr><td>${itemCode}</td><td>${itemName}</td><td>${price}</td><td>${orderqty}</td><td>${total}</td></tr>`;
+        console.log(row);
+        //total = orderqty * price;
+        $("#tblPlaceOrder").append(row);
+        $('#exampleInputTotal').val(fullTotal);
+    }else if (duplicate==true){
 
+    }
     $('#exampleInputTotal').val(fullTotal);
 }
 
