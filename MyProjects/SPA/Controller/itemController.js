@@ -198,16 +198,15 @@ function saveItem() {
     loadItemIds("<option>"+itemId+"</option>");
 
     //making the item object
-    /*var item = {
+    var item = {
         itemId:itemId,
         itemName:itemName,
         itemUnitPrice:itemUnitPrice,
         itemQTYOnHand:itemQTYOnHand
     }
-*/
-    var itemDTO = new ItemDTO(itemId,itemName,itemUnitPrice,itemQTYOnHand);
-    itemDB.push(itemDTO);
-    console.log(itemDTO);
+    //var itemDTO = new ItemDTO(itemId,itemName,itemUnitPrice,itemQTYOnHand);
+    itemDB.push(item);
+    console.log(item);
 }
 
 function deleteItem() {

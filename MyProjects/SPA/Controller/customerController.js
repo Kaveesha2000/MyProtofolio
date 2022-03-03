@@ -161,16 +161,11 @@ function rowClick() {
 //=====================================================================
 /*Save On Action*/
 $("#saveBtn").click(function () {
-
     saveCustomer();
-
     loadAllCustomers();
-
     customerBorderColor();
-
     // clearing the text fields
     clearCustomerTextFields();
-
     //rowClick();
 });
 
@@ -189,13 +184,12 @@ $("#deleteBtn").click(function () {
 /*Search On Action*/
 $("#searchBtn").click(function () {
     var searchID = $("#exampleInputSearch").val();
-
     var response = searchCustomer(searchID);
     if (response) {
-        $("#id").val(response.id);
-        $("#name").val(response.name);
-        $("#address").val(response.address);
-        $("#telNo").val(response.telNo);
+        $("#id").val(response.getCustomerID());
+        $("#name").val(response.getCustomerName());
+        $("#address").val(response.getCustomerAddress());
+        $("#telNo").val(response.getCustomerTelNo());
     }else{
         clearCustomerTextFields();
         alert("No Such a Customer");
@@ -222,7 +216,7 @@ function saveCustomer() {
     }*/
     var customerDTO = new CustomerDTO(customerId,customerName,customerAddress,customerTp);
     customerDB.push(customerDTO);
-    console.log(customerDTO);
+    //console.log(customerDTO);
 }
 
 function deleteCustomer() {
@@ -269,8 +263,8 @@ function updateCustomer() {
 function loadAllCustomers() {
     $("#tblCustomer").empty();
     for (var i = 0; i < customerDB.length; i++) {
-        var row = `<tr><td>${customerDB[i].id}</td><td>${customerDB[i].name}</td><td>${customerDB[i].address}</td><td>${customerDB[i].telNo}</td></tr>`;
-        console.log(row);
+        var row = `<tr><td>${customerDB[i].getCustomerId()}</td><td>${customerDB[i].getCustomerName()}</td><td>${customerDB[i].getCustomerAddress()}</td><td>${customerDB[i].getCustomerTelNo()}</td></tr>`;
+        //console.log(row);
         $("#tblCustomer").append(row);
     }
 

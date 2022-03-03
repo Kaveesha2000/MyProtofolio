@@ -48,7 +48,6 @@ $('#purchaseBtn').click(function () {
 
 //load cart
 var fullTotal = 0;
-
 function loadCart() {
     var itemCode = $('#itemComboBox').val();
     var itemName = $('#exampleInputName2').val();
@@ -57,48 +56,46 @@ function loadCart() {
     var qtyOnHand = $('#exampleInputQtyOnHand2').val();
 
     var total = 0;
-    //var total = orderqty * price;
     qtyOnHand = qtyOnHand - orderqty;
 
+    //updating qty
     for (let i = 0; i < itemDB.length; i++) {
         if ($('#itemComboBox').val()==itemDB[i].itemId){
             itemDB[i].itemQTYOnHand = qtyOnHand;
             console.log(qtyOnHand);
         }
     }
-
     //fullTotal = fullTotal + total;
-
-    var duplicate = false;
+    //checking duplicates
     var newQty = 0;
     var newTotal = 0;
-    for (let i = 0; i < $('#tblPlaceOrder tr').length; i++) {
-        if (itemCode==$('#tblPlaceOrder tr').children(":eq(0)")[i].innerText){
-            duplicate=true;
-            newQty = parseInt($('#exampleInputOrderQty').val());
-            var oldQty = parseInt($('#tblPlaceOrder tr').children(":eq(3)")[i].innerText);
-            console.log(oldQty);
-            var newQty1 = newQty + oldQty;
-           // $('#tblPlaceOrder tr').children(":eq(3)")[i].value(newQty);
-            newTotal = newQty * price;
-            var newTotal1 = newQty1 * price;
-            fullTotal = fullTotal + newTotal;
-            $('#tblPlaceOrder tr').children(":eq(0),:eq(1),:eq(2),:eq(3),:eq(4)").remove();
-            var row = `<tr><td>${itemCode}</td><td>${itemName}</td><td>${price}</td><td>${newQty1}</td><td>${newTotal1}</td></tr>`;
-            $("#tblPlaceOrder").append(row);
-            $('#exampleInputTotal').val(fullTotal);
-            console.log(newQty1);
-        }
-    }
-    if (duplicate!=true){
+
+    //first check duplicates
+    if (!checkDuplicates(itemCode)){
+        //alert("No Duplicates...!");
         total = orderqty * price;
         fullTotal = fullTotal + total;
         var row = `<tr><td>${itemCode}</td><td>${itemName}</td><td>${price}</td><td>${orderqty}</td><td>${total}</td></tr>`;
-        console.log(row);
-        //total = orderqty * price;
+        //console.log(row);
         $("#tblPlaceOrder").append(row);
         $('#exampleInputTotal').val(fullTotal);
-    }else if (duplicate==true){
+    }else{
+        //alert("There are duplicates");
+        var rowNo= checkDuplicates(itemCode).rowNumber;
+        newQty = parseInt($('#exampleInputOrderQty').val());
+        var oldQty = parseInt($($('#tblPlaceOrder tr').eq(rowNo).children(":eq(3)")).text());
+        console.log(oldQty);
+        var newQty1 = newQty + oldQty;
+        newTotal = newQty * price;
+        var newTotal1 = newQty1 * price;
+        fullTotal = fullTotal + newTotal;
+        //update the row
+        $('#tblPlaceOrder tr').eq(rowNo).children(":eq(0)").text(itemCode);
+        $('#tblPlaceOrder tr').eq(rowNo).children(":eq(1)").text(itemName);
+        $('#tblPlaceOrder tr').eq(rowNo).children(":eq(2)").text(price);
+        $('#tblPlaceOrder tr').eq(rowNo).children(":eq(3)").text(newQty1);
+        $('#tblPlaceOrder tr').eq(rowNo).children(":eq(4)").text(newTotal1);
+        $('#exampleInputTotal').val(fullTotal);
 
     }
     $('#exampleInputTotal').val(fullTotal);
@@ -123,3 +120,18 @@ $('#clearBtn').click(function () {
     clearTextFields();
     clearTableAndFinalTotals();
 })
+
+//checking duplicates
+function checkDuplicates(itemCode){
+    for (let i = 0; i < $('#tblPlaceOrder tr').length; i++) {
+        // get the first row
+        //not working at the first time
+        if (itemCode==$('#tblPlaceOrder').children().eq(i).children().eq(0).text()){
+            return {
+                "rowNumber":i
+            };
+            break;
+        }
+    }
+    return false;
+}
