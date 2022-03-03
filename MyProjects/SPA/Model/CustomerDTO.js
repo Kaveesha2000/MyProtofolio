@@ -1,8 +1,8 @@
-function CustomerDTO(id,name,address,telNo){
-    var __id=id;
-    var __name=name;
-    var __address=address;
-    var __telNo=telNo; // these are in function scope
+function CustomerDTO(id, name, address, telNo) {
+    var __id = id;
+    var __name = name;
+    var __address = address;
+    var __telNo = telNo;
 
     this.setCustomerId = function (id) {
         __id = id;
@@ -28,5 +28,4 @@ function CustomerDTO(id,name,address,telNo){
     this.getCustomerTelNo = function () {
         return __telNo;
     }
-    //no this keyword wanted for here..
 }

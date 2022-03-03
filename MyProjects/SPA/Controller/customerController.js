@@ -185,11 +185,11 @@ $("#deleteBtn").click(function () {
 $("#searchBtn").click(function () {
     var searchID = $("#exampleInputSearch").val();
     var response = searchCustomer(searchID);
-    if (response) {
-        $("#id").val(response.getCustomerID());
-        $("#name").val(response.getCustomerName());
-        $("#address").val(response.getCustomerAddress());
-        $("#telNo").val(response.getCustomerTelNo());
+    if (response!=null) {
+        $("#id").val(customerDB[response].getCustomerId());
+        $("#name").val(customerDB[response].getCustomerName());
+        $("#address").val(customerDB[response].getCustomerAddress());
+        $("#telNo").val(customerDB[response].getCustomerTelNo());
     }else{
         clearCustomerTextFields();
         alert("No Such a Customer");
@@ -223,22 +223,23 @@ function deleteCustomer() {
     var index = -1;
 
     for (var j = 0; j < customerDB.length; j++) {
-        if ($('#tblCustomer>tr').id==(customerDB[j].id)){
-            console.log(itemDB[j].id);
+        if ($('#tblCustomer>tr').id==(customerDB[j].getCustomerId())){
+            console.log(itemDB[j].getCustomerId());
             index = j;
         }
     }
-
     customerDB.splice(index,1);
-
     // clearing the text fields
     clearCustomerTextFields();
 }
 
-function searchCustomer(id) {
+function searchCustomer(searchID) {
     for (let i = 0; i < customerDB.length; i++) {
-        if (customerDB[i].id == id) {
-            return customerDB[i];
+        if (customerDB[i].getCustomerId() == searchID) {
+            return i;
+        }
+        else{
+            return null;
         }
     }
 }
@@ -250,11 +251,11 @@ function updateCustomer() {
     let customerTelNo = $("#telNo").val();
 
     for (var i = 0; i < customerDB.length; i++) {
-        if ($("#id").val()==customerDB[i].id){
-            customerDB[i].id= customerId;
-            customerDB[i].name=customerName;
-            customerDB[i].address=customerAddress;
-            customerDB[i].telNo=customerTelNo;
+        if (customerId==customerDB[i].getCustomerId()){
+            customerDB[i].setCustomerId(customerId);
+            customerDB[i].setCustomerName(customerName);
+            customerDB[i].setCustomerAddress(customerAddress);
+            customerDB[i].setCustomerTelNo(customerTelNo);
         }
     }
 }
@@ -283,21 +284,18 @@ function loadAllCustomers() {
 
     });
 
-
     $("#tblCustomer>tr").dblclick(function () {
         var index = -1;
 
         for (var j = 0; j < customerDB.length; j++) {
-            if ($('#tblCustomer>tr').id==(customerDB[j].id)){
-                console.log(itemDB[j].id);
+            if ($('#tblCustomer>tr').id==(customerDB[j].getCustomerId())){
+                console.log(itemDB[j].getCustomerId());
                 index = j;
             }
         }
 
         customerDB.splice(index,1);
-
         $(this).remove();
-
         // clearing the text fields
         clearCustomerTextFields();
     });

@@ -173,7 +173,6 @@ $("#deleteBtnItem").click(function () {
 /*Search On Action*/
 $("#searchBtnItem").click(function () {
     var searchID = $("#exampleInputSearch1").val();
-
     var response = searchItem(searchID);
     if (response) {
         $("#itemId").val(response.itemId);
@@ -198,15 +197,15 @@ function saveItem() {
     loadItemIds("<option>"+itemId+"</option>");
 
     //making the item object
-    var item = {
+    /*var item = {
         itemId:itemId,
         itemName:itemName,
         itemUnitPrice:itemUnitPrice,
         itemQTYOnHand:itemQTYOnHand
-    }
-    //var itemDTO = new ItemDTO(itemId,itemName,itemUnitPrice,itemQTYOnHand);
-    itemDB.push(item);
-    console.log(item);
+    }*/
+    var itemDTO = new ItemDTO(itemId,itemName,itemUnitPrice,itemQTYOnHand);
+    itemDB.push(itemDTO);
+    console.log(itemDTO);
 }
 
 function deleteItem() {
@@ -220,7 +219,6 @@ function deleteItem() {
     }
 
     itemDB.splice(index,1);
-
     // clearing the text fields
     clearItemTextFields();
 }
@@ -253,7 +251,7 @@ function updateItem() {
 function loadAllItems() {
     $("#tblItem").empty();
     for (let i = 0; i < itemDB.length; i++) {
-        var row = `<tr><td>${itemDB[i].itemId}</td><td>${itemDB[i].itemName}</td><td>${itemDB[i].itemUnitPrice}</td><td>${itemDB[i].itemQTYOnHand}</td></tr>`;
+        var row = `<tr><td>${itemDB[i].getItemId()}</td><td>${itemDB[i].getItemName()}</td><td>${itemDB[i].getItemUnitPrice()}</td><td>${itemDB[i].getItemQty()}</td></tr>`;
         console.log(row);
         $("#tblItem").append(row);
     }
@@ -276,9 +274,7 @@ function loadAllItems() {
         }
 
         itemDB.splice(index,1);
-
         $(this).remove();
-
         // clearing the text fields
         clearItemTextFields();
     });
