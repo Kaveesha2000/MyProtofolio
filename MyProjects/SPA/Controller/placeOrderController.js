@@ -7,10 +7,10 @@ function generateOrderId() {
 $('#customerComboBox').click(function () {
     var customerId = $('#customerComboBox').val();
     for (let i = 0; i < customerDB.length; i++) {
-        if (customerDB[i].id == customerId) {
-            $('#customerName').val(customerDB[i].name);
-            $('#exampleInputTelephoneNo2').val(customerDB[i].telNo);
-            $('#exampleInputAddress2').val(customerDB[i].address);
+        if (customerDB[i].getCustomerId() == customerId) {
+            $('#customerName').val(customerDB[i].getCustomerName());
+            $('#exampleInputTelephoneNo2').val(customerDB[i].getCustomerTelNo());
+            $('#exampleInputAddress2').val(customerDB[i].getCustomerAddress());
         }
     }
 })
@@ -19,10 +19,10 @@ $('#customerComboBox').click(function () {
 $('#itemComboBox').click(function () {
     var itemId = $('#itemComboBox').val();
     for (let i = 0; i < itemDB.length; i++) {
-        if (itemDB[i].itemId == itemId) {
-            $('#exampleInputName2').val(itemDB[i].itemName);
-            $('#exampleInputUnitPrice2').val(itemDB[i].itemUnitPrice);
-            $('#exampleInputQtyOnHand2').val(itemDB[i].itemQTYOnHand);
+        if (itemDB[i].getItemId() == itemId) {
+            $('#exampleInputName2').val(itemDB[i].getItemName());
+            $('#exampleInputUnitPrice2').val(itemDB[i].getItemUnitPrice());
+            $('#exampleInputQtyOnHand2').val(itemDB[i].getQtyOnHand);
         }
     }
 })
@@ -35,12 +35,35 @@ $('#addBtn').click(function () {
 
 //purchase
 $('#purchaseBtn').click(function () {
+    var oId = $('#exampleInputId2').val();
+    var cId = $('#customerComboBox').val();
+    var date = $('#exampleInputDate').val();
     var cash = $('#exampleInputCash').val();
     var total = $('#exampleInputTotal').val();
     var discount = $('#discountComboBox').val();
 
+    var tblItemId;
+    var tblItemName;
+    var tblItemPrice;
+    var tblItemQty;
+    var tblItemTotal;
+
     //calculating balance of the cash
     var balance = cash - (total - (total * discount / 100));
+
+    for (let i = 0; i < $('#tblPlaceOrder tr').length; i++) {
+        tblItemId = $("#tblPlaceOrder tr").children(':nth-child(1)')[i].innerText;
+        tblItemName = $('#tblPlaceOrder tr').children(':nth-child(2)')[i].innerText;
+        tblItemPrice = $('#tblPlaceOrder tr').children(':nth-child(3)')[i].innerText;
+        tblItemQty = $('#tblPlaceOrder tr').children(':nth-child(4)')[i].innerText;
+        tblItemTotal = $('#tblPlaceOrder tr').children(':nth-child(5)')[i].innerText;
+
+        var orderDetailDTO = new OrderDetailDTO(oId,tblItemId,tblItemQty,tblItemTotal);
+        orderDetailsDB.push(orderDetailDTO);
+    }
+
+    var orderDTO = new OrderDTO(oId,cId,date,discount,fullTotal);
+    orderDB.push(orderDTO);
 
     $('#exampleInputBalance').val(balance);
     clearTextFields();
@@ -60,27 +83,23 @@ function loadCart() {
 
     //updating qty
     for (let i = 0; i < itemDB.length; i++) {
-        if ($('#itemComboBox').val()==itemDB[i].itemId){
-            itemDB[i].itemQTYOnHand = qtyOnHand;
+        if ($('#itemComboBox').val()==itemDB[i].getItemId()){
+            itemDB[i].setQtyOnHand(qtyOnHand);
             console.log(qtyOnHand);
         }
     }
-    //fullTotal = fullTotal + total;
     //checking duplicates
     var newQty = 0;
     var newTotal = 0;
 
     //first check duplicates
     if (!checkDuplicates(itemCode)){
-        //alert("No Duplicates...!");
         total = orderqty * price;
         fullTotal = fullTotal + total;
         var row = `<tr><td>${itemCode}</td><td>${itemName}</td><td>${price}</td><td>${orderqty}</td><td>${total}</td></tr>`;
-        //console.log(row);
         $("#tblPlaceOrder").append(row);
         $('#exampleInputTotal').val(fullTotal);
     }else{
-        //alert("There are duplicates");
         var rowNo= checkDuplicates(itemCode).rowNumber;
         newQty = parseInt($('#exampleInputOrderQty').val());
         var oldQty = parseInt($($('#tblPlaceOrder tr').eq(rowNo).children(":eq(3)")).text());
@@ -96,9 +115,8 @@ function loadCart() {
         $('#tblPlaceOrder tr').eq(rowNo).children(":eq(3)").text(newQty1);
         $('#tblPlaceOrder tr').eq(rowNo).children(":eq(4)").text(newTotal1);
         $('#exampleInputTotal').val(fullTotal);
-
     }
-    $('#exampleInputTotal').val(fullTotal);
+    //$('#exampleInputTotal').val(fullTotal);
 }
 
 //clearing the text fields

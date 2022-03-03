@@ -1,4 +1,4 @@
-function OrderDetail(orderId, itemId, orderQty, total) {
+function OrderDetailDTO(orderId, itemId, orderQty, total) {
     this.__oId = orderId;
     this.__itemId = itemId;
     this.__qty = orderQty;
