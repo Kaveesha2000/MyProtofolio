@@ -149,8 +149,11 @@ $("#saveBtn").click(function () {
     customerBorderColor();
     // clearing the text fields
     clearCustomerTextFields();
-    generateCustomerId();
-    //rowClick();
+    if (customerDB.length>0){
+        generateCustomerId();
+    }else {
+        $("#id").val("C00-0001");
+    }
 });
 
 /*Update On Action*/
@@ -158,7 +161,11 @@ $("#updateBtn").click(function () {
     updateCustomer();
     loadAllCustomers();
     clearCustomerTextFields();
-    generateCustomerId();
+    if (customerDB.length>0){
+        generateCustomerId();
+    }else {
+        $("#id").val("C00-0001");
+    }
 });
 
 /*Delete On Action*/
@@ -166,7 +173,11 @@ $("#deleteBtn").click(function () {
     deleteCustomer();
     loadAllCustomers();
     clearCustomerTextFields();
-    generateCustomerId();
+    if (customerDB.length>0){
+        generateCustomerId();
+    }else {
+        $("#id").val("C00-0001");
+    }
 });
 
 /*Search On Action*/
@@ -289,7 +300,6 @@ function loadCustomerIds(id) {
 
 //generate customer id
 function generateCustomerId() {
-    $("#id").val("C00-0001");
     var customerId = customerDB[customerDB.length - 1].getCustomerId();
     var tempId = parseInt(customerId.split("-")[1]);
     tempId = tempId + 1;
@@ -303,5 +313,3 @@ function generateCustomerId() {
         $("#id").val("C00-" + tempId);
     }
 }
-
-

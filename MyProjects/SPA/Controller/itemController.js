@@ -133,7 +133,11 @@ $("#saveBtnItem").click(function () {
     loadAllItems();
     itemBorderColor();
     clearItemTextFields();
-    generateItemId();
+    if (itemDB.length>0){
+        generateItemId();
+    }else {
+        $("#itemId").val("I00-0001");
+    }
 });
 
 /*Update On Action*/
@@ -141,7 +145,11 @@ $("#updateItem").click(function () {
     updateItem();
     loadAllItems();
     clearItemTextFields();
-    generateItemId();
+    if (itemDB.length>0){
+        generateItemId();
+    }else {
+        $("#itemId").val("I00-0001");
+    }
 })
 
 /*Delete On Action*/
@@ -149,7 +157,11 @@ $("#deleteBtnItem").click(function () {
     deleteItem();
     loadAllItems();
     clearItemTextFields();
-    generateItemId();
+    if (itemDB.length>0){
+        generateItemId();
+    }else {
+        $("#itemId").val("I00-0001");
+    }
 })
 
 /*Search On Action*/
@@ -266,7 +278,6 @@ function loadItemIds(itemId) {
 
 //generate item id
 function generateItemId() {
-    $("#itemId").val("I00-0001");
     var itemId = itemDB[itemDB.length - 1].getItemId();
     var tempId = parseInt(itemId.split("-")[1]);
     tempId = tempId + 1;

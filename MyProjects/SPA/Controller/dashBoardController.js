@@ -16,7 +16,11 @@ $("#customerBtn").click(function () {
     $("#itemSection").css('display', 'none');
     $("#placeOrderSection").css('display', 'none');
 
-    generateCustomerId();
+    if (customerDB.length>0){
+        generateCustomerId();
+    }else {
+        $("#id").val("C00-0001");
+    }
 })
 
 $("#itemBtn").click(function () {
@@ -32,7 +36,11 @@ $("#itemBtn").click(function () {
         $("#tblItem").append(row);
     }
 
-    generateItemId();
+    if (itemDB.length>0){
+        generateItemId();
+    }else {
+        $("#itemId").val("I00-0001");
+    }
 })
 
 $("#placeOrderBtn").click(function () {
@@ -41,7 +49,11 @@ $("#placeOrderBtn").click(function () {
     $("#itemSection").css('display', 'none');
     $("#placeOrderSection").css('display', 'block');
 
-    generateOrderId();
+    if (orderDB.length>0){
+        generateOrderId();
+    }else {
+        $("#exampleInputId2").val("O00-0001");
+    }
 })
 
 /*picture buttons*/
@@ -52,7 +64,11 @@ $("#customerpicBtn").click(function () {
     $("#itemSection").css('display', 'none');
     $("#placeOrderSection").css('display', 'none');
 
-    generateCustomerId();
+    if (customerDB.length>0){
+        generateCustomerId();
+    }else {
+        $("#id").val("C00-0001");
+    }
 })
 
 $("#itempicBtn").click(function () {
@@ -68,7 +84,11 @@ $("#itempicBtn").click(function () {
         $("#tblItem").append(row);
     }
 
-    generateItemId();
+    if (itemDB.length>0){
+        generateItemId();
+    }else {
+        $("#itemId").val("I00-0001");
+    }
 })
 
 $("#placeOrderpicBtn").click(function () {
@@ -77,5 +97,9 @@ $("#placeOrderpicBtn").click(function () {
     $("#itemSection").css('display', 'none');
     $("#placeOrderSection").css('display', 'block');
 
-    generateOrderId();
+    if (orderDB.length>0){
+        generateOrderId();
+    }else {
+        $("#exampleInputId2").val("O00-0001");
+    }
 })

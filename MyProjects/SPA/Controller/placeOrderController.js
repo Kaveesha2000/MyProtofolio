@@ -1,6 +1,5 @@
 //generate order id
 function generateOrderId() {
-    $("#exampleInputId2").val("O00-0001");
     var orderId = orderDB[orderDB.length - 1].getOrderId();
     var tempId = parseInt(orderId.split("-")[1]);
     tempId = tempId + 1;
@@ -69,7 +68,7 @@ $('#purchaseBtn').click(function () {
         tblItemQty = $('#tblPlaceOrder tr').children(':nth-child(4)')[i].innerText;
         tblItemTotal = $('#tblPlaceOrder tr').children(':nth-child(5)')[i].innerText;
 
-        var orderDetailDTO = new OrderDetailDTO(oId, tblItemId, tblItemQty, tblItemTotal);
+        var orderDetailDTO = new OrderDetailDTO(oId, tblItemId, tblItemName, tblItemQty, tblItemTotal);
         orderDetailsDB.push(orderDetailDTO);
     }
 
@@ -131,6 +130,11 @@ function loadCart() {
     //$('#exampleInputTotal').val(fullTotal);
 }
 
+//search existing order
+$('#searchOrderBtn').click(function () {
+    searchOrders();
+})
+
 //clearing the text fields
 function clearTextFields() {
     $('#exampleInputName2,#exampleInputUnitPrice2,#exampleInputQtyOnHand2,#exampleInputOrderQty').val('');
@@ -149,7 +153,11 @@ function clearTableAndFinalTotals() {
 $('#clearBtn').click(function () {
     clearTextFields();
     clearTableAndFinalTotals();
-    generateOrderId();
+    if (orderDB.length>0){
+        generateOrderId();
+    }else {
+        $("#exampleInputId2").val("O00-0001");
+    }
 })
 
 //checking duplicates
@@ -170,12 +178,54 @@ function checkDuplicates(itemCode) {
 //checking order qty
 function checkOrderQtyAndAddToCart() {
     var qtyOnHand = $('#exampleInputQtyOnHand2').val();
-    var orderQty =$('#exampleInputOrderQty').val();
+    var orderQty = $('#exampleInputOrderQty').val();
     if (orderQty > qtyOnHand) {
-        alert(orderQty+' order quantity is exceed than quantity on hand...! Try Again...');
+        alert(orderQty + ' order quantity is exceed than quantity on hand...! Try Again...');
         $('#exampleInputOrderQty').val('');
-    }else {
+    } else {
         loadCart();
         clearTextFields();
+    }
+}
+
+//search orders
+function searchOrders() {
+    var orderId = $('#orderSearchBar').val();
+    var ifExist = false;
+
+    for (let i = 0; i < orderDB.length; i++) {
+        if (orderId == orderDB[i].getOrderId()) {
+            ifExist = true;
+        }
+    }
+    if (ifExist == true) {
+        for (let i = 0; i < orderDB.length; i++) {
+            //from order db
+            for (var j = 0; j < orderDB.length; j++) {
+                if (orderId == orderDB[i].getOrderId()) {
+                    $("#exampleInputId2").val(orderId);
+                    $("#customerComboBox").val(orderDB[j].getCustomerId());
+                    $("#exampleInputDate").val(orderDB[j].getDate());
+                    $("#discountComboBox").val(orderDB[j].getDiscount());
+                    $("#exampleInputTotal").val(orderDB[j].getTotal());
+                }
+            }
+            //from customer db
+            for (var j = 0; j < customerDB.length; j++) {
+                if ($("#customerComboBox").val() == customerDB[i].getCustomerId()) {
+                    $("#customerName").val(customerDB[j].getCustomerName());
+                    $("#exampleInputTelephoneNo2").val(customerDB[j].getCustomerTelNo());
+                    $("#exampleInputAddress2").val(customerDB[j].getCustomerAddress());
+                }
+            }
+            for (var j = 0; j < orderDetailsDB.length; j++) {
+                if (orderId == orderDetailsDB[j].getOrderid()) {
+                    let raw = `<tr><td> ${orderDetailsDB[j].getItemCode()} </td><td> ${orderDetailsDB[j].getItemName()} </td><td> ${orderDetailsDB[j].getItemQty()} </td><td> ${orderDetailsDB[j].getTotAmount()} </td></tr>`;
+                    $("#tblPlaceOrder").append(raw);
+                }
+            }
+        }
+    } else {
+        alert('There is no any order related to ' + orderId);
     }
 }

@@ -1,31 +1,38 @@
-function OrderDetailDTO(orderId, itemId, orderQty, total) {
-    this.__oId = orderId;
-    this.__itemId = itemId;
-    this.__qty = orderQty;
-    this.__total = total;
+function OrderDetailDTO(orderId, itemId, itemName, orderQty, total) {
+    var __oId = orderId;
+    var __itemId = itemId;
+    var __itemName = itemName
+    var __qty = orderQty;
+    var __total = total;
 
     this.setOrderid = function (orderId) {
-        this.__oId = orderId;
+        __oId = orderId;
     }
     this.getOrderid = function () {
-        return this.__oId;
+        return __oId;
     }
     this.setItemCode = function (itemCode) {
-        this.__itemId = itemCode;
+        __itemId = itemCode;
     }
     this.getItemCode = function () {
-        return this.__itemId;
+        return __itemId;
+    }
+    this.setItemName = function (itemName) {
+        __itemName = itemName;
+    }
+    this.getItemName = function () {
+        return __itemName;
     }
     this.setItemQty = function (orderQty) {
-        this.__qty = orderQty;
+        __qty = orderQty;
     }
     this.getItemQty = function () {
-        return this.__qty;
+        return __qty;
     }
     this.setTotAmount = function (totAmount) {
-        this.__total = totAmount;
+       __total = totAmount;
     }
     this.getTotAmount = function () {
-        return this.__total;
+        return __total;
     }
 }

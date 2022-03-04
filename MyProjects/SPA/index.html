@@ -269,13 +269,22 @@
 <section class="container-fluid" id="placeOrderSection">
     <!--title (Place Order)-->
     <section>
-        <img alt="Customer image" class="rounded mx-auto d-block mt-4" src="assets/images/placeorder.png" width="100px">
-        <h1 class="text-secondary text-center" id="header3">Placement Of An Order</h1>
+        <img alt="Customer image" class="rounded mx-auto d-block mt-4" src="assets/images/placeorder.png" width="80px">
+        <h2 class="text-secondary text-center" id="header3">Placement Of An Order</h2>
+    </section>
+    <section class="row">
+        <div class="mb-2 col-5 mt-2">
+            <input aria-describedby="searchBarHelp" class="form-control" id="orderSearchBar" type="text" placeholder="Format : O00-0001">
+            <div class="form-text" id="orderSearchHelp"></div>
+        </div>
+        <div class="mb-2 col-4 mt-2">
+            <button class="btn btn-primary  btn-group-sm" id="searchOrderBtn" type="button">Search</button>
+        </div>
     </section>
     <!--details section-->
     <section class="row">
         <!--invoice details-->
-        <div class="col-4 mt-3">
+        <div class="col-4 mt-2">
             <div class="card border-success mb-3" style="max-width: 30rem; min-height: 22rem">
                 <div class="card-header text-white" style="font-weight: bold; background-color: #38ada9">
                     Invoice Details
@@ -324,7 +333,7 @@
             </div>
         </div>
         <!--item selection-->
-        <div class="col-4 mt-3">
+        <div class="col-4 mt-2">
             <div class="card border-warning mb-3" style="max-width: 30rem; min-height: 22rem">
                 <div class="card-header text-white" style="font-weight: bold; background-color: #f6b93b">Item
                     Selection
@@ -375,7 +384,7 @@
             </div>
         </div>
         <!--final totals-->
-        <div class="col-4 mt-3">
+        <div class="col-4 mt-2">
             <div class="card border-dark mb-3" style="max-width: 30rem; min-height: 22rem">
                 <div class="card-body">
                     <form>
