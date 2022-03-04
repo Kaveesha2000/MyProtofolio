@@ -53,26 +53,9 @@ $('#itemId,#itemName,#itemUnitPrice,#itemQTYOnHand').on('keydown', function (eve
 // Item
 /*selecting the button*/
 //validation of item
-const itemIDRegEx = /^(I00-)[0-9]{3,4}$/;
 const itemNameRegEx = /^[A-z]{1,20}$/;
 const itemUnitPriceRegEx = /^[0-9]{2,8}$/;
 const itemQTYOnHand = /^[0-9]{1,10}$/;
-
-$("#itemId").keyup(function () {
-
-    let input = $("#itemId").val();
-
-    if (itemIDRegEx.test(input)) {
-
-        $("#itemId").css('border', '2px solid green');
-        $("#errorItemid").text("");
-
-    } else {
-
-        $("#itemId").css('border', '2px solid red');
-        $("#errorItemid").text("Wrong format : I00-001");
-    }
-});
 
 $("#itemName").keyup(function () {
 
@@ -149,20 +132,24 @@ $("#saveBtnItem").click(function () {
     saveItem();
     loadAllItems();
     itemBorderColor();
-    // clearing the text fields
     clearItemTextFields();
+    generateItemId();
 });
 
 /*Update On Action*/
 $("#updateItem").click(function () {
     updateItem();
     loadAllItems();
+    clearItemTextFields();
+    generateItemId();
 })
 
 /*Delete On Action*/
 $("#deleteBtnItem").click(function () {
     deleteItem();
     loadAllItems();
+    clearItemTextFields();
+    generateItemId();
 })
 
 /*Search On Action*/
@@ -174,6 +161,8 @@ $("#searchBtnItem").click(function () {
         $("#itemName").val(itemDB[response].getItemName());
         $("#itemUnitPrice").val(itemDB[response].getItemUnitPrice());
         $("#itemQTYOnHand").val(itemDB[response].getItemQty());
+
+        $("#exampleInputSearch1").val('');
     }else{
         clearItemTextFields();
         alert("No Such a Item");
@@ -191,16 +180,8 @@ function saveItem() {
 
     loadItemIds("<option>"+itemId+"</option>");
 
-    //making the item object
-    /*var item = {
-        itemId:itemId,
-        itemName:itemName,
-        itemUnitPrice:itemUnitPrice,
-        itemQTYOnHand:itemQTYOnHand
-    }*/
     var itemDTO = new ItemDTO(itemId,itemName,itemUnitPrice,itemQTYOnHand);
     itemDB.push(itemDTO);
-    console.log(itemDTO);
 }
 
 function deleteItem() {
@@ -281,4 +262,21 @@ function loadAllItems() {
 //load all itemIds to the item combo box
 function loadItemIds(itemId) {
     $('#itemComboBox').append(itemId);
+}
+
+//generate item id
+function generateItemId() {
+    $("#itemId").val("I00-0001");
+    var itemId = itemDB[itemDB.length - 1].getItemId();
+    var tempId = parseInt(itemId.split("-")[1]);
+    tempId = tempId + 1;
+    if (tempId <= 9) {
+        $("#itemId").val("I00-000" + tempId);
+    } else if (tempId <= 99) {
+        $("#itemId").val("I00-00" + tempId);
+    } else if (tempId <= 999) {
+        $("#itemId").val("I00-0" + tempId);
+    } else {
+        $("#itemId").val("I00-" + tempId);
+    }
 }

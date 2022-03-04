@@ -31,6 +31,8 @@ $("#itemBtn").click(function () {
         console.log(row);
         $("#tblItem").append(row);
     }
+
+    generateItemId();
 })
 
 $("#placeOrderBtn").click(function () {
