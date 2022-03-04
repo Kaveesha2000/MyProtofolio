@@ -69,26 +69,9 @@ $('#id,#name,#address,#telNo').on('keydown', function (eventOb) {
 // Customer
 /*selecting the button*/
 //validation of customer
-const cusIDRegEx = /^(C00-)[0-9]{3,4}$/;
 const cusNameRegEx = /^[A-z ]{3,20}$/;
 const cusAddressRegEx = /^[0-9/A-z. ,]{2,}$/;
 const cusTelNoRegEx = /^[0-9]{10}$/;
-
-$("#id").keyup(function () {
-
-    let input = $("#id").val();
-
-    if (cusIDRegEx.test(input)) {
-
-        $("#id").css('border', '2px solid green');
-        $("#errorid").text("");
-
-    } else {
-
-        $("#id").css('border', '2px solid red');
-        $("#errorid").text("Wrong format : C00-001");
-    }
-});
 
 $("#name").keyup(function () {
 
@@ -139,7 +122,7 @@ $("#telNo").keyup(function () {
 });
 //========================================================================
 /*Row Click*/
-function rowClick() {
+/*function rowClick() {
     //selecting the table row
     $("#tblCustomer > tr").click(function () {
 
@@ -156,7 +139,7 @@ function rowClick() {
         $("#telNo").val(cusTelNo);
 
     });
-}
+}*/
 
 //=====================================================================
 /*Save On Action*/
@@ -166,6 +149,7 @@ $("#saveBtn").click(function () {
     customerBorderColor();
     // clearing the text fields
     clearCustomerTextFields();
+    generateCustomerId();
     //rowClick();
 });
 
@@ -173,12 +157,16 @@ $("#saveBtn").click(function () {
 $("#updateBtn").click(function () {
     updateCustomer();
     loadAllCustomers();
+    clearCustomerTextFields();
+    generateCustomerId();
 });
 
 /*Delete On Action*/
 $("#deleteBtn").click(function () {
     deleteCustomer();
     loadAllCustomers();
+    clearCustomerTextFields();
+    generateCustomerId();
 });
 
 /*Search On Action*/
@@ -190,6 +178,8 @@ $("#searchBtn").click(function () {
         $("#name").val(customerDB[response].getCustomerName());
         $("#address").val(customerDB[response].getCustomerAddress());
         $("#telNo").val(customerDB[response].getCustomerTelNo());
+
+        $("#exampleInputSearch").val('');
     }else{
         clearCustomerTextFields();
         alert("No Such a Customer");
@@ -207,16 +197,8 @@ function saveCustomer() {
 
     loadCustomerIds("<option>"+customerId+"</option>");
 
-    //making the customer object
-    /*var customer = {
-        id: customerId,
-        name: customerName,
-        address: customerAddress,
-        telNo: customerTp
-    }*/
     var customerDTO = new CustomerDTO(customerId,customerName,customerAddress,customerTp);
     customerDB.push(customerDTO);
-    //console.log(customerDTO);
 }
 
 function deleteCustomer() {
@@ -229,8 +211,6 @@ function deleteCustomer() {
         }
     }
     customerDB.splice(index,1);
-    // clearing the text fields
-    clearCustomerTextFields();
 }
 
 function searchCustomer(searchID) {
@@ -305,6 +285,23 @@ function loadAllCustomers() {
 //load all customerIds to the combo box
 function loadCustomerIds(id) {
     $('#customerComboBox').append(id);
+}
+
+//generate customer id
+function generateCustomerId() {
+    $("#id").val("C00-0001");
+    var customerId = customerDB[customerDB.length - 1].getCustomerId();
+    var tempId = parseInt(customerId.split("-")[1]);
+    tempId = tempId + 1;
+    if (tempId <= 9) {
+        $("#id").val("C00-000" + tempId);
+    } else if (tempId <= 99) {
+        $("#id").val("C00-00" + tempId);
+    } else if (tempId <= 999) {
+        $("#id").val("C00-0" + tempId);
+    } else {
+        $("#id").val("C00-" + tempId);
+    }
 }
 
 

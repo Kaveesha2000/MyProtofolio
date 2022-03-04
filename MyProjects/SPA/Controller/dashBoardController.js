@@ -15,6 +15,8 @@ $("#customerBtn").click(function () {
     $("#customerSection").css('display', 'block');
     $("#itemSection").css('display', 'none');
     $("#placeOrderSection").css('display', 'none');
+
+    generateCustomerId();
 })
 
 $("#itemBtn").click(function () {
