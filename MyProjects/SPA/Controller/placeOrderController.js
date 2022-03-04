@@ -41,8 +41,7 @@ $('#itemComboBox').click(function () {
 
 //add to cart
 $('#addBtn').click(function () {
-    loadCart();
-    clearTextFields();
+    checkOrderQtyAndAddToCart();
 })
 
 //purchase
@@ -166,4 +165,17 @@ function checkDuplicates(itemCode) {
         }
     }
     return false;
+}
+
+//checking order qty
+function checkOrderQtyAndAddToCart() {
+    var qtyOnHand = $('#exampleInputQtyOnHand2').val();
+    var orderQty =$('#exampleInputOrderQty').val();
+    if (orderQty > qtyOnHand) {
+        alert(orderQty+' order quantity is exceed than quantity on hand...! Try Again...');
+        $('#exampleInputOrderQty').val('');
+    }else {
+        loadCart();
+        clearTextFields();
+    }
 }
