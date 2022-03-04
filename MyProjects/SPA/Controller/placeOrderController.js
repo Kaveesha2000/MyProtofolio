@@ -68,7 +68,7 @@ $('#purchaseBtn').click(function () {
         tblItemQty = $('#tblPlaceOrder tr').children(':nth-child(4)')[i].innerText;
         tblItemTotal = $('#tblPlaceOrder tr').children(':nth-child(5)')[i].innerText;
 
-        var orderDetailDTO = new OrderDetailDTO(oId, tblItemId, tblItemName, tblItemQty, tblItemTotal);
+        var orderDetailDTO = new OrderDetailDTO(oId, tblItemId, tblItemName,tblItemPrice, tblItemQty, tblItemTotal);
         orderDetailsDB.push(orderDetailDTO);
     }
 
@@ -177,7 +177,7 @@ function checkDuplicates(itemCode) {
 
 //checking order qty
 function checkOrderQtyAndAddToCart() {
-    var qtyOnHand = $('#exampleInputQtyOnHand2').val();
+    /*var qtyOnHand = $('#exampleInputQtyOnHand2').val();
     var orderQty = $('#exampleInputOrderQty').val();
     if (orderQty > qtyOnHand) {
         alert(orderQty + ' order quantity is exceed than quantity on hand...! Try Again...');
@@ -185,7 +185,10 @@ function checkOrderQtyAndAddToCart() {
     } else {
         loadCart();
         clearTextFields();
-    }
+    }*/
+
+    loadCart();
+    clearTextFields();
 }
 
 //search orders
@@ -204,7 +207,7 @@ function searchOrders() {
             for (var j = 0; j < orderDB.length; j++) {
                 if (orderId == orderDB[i].getOrderId()) {
                     $("#exampleInputId2").val(orderId);
-                    $("#customerComboBox").val(orderDB[j].getCustomerId());
+                    $("#customerComboBox").val(orderDB[j].getCustomerID());
                     $("#exampleInputDate").val(orderDB[j].getDate());
                     $("#discountComboBox").val(orderDB[j].getDiscount());
                     $("#exampleInputTotal").val(orderDB[j].getTotal());
@@ -220,11 +223,12 @@ function searchOrders() {
             }
             for (var j = 0; j < orderDetailsDB.length; j++) {
                 if (orderId == orderDetailsDB[j].getOrderid()) {
-                    let raw = `<tr><td> ${orderDetailsDB[j].getItemCode()} </td><td> ${orderDetailsDB[j].getItemName()} </td><td> ${orderDetailsDB[j].getItemQty()} </td><td> ${orderDetailsDB[j].getTotAmount()} </td></tr>`;
+                    let raw = `<tr><td> ${orderDetailsDB[j].getItemCode()} </td><td> ${orderDetailsDB[j].getItemName()} </td><td> ${orderDetailsDB[j].getItemUnitPrice()} </td><td> ${orderDetailsDB[j].getItemQty()} </td><td> ${orderDetailsDB[j].getTotAmount()} </td></tr>`;
                     $("#tblPlaceOrder").append(raw);
                 }
             }
         }
+        $('#orderSearchBar').val('');
     } else {
         alert('There is no any order related to ' + orderId);
     }
