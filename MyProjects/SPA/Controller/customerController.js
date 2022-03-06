@@ -67,7 +67,6 @@ $('#id,#name,#address,#telNo').on('keydown', function (eventOb) {
 //=========================================================================
 
 // Customer
-/*selecting the button*/
 //validation of customer
 const cusNameRegEx = /^[A-z ]{3,20}$/;
 const cusAddressRegEx = /^[0-9/A-z. ,]{2,}$/;
