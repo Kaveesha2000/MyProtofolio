@@ -190,7 +190,7 @@ function saveItem() {
     let itemUnitPrice = $("#itemUnitPrice").val();
     let itemQTYOnHand = $("#itemQTYOnHand").val();
 
-    loadItemIds("<option>"+itemId+"</option>");
+    //loadItemIds("<option>"+itemId+"</option>");
 
     var itemDTO = new ItemDTO(itemId,itemName,itemUnitPrice,itemQTYOnHand);
     itemDB.push(itemDTO);
