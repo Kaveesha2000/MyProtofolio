@@ -105,6 +105,30 @@ body{
     background-image: url("images/Assignments/A4.png");
 }
 
+#javaScript {
+    position: absolute;
+    width: 90%;
+    height: 40vh;
+    left: 5vw;
+    display: grid;
+    margin-top: 165vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40px;
+}
+
+#javaScript>a{
+    position: relative;
+    background-size: cover;
+}
+
+#j1 {
+    background-image: url("images/Assignments/J1.png");
+}
+
+#j2 {
+    background-image: url("images/Assignments/J2.png");
+}
+
 .photos {
     webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
@@ -139,6 +163,11 @@ body{
         margin-top: 45vh;
         grid-gap: 10px;
     }
+    #javaScript{
+        height: 12vh;
+        margin-top: 45vh;
+        grid-gap: 10px;
+    }
 }
 @media all and (min-width: 321px) and (max-width: 375px){
     body{
@@ -159,6 +188,11 @@ body{
         grid-gap: 10px;
     }
     #animation{
+        height: 12vh;
+        margin-top: 45vh;
+        grid-gap: 10px;
+    }
+    #javaScript{
         height: 12vh;
         margin-top: 45vh;
         grid-gap: 10px;
@@ -187,6 +221,11 @@ body{
         margin-top: 45vh;
         grid-gap: 10px;
     }
+    #javaScript{
+        height: 12vh;
+        margin-top: 45vh;
+        grid-gap: 10px;
+    }
 }
 @media all and (min-width: 426px) and (max-width: 768px){
     body{
@@ -211,6 +250,11 @@ body{
         margin-top: 92vh;
         grid-gap: 10px;
     }
+    #javaScript{
+        height: 30vh;
+        margin-top: 92vh;
+        grid-gap: 10px;
+    }
 }
 @media all and (min-width: 769px) and (max-width: 1024px){
     body{
@@ -231,6 +275,11 @@ body{
         grid-gap: 10px;
     }
     #animation{
+        height: 50vh;
+        margin-top: 136vh;
+        grid-gap: 10px;
+    }
+    #javaScript{
         height: 50vh;
         margin-top: 136vh;
         grid-gap: 10px;
