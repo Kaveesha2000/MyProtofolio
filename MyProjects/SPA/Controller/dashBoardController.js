@@ -44,8 +44,9 @@ $("#placeOrderBtn").click(function () {
     $("#placeOrderSection").css('display', 'block');
 
     $('#itemComboBox').empty();
-    $('#itemComboBox').val('');
+
     for (let i = 0; i < itemDB.length; i++) {
+        loadItemIds("<option>None</option>");
         loadItemIds("<option>"+itemDB[i].getItemId()+"</option>");
     }
 
