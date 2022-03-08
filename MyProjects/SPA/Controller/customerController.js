@@ -265,7 +265,7 @@ function loadAllCustomers() {
         let cusAddress = $(this).children(":eq(2)").text();
         let cusTelNo = $(this).children(":eq(3)").text();
 
-        console.log(cusId, cusName, cusAddress, cusTelNo);
+        //console.log(cusId, cusName, cusAddress, cusTelNo);
 
         $("#id").val(cusId);
         $("#name").val(cusName);
@@ -279,7 +279,7 @@ function loadAllCustomers() {
 
         for (var j = 0; j < customerDB.length; j++) {
             if ($('#tblCustomer>tr').id==(customerDB[j].getCustomerId())){
-                console.log(itemDB[j].getCustomerId());
+                //console.log(itemDB[j].getCustomerId());
                 index = j;
             }
         }

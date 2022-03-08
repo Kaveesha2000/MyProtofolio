@@ -157,7 +157,7 @@ function loadCart() {
     for (let i = 0; i < itemDB.length; i++) {
         if ($('#itemComboBox').val() == itemDB[i].getItemId()) {
             itemDB[i].setQtyOnHand(qtyOnHand);
-            console.log(qtyOnHand);
+            //console.log(qtyOnHand);
         }
     }
     //checking duplicates
@@ -188,6 +188,7 @@ function loadCart() {
         $('#tblPlaceOrder tr').eq(rowNo).children(":eq(4)").text(newTotal1);
         $('#exampleInputTotal').val(fullTotal);
     }
+    clickAndDoubleClick();
     //$('#exampleInputTotal').val(fullTotal);
 }
 
@@ -301,4 +302,43 @@ function addToPreviousQty(itemId, itemQty) {
             itemDB[i].setQtyOnHand(qtyOnHand);
         }
     }
+}
+
+function clickAndDoubleClick() {
+    let itemId = 0;
+    let orderQty = 0;
+
+    $("#tblPlaceOrder>tr").click(function () {
+        itemId = $(this).children(":eq(0)").text();
+        let itemName = $(this).children(":eq(1)").text();
+        let unitPrice = $(this).children(":eq(2)").text();
+        orderQty = $(this).children(":eq(3)").text();
+        //let total = $(this).children(":eq(4)").text();
+
+        console.log(itemId, itemName, unitPrice, orderQty);
+
+        $("#itemComboBox").val(itemId);
+        $("#exampleInputName2").val(itemName);
+        $("#exampleInputUnitPrice2").val(unitPrice);
+        $("#exampleInputOrderQty").val(orderQty);
+        //$("#exampleInputQtyOnHand2").val(orderQty);
+
+    });
+
+    $("#tblPlaceOrder>tr").dblclick(function () {
+        var index = -1;
+
+        for (var j = 0; j < orderDetailsDB.length; j++) {
+            if ($('#tblCustomer>tr').id==(orderDetailsDB[j].getItemCode())){
+                //console.log(itemDB[j].getCustomerId());
+                index = j;
+            }
+        }
+
+        orderDetailsDB.splice(index,1);
+        addToPreviousQty(itemId,orderQty);
+        $(this).remove();
+        // clearing the text fields
+        clearTextFields();
+    });
 }
