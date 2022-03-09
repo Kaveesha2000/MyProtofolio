@@ -146,6 +146,7 @@ $('#purchaseBtn').click(function () {
 
 //load cart
 var fullTotal = 0;
+
 function loadCart() {
     var itemCode = $('#itemComboBox').val();
     var itemName = $('#exampleInputName2').val();
@@ -309,6 +310,7 @@ function addToPreviousQty(itemId, itemQty) {
     }
 }
 
+//click and double click
 function clickAndDoubleClick() {
     let itemId = 0;
     let orderQty = 0;
@@ -323,20 +325,19 @@ function clickAndDoubleClick() {
         $("#exampleInputName2").val(itemName);
         $("#exampleInputUnitPrice2").val(unitPrice);
         $("#exampleInputOrderQty").val(orderQty);
-
     });
 
     $("#tblPlaceOrder>tr").dblclick(function () {
         var index = -1;
 
         for (var j = 0; j < orderDetailsDB.length; j++) {
-            if ($('#tblCustomer>tr').id==(orderDetailsDB[j].getItemCode())){
+            if ($('#tblCustomer>tr').id == (orderDetailsDB[j].getItemCode())) {
                 index = j;
             }
         }
 
-        orderDetailsDB.splice(index,1);
-        addToPreviousQty(itemId,orderQty);
+        addToPreviousQty(itemId, orderQty);
+        orderDetailsDB.splice(index, 1);
         $(this).remove();
         clearTextFields();
     });
@@ -344,20 +345,20 @@ function clickAndDoubleClick() {
 
 // disable the customer fields
 function disableCustomerField() {
-    $("#customerName").prop('disabled',true);
-    $("#exampleInputTelephoneNo2").prop('disabled',true);
-    $("#exampleInputAddress2").prop('disabled',true);
+    $("#customerName").prop('disabled', true);
+    $("#exampleInputTelephoneNo2").prop('disabled', true);
+    $("#exampleInputAddress2").prop('disabled', true);
 }
 
 // disable the item fields
 function disableItemField() {
-    $("#exampleInputName2").prop('disabled',true);
-    $("#exampleInputUnitPrice2").prop('disabled',true);
-    $("#exampleInputQtyOnHand2").prop('disabled',true);
-    $("#exampleInputTotal").prop('disabled',true);
+    $("#exampleInputName2").prop('disabled', true);
+    $("#exampleInputUnitPrice2").prop('disabled', true);
+    $("#exampleInputQtyOnHand2").prop('disabled', true);
+    $("#exampleInputTotal").prop('disabled', true);
 }
 
 // disable the purchase details fields
 function disableTotalField() {
-    $("#exampleInputTotal").prop('disabled',true);
+    $("#exampleInputTotal").prop('disabled', true);
 }
