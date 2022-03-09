@@ -302,9 +302,9 @@ function addToPreviousQty(itemId, itemQty) {
     for (let i = 0; i < itemDB.length; i++) {
         if (itemId == itemDB[i].getItemId()) {
             var qtyOnHand = itemDB[i].getQtyOnHand();
-            console.log(qtyOnHand);
+            //console.log(qtyOnHand);
             qtyOnHand += qty;
-            console.log(qty);
+            //console.log(qty);
             itemDB[i].setQtyOnHand(qtyOnHand);
         }
     }
@@ -314,12 +314,13 @@ function addToPreviousQty(itemId, itemQty) {
 function clickAndDoubleClick() {
     let itemId = 0;
     let orderQty = 0;
+    let unitPrice = 0;
 
     $("#tblPlaceOrder>tr").click(function () {
         itemId = $(this).children(":eq(0)").text();
         let itemName = $(this).children(":eq(1)").text();
-        let unitPrice = $(this).children(":eq(2)").text();
-        orderQty = $(this).children(":eq(3)").text();
+        unitPrice = parseInt($(this).children(":eq(2)").text());
+        orderQty = parseInt($(this).children(":eq(3)").text());
 
         $("#itemComboBox").val(itemId);
         $("#exampleInputName2").val(itemName);
@@ -337,6 +338,8 @@ function clickAndDoubleClick() {
         }
 
         addToPreviousQty(itemId, orderQty);
+        fullTotal = fullTotal - (unitPrice * orderQty);
+        $('#exampleInputTotal').val(fullTotal);
         orderDetailsDB.splice(index, 1);
         $(this).remove();
         clearTextFields();
