@@ -201,7 +201,7 @@ function deleteItem() {
 
     for (var j = 0; j < itemDB.length; j++) {
         if ($('#tblItem>tr').itemId==(itemDB[j].getItemId())){
-            console.log(itemDB[j].getItemId());
+            //console.log(itemDB[j].getItemId());
             index = j;
         }
     }
@@ -243,7 +243,7 @@ function loadAllItems() {
     $("#tblItem").empty();
     for (let i = 0; i < itemDB.length; i++) {
         var row = `<tr><td>${itemDB[i].getItemId()}</td><td>${itemDB[i].getItemName()}</td><td>${itemDB[i].getItemUnitPrice()}</td><td>${itemDB[i].getQtyOnHand()}</td></tr>`;
-        console.log(row);
+        //console.log(row);
         $("#tblItem").append(row);
     }
 

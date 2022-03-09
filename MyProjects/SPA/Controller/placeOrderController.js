@@ -179,7 +179,7 @@ function loadCart() {
         var rowNo = checkDuplicates(itemCode).rowNumber;
         newQty = parseInt($('#exampleInputOrderQty').val());
         var oldQty = parseInt($($('#tblPlaceOrder tr').eq(rowNo).children(":eq(3)")).text());
-        console.log(oldQty);
+        //console.log(oldQty);
         var newQty1 = newQty + oldQty;
         newTotal = newQty * price;
         var newTotal1 = newQty1 * price;

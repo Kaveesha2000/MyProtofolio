@@ -216,7 +216,7 @@ function deleteCustomer() {
 
     for (var j = 0; j < customerDB.length; j++) {
         if ($('#tblCustomer>tr').id==(customerDB[j].getCustomerId())){
-            console.log(itemDB[j].getCustomerId());
+            //console.log(itemDB[j].getCustomerId());
             index = j;
         }
     }
