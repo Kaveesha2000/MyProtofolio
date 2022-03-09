@@ -1,4 +1,4 @@
-/*//validation of place order
+//validation of place order
 var regCash = /^[0-9]{2,10}(.)[0-9]{2}$/;
 var regDiscount = /^[0-9]{1,2}$/;
 var regOrderQty = /^[0-9]{1,20}$/;
@@ -25,11 +25,11 @@ $("#exampleInputCash").keyup(function () {
     if (regCash.test(input)) {
 
         $("#exampleInputCash").css('border', '2px solid green');
-        $("#errorTotal").text("");
+        $("#errorCash").text("");
 
     } else {
         $("#exampleInputCash").css('border', '2px solid red');
-        $("#errorTotal").text("Wrong format");
+        $("#errorCash").text("Wrong format");
     }
 });
 
@@ -46,7 +46,7 @@ $("#discountComboBox").keyup(function () {
         $("#discountComboBox").css('border', '2px solid red');
         $("#errorDiscount").text("Wrong format");
     }
-});*/
+});
 
 //generate order id
 function generateOrderId() {
@@ -66,6 +66,7 @@ function generateOrderId() {
 
 //load customer data to text field
 $('#customerComboBox').click(function () {
+    disableCustomerField();
     var customerId = $('#customerComboBox').val();
     for (let i = 0; i < customerDB.length; i++) {
         if (customerDB[i].getCustomerId() == customerId) {
@@ -78,6 +79,7 @@ $('#customerComboBox').click(function () {
 
 //load item data to text field
 $('#itemComboBox').click(function () {
+    disableItemField();
     var itemId = $('#itemComboBox').val();
     for (let i = 0; i < itemDB.length; i++) {
         if (itemDB[i].getItemId() == itemId) {
@@ -91,6 +93,7 @@ $('#itemComboBox').click(function () {
 //add to cart
 $('#addBtn').click(function () {
     checkOrderQtyAndAddToCart();
+    disableTotalField();
 })
 
 //purchase
@@ -298,7 +301,9 @@ function addToPreviousQty(itemId, itemQty) {
     for (let i = 0; i < itemDB.length; i++) {
         if (itemId == itemDB[i].getItemId()) {
             var qtyOnHand = itemDB[i].getQtyOnHand();
+            console.log(qtyOnHand);
             qtyOnHand += qty;
+            console.log(qty);
             itemDB[i].setQtyOnHand(qtyOnHand);
         }
     }
@@ -313,15 +318,11 @@ function clickAndDoubleClick() {
         let itemName = $(this).children(":eq(1)").text();
         let unitPrice = $(this).children(":eq(2)").text();
         orderQty = $(this).children(":eq(3)").text();
-        //let total = $(this).children(":eq(4)").text();
-
-        console.log(itemId, itemName, unitPrice, orderQty);
 
         $("#itemComboBox").val(itemId);
         $("#exampleInputName2").val(itemName);
         $("#exampleInputUnitPrice2").val(unitPrice);
         $("#exampleInputOrderQty").val(orderQty);
-        //$("#exampleInputQtyOnHand2").val(orderQty);
 
     });
 
@@ -330,7 +331,6 @@ function clickAndDoubleClick() {
 
         for (var j = 0; j < orderDetailsDB.length; j++) {
             if ($('#tblCustomer>tr').id==(orderDetailsDB[j].getItemCode())){
-                //console.log(itemDB[j].getCustomerId());
                 index = j;
             }
         }
@@ -338,7 +338,26 @@ function clickAndDoubleClick() {
         orderDetailsDB.splice(index,1);
         addToPreviousQty(itemId,orderQty);
         $(this).remove();
-        // clearing the text fields
         clearTextFields();
     });
+}
+
+// disable the customer fields
+function disableCustomerField() {
+    $("#customerName").prop('disabled',true);
+    $("#exampleInputTelephoneNo2").prop('disabled',true);
+    $("#exampleInputAddress2").prop('disabled',true);
+}
+
+// disable the item fields
+function disableItemField() {
+    $("#exampleInputName2").prop('disabled',true);
+    $("#exampleInputUnitPrice2").prop('disabled',true);
+    $("#exampleInputQtyOnHand2").prop('disabled',true);
+    $("#exampleInputTotal").prop('disabled',true);
+}
+
+// disable the purchase details fields
+function disableTotalField() {
+    $("#exampleInputTotal").prop('disabled',true);
 }
