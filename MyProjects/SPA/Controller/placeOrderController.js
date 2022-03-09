@@ -103,8 +103,12 @@ $('#purchaseBtn').click(function () {
     var date = $('#exampleInputDate').val();
     var cash = $('#exampleInputCash').val();
     var total = $('#exampleInputTotal').val();
-    var discount = $('#discountComboBox').val();
-
+    if ($('#discountComboBox').val() != '') {
+        discount = parseInt($('#discountComboBox').val());
+    } else {
+        discount = 0;
+    }
+    var discount;
     var tblItemId;
     var tblItemName;
     var tblItemPrice;
