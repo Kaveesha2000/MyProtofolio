@@ -1,3 +1,5 @@
+// disable the purchase button
+$("#purchaseBtn").prop('disabled', true);
 //validation of place order
 var regCash = /^[0-9]{2,10}(.)[0-9]{2}$/;
 var regDiscount = /^[0-9]{1,2}$/;
@@ -92,6 +94,7 @@ $('#itemComboBox').click(function () {
 
 //add to cart
 $('#addBtn').click(function () {
+    $("#purchaseBtn").prop('disabled', false);
     checkOrderQtyAndAddToCart();
     disableTotalField();
 })
